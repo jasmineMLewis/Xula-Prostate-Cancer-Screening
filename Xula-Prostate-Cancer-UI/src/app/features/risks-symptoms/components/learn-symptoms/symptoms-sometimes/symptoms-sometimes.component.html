@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="title">
+        <h1 class="problem-title">
+            <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>
+            Learning the Symptoms - Sometimes
+        </h1>
+    </div>
+
+    <hr />
+
+    <div class="row">
+        <!-- Text -->
+        <div class="col-md-8">
+            <h4 class="definition-title">
+                Learn the Symptoms of Prostate Cancer
+            </h4>
+            <h4 class="problem-title margin-top-twenty">
+                <b>SOMETIMES</b>, there are symptoms
+            </h4>
+
+            <p class="margin-top-twenty">
+                Some symptoms might be a sign of prostate cancer.This is particularly true when the cancer is more advanced.
+            </p>
+            <p class="margin-top-twenty">
+                Let’s look all the possible symptoms.
+            </p>
+
+            <div class="row margin-top-seventy">
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="symptomsPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" (click)="symptomsStop()">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                        Stop Audio
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video -->
+        <div class="col-md-4 text-center">
+            <div class="row">
+                <video width="320" height="300" controls>
+                    <source src="/assets/video/features/risks-symptoms/learn-symptoms/sometimes-symptoms.mp4" type="video/mp4">                
+                </video>
+            </div>
+        </div>
+    </div>
+</div>

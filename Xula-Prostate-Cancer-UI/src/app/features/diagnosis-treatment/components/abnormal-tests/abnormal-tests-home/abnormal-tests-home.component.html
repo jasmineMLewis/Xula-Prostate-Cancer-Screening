@@ -1,0 +1,94 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <div class="title">
+                <h1 class="problem-title">
+                    <i class="fa fa-adjust" aria-hidden="true"></i>
+                    If test results are abnormal?
+                </h1>
+            </div>
+            <hr />
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Text and Audio -->
+        <div class="col-md">
+            <p>
+                If you have had several prostate cancer screening tests (PSA and/or DRE) 
+                with abnormal results, it does NOT mean that you have prostate cancer.
+            </p>
+            
+            <p>
+                The first step is to discuss with your doctor your results and personal conditions.
+            </p>
+
+            <p>
+                You may be referred to a <a href="#" data-toggle="modal" data-target="#urologist">urologist</a> to discuss the benefits and risks of the options you have. 
+                The  urologist may order additional testing procedures.
+            </p>
+
+            <p id="problem-details">
+                Let’s look at each one of these options in detail...
+            </p>
+            
+            <div class="row">
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="abnormalTestsHomePlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" (click)="abnormalTestsHomeStop()">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                        Stop Audio
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image -->
+        <div class="col-md-4 text-center">
+           <img src="/assets/img/features/diagnosis-treatment/abnormal-tests/abnormal-tests-home.png" width="250" height="322">
+        </div>
+    </div>
+</div>
+
+<!-- Urologist Modal -->
+<div class="modal fade" id="urologist" tabindex="-1" role="dialog" aria-labelledby="urologistTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content border-success">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="modalTitle">Urologist</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="urologistStop()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <b>Urologist:</b> 
+                    A doctor (surgeon) who specializes in disorders of the urinary system and the male reproductive system.*
+                </p>
+                <p>
+                    * See Module 3, “Screening”,  for additional information.
+                </p>
+            </div>
+            <div class="modal-footer">                
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="urologistPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" data-dismiss="modal" (click)="urologistStop()">
+                        <i class="fa fa-close" aria-hidden="true"></i>
+                        Close
+                    </button> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

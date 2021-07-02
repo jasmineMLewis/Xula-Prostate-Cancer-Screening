@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="title">
+        <h1 class="problem-title">
+            <i class="fa fa-tag" aria-hidden="true"></i>
+            Prostate Specific Antigen
+        </h1>
+    </div>
+
+    <hr />
+
+    <div class="row">
+        <!-- Text and Audio -->
+        <div class="col-md">
+            <h5>
+                <b>PSA</b> stands for <i class="definition-name">Prostate Specific Antigen</i>.
+            </h5>
+            <ul>
+                <li>
+                    PSA is a substance (protein) made by the prostate gland. 
+                    The prostate gland releases the PSA into the blood.
+                </li>
+                <li>
+                    The PSA test measures the level of PSA in the blood.
+                </li>
+                <li>
+                    As a rule, the higher the PSA level in the blood, the more likely it 
+                    is that a prostate problem is present.
+                </li>
+                <li>
+                    This is not always the case, which is why a high PSA level needs to be followed by additional tests.
+                </li>
+            </ul>
+
+            <div class="row margin-top-ten">
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" 
+                        (click)="prostateSpecificAntigenPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" 
+                        (click)="prostateSpecificAntigenStop()">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                        Stop Audio
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video -->
+        <div class="col-md">
+            <div class="row">
+                <h5 class="text-light-green"><i>Blood Test</i></h5>
+
+                <video width="382" height="255" controls>
+                    <source src="/assets/video/features/prostate-importance/prostate-exams/prostate-specific-antigen.mp4" type="video/mp4">                
+                </video>
+            </div>
+
+            <div class="row">
+                <br/>
+                <p class="gray-background text-center">
+                    [Video embedded with permission from Dr. Patrick Flynn https://youtu.be/SuQRZUiForA]
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>

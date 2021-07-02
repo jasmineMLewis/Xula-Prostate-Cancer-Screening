@@ -1,0 +1,102 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <div class="title">
+                <h1 class="problem-title">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Making the Best Choice: Is screening right for you?
+                </h1>
+            </div>
+            <hr />
+
+            <h4 class="definition-title">You should see your doctor if you have any symptons:</h4>
+            <h6 class="definition-name">
+                Now take a few seconds to think about your OWN preferences.
+            </h6>
+            <p>
+                Which of the following statements sounds like you?
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md radio-toolbar">
+            <p>
+                <b>
+                    Because the DRE and PSA are both medical exams available to diagnose prostate problems,
+                </b>
+            </p>
+            <p>
+                I prefer to have these exams routinely during my wellness visits.
+            </p>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="routinelyWellnessVisit" id="routinelyYes"
+                    value="Yes">
+                <label class="form-check-label" for="routinelyYes">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="routinelyWellnessVisit" id="routinelyNo" value="No">
+                <label class="form-check-label" for="routinelyNo">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="routinelyWellnessVisit" id="routinelyNotSureYet"
+                    value="Not Sure Yet">
+                <label class="form-check-label" for="routinelyNotSureYet">
+                    Not Sure Yet
+                </label>
+            </div>
+        </div>
+
+        <div class="col-md radio-toolbar">
+            <p>
+                <b>
+                    Although DRE and PSA are both medical exams available to identify prostate problems,
+                </b>
+            </p>
+            <p>
+                I prefer to wait to have these tests later or to make a decision later about whether to have these tests.
+            </p>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="testDecisionLater" id="testLaterYes"
+                    value="Yes">
+                <label class="form-check-label" for="testLaterYes">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="testDecisionLater" id="testLaterNo" value="No">
+                <label class="form-check-label" for="testLaterNo">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="testDecisionLater" id="testLaterNotSureYet"
+                    value="Not Sure Yet">
+                <label class="form-check-label" for="testLaterNotSureYet">
+                    Not Sure Yet
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md">
+            <button type="button" class="btn btn-outline-success btn-block" (click)="screeningForYouPlay()">
+                <i class="fa fa-play" aria-hidden="true"></i>
+                Play Audio
+            </button>
+        </div>
+        <div class="col-md">
+            <button type="button" class="btn btn-outline-secondary btn-block" (click)="screeningForYouStop()">
+                <i class="fa fa-stop" aria-hidden="true"></i>
+                Stop Audio
+            </button>
+        </div>
+    </div>
+</div>

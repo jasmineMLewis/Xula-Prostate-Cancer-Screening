@@ -1,0 +1,190 @@
+<div class="container">
+    <p></p>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="definition-title"><i>Discussing Results</i></p>
+
+            If your PSA test of DRE is abnormal, your doctor may suggest a repeat PSA test.
+            <ul>
+                <li>
+                    This will help to see if the earlier test was accurate
+                </li>
+                <li>
+                    Your doctor may test for the level of “free” PSA
+                </li>
+                <li>
+                    A repeat PSA test can also determine if the PSA level changes over time. Doctors call this the PSA
+                    velocity.
+                </li>
+                <li>
+                    Also, your doctor may test PSA density, or the size of your prostate and how it compares to your PSA
+                    number.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <a href="#" data-toggle="modal" data-target="#freePSA">
+                <img src="/assets/img/features/prostate-screening/steps-involved/step-threee-free-psa.png" width="230"
+                    height="220">
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="#" data-toggle="modal" data-target="#velocityPSA">
+                <img src="/assets/img/features/prostate-screening/steps-involved/step-threee-psa-velocity.png"
+                    width="230" height="220">
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="#" data-toggle="modal" data-target="#densityPSA">
+                <img src="/assets/img/features/prostate-screening/steps-involved/step-threee-psa-density.png"
+                    width="230" height="220">
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md">
+            <button type="button" class="btn btn-outline-success btn-block" (click)="discussingResultsPlay()">
+                <i class="fa fa-play" aria-hidden="true"></i>
+                Play Audio
+            </button>
+        </div>
+        <div class="col-md">
+            <button type="button" class="btn btn-outline-secondary btn-block" (click)="discussingResultsStop()">
+                <i class="fa fa-stop" aria-hidden="true"></i>
+                Stop Audio
+            </button>
+        </div>
+    </div>
+</div>
+<!-- Free PSA Modal -->
+<div class="modal fade" id="freePSA" tabindex="-1" role="dialog" aria-labelledby="freePSATitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content border-success">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="modalTitle">“Free” versus “Attached” PSA</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                    (click)="freePsaAudioStop()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    PSA circulates in the blood in 2 forms: free or attached to a protein molecule:
+                </p>
+
+                <ul>
+                    <li>A “free” PSA test only measures the amount of PSA that is floating freely in the bloodstream.
+                    </li>
+                    <li>An “attached” PSA test only measures the amount of PSA that is attached (bound) to a protein
+                        molecule.</li>
+                </ul>
+
+                <p>
+                    In healthy prostates there is more of the “free” form of PSA. In prostates with cancer, there is
+                    more of
+                    the “attached” form of PSA.
+                </p>
+
+                <p>
+                    Many doctors use the measure of “free” PSA to help them interpret a man’s PSA level.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="freePsaAudioPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" data-dismiss="modal"
+                        (click)="freePsaAudioStop()">
+                        <i class="fa fa-window-close" aria-hidden="true"></i>
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Velocity PSA Modal -->
+<div class="modal fade" id="velocityPSA" tabindex="-1" role="dialog" aria-labelledby="velocityPSATitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content border-success">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="modalTitle">PSA Velocity</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                    (click)="velocityPsaAudioStop()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>A PSA velocity is the change in PSA levels over time.</li>
+                    <li>A sharp rise in the PSA level raises the suspicion of cancer.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="velocityPsaAudioPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" data-dismiss="modal"
+                        (click)="velocityPsaAudioStop()">
+                        <i class="fa fa-window-close" aria-hidden="true"></i>
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Density PSA Modal -->
+<div class="modal fade" id="densityPSA" tabindex="-1" role="dialog" aria-labelledby="densityPSATitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content border-success">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="modalTitle">Density PSA</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="densityPsaStop()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>PSA levels are higher in men with larger prostate glands.</li>
+                    <li>
+                        The doctor measures the volume (size) of the prostate gland with and divides the PSA number by
+                        the prostate volume.
+                    </li>
+                    <li>A higher PSA density indicates a greater likelihood of cancer.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="densityPsaPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" data-dismiss="modal"
+                        (click)="densityPsaStop()">
+                        <i class="fa fa-window-close" aria-hidden="true"></i>
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

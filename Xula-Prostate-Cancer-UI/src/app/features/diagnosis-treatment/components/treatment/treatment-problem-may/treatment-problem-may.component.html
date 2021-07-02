@@ -1,0 +1,111 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <div class="title">
+                <h1 class="problem-title">
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    Prostate Tumors - MAY
+                </h1>
+            </div>
+            <hr />
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Text and Audio -->
+        <div class="col-md-8">
+            <p class="definition-name">
+                Which tumors MAY become a serious problem?
+            </p>
+            
+            <ul>
+                <li>
+                    Unfortunately, doctors do not yet know how to figure out which prostate cancers
+                    will spread and which will not.
+                </li>
+                <li>
+                    Doctors may use two ways to measure 
+                    <a href="#" data-toggle="modal" data-target="#two-ways-to-measure">two ways to measure </a>
+                    how fast the tumor is growing and if it has
+                    spread, but these measures cannot predict how serious the disease may become.
+                </li>
+                <li>
+                    If we could accurately predict which cancer will grow, then we could treat only these patients.
+                </li>
+            </ul>
+            
+            <div class="row">
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="treatmentProblemMayPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" (click)="treatmentProblemMayStop()">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                        Stop Audio
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Image -->
+        <div class="col-md-4 text-center">
+            <img src="/assets/img/features/diagnosis-treatment/treatment/treatment-may.png" width="248" height="330">
+         </div>
+    </div>
+</div>
+
+<!-- Two Ways to Measure Modal -->
+<div class="modal fade" id="two-ways-to-measure" tabindex="1" role="dialog" aria-labelledby="twoWaysToMeasureTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content border-success">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="modalTitle">Two Ways to Measure</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="waysToMeasureTumorStop()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Doctors look at different ways so predict how fast prostate cancer may be growing:
+                </p>
+                <p>
+                    <b>Cancer Stage: </b> 
+                    The <b>stage</b> is based on the growth or spread of the cancer through the prostate,
+                    and if it has spread to other parts of your body. Your cancer can be stage 1, 2, 
+                    3, or 4. The lower the number, the less the cancer has spread. A higher number, like
+                    stage 4, means a more serious cancer that has spread outside the prostate.
+                </p>
+                <p>
+                    <b>Cancer Grade: </b>
+                    The prostate cancer cells are given a <b>grade</b> based on how they look under a
+                    microscope. Those that look very different from normal cells are given a higher
+                    grade and are likely to grow faster. The grade of your cancer might be given as
+                    a Gleason score (ranging from 6 to 10) or a Grade Group (ranging from 1 to 5). 
+                    Higher numbers mean a more serious cancer that has spread outside the prostate.
+                </p>
+                <p class="text-center">
+                    Ask your doctor to explain the grade of your cancer. The grade also can help 
+                    decide which treatments might be best for you.
+                </p>
+            </div>
+            <div class="modal-footer">                
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="waysToMeasureTumorPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" data-dismiss="modal" 
+                        (click)="waysToMeasureTumorStop()">
+                        <i class="fa fa-close" aria-hidden="true"></i>
+                        Close
+                    </button> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

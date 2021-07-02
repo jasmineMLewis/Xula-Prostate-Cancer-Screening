@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="title">
+        <h1 class="problem-title">
+            <i class="fa fa-tag" aria-hidden="true"></i>
+            Should I get a PSA test?
+        </h1>
+    </div>
+    
+    <hr/>
+
+    <div class="row">
+        <!-- Text and Audio -->
+        <div class="col-md">
+            <p>
+                The best recommendation is that you take an active role when making the decision, 
+                instead of asking the doctor to make the decision for you. 
+            </p>
+
+            Current guidelines recommend <b class="text-light-blue">Shared Decision Making</b>, meaning:
+            <ul>
+                <li>
+                    You talk with your doctor about the general risks and benefits of the PSA test for prostate cancer screening, and
+                </li>
+                <li>
+                    Together, you and your doctor, make a decision about the choice that will be best for you as an individual.
+                </li>
+            </ul>
+
+            <div class="row">
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="psaTestPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" (click)="psaTestStop()">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                        Stop Audio
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image -->
+        <div class="col-md margin-top-ten">
+            <img src="/assets/img/features/prostate-screening/choice/get-psa-test.png" width="350" height="300">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+<div class="container">
+    <div class="title">
+        <h1 class="problem-title">
+            <i class="fa fa-th-large" aria-hidden="true"></i>
+            Enlarged Prostate
+        </h1>
+    </div>
+
+    <hr/>
+    
+    <div class="row">
+        <!-- Text and Audio -->
+        <div class="col-md">
+            <p class="definition-title"><i>Benign Prostatic Hyperplasia</i></p>
+            <p>This problem is also called 
+                <a href="#" data-toggle="modal" data-target="#urethra">benign prostatic hyperplasia (BPH)</a>.
+            </p>
+
+            <p>
+                As men age, the prostate tends to increase in size. As the prostate
+                grows  it can cause the urethra to narrow and decrease urine flow.
+            </p>
+
+            <p>BPH is not prostate cancer.</p>
+
+            <p>BPH is treated with medications.</p>
+
+            <div class="row">
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="enlargedProstatePlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" (click)="enlargedProstateStop()">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                        Stop Audio
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image -->
+        <div class="col-md text-center">
+           <img src="/assets/img/features/prostate-importance/common-problems/enlarged-prostate.png" 
+            alt="Image - Common Problem - Enlarged Prostate" width="320" height="322">
+        </div>
+    </div>
+</div>
+
+
+<!-- Urethra Modal -->
+<div class="modal fade" id="urethra" tabindex="-1" role="dialog" aria-labelledby="urethraTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content border-success">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="modalTitle">Urethra</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="urethraStop()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <b>Urethra:</b> 
+                    The tube that extends from the bladder to the tip of the penis. It carries
+                    urine from the bladder and, during ejaculation, semen, from the prostate
+                    gland, out through the penis.
+                </p>
+                
+            </div>
+            <div class="modal-footer">                
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="urethraPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" data-dismiss="modal" (click)="urethraStop()">
+                        <i class="fa fa-window-close" aria-hidden="true"></i>
+                        Close
+                    </button> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
