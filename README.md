@@ -25,11 +25,3 @@ The project for Xavier University of Louisiana's Prostate Cancer Screening: Maki
 # Angular Project Version
 ----
 2.1.0.1
-
-# C Sharp Project Version
-----
-0.0.0.0
-
-# Databse Project Version
-----
-2.1.0.1
