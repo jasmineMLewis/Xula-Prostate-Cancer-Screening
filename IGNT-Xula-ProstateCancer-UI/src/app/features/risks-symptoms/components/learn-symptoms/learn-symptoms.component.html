@@ -1,0 +1,49 @@
+<div class="container">
+    <p></p>
+    <div class="row">
+        <!-- Tabs -->
+        <div class="col-3">
+            <div class="nav flex-column nav-pills" id="learn-symptoms-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="learn-symptoms-none-tab" data-toggle="pill" href="#learn-symptoms-none"
+                    role="tab" aria-controls="learn-symptoms-none" aria-selected="true">
+                    <i class="fa fa-thermometer-empty" aria-hidden="true"></i>
+                    None
+                </a>
+                <a class="nav-link" id="sometimes-tab" data-toggle="pill" href="#sometimes" role="tab" aria-controls="sometimes"
+                    aria-selected="false">
+                    <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>
+                    Common 
+                </a>
+                <a class="nav-link" id="often-tab" data-toggle="pill" href="#often" role="tab"
+                    aria-controls="often" aria-selected="false">
+                    <i class="fa fa-thermometer-full" aria-hidden="true"></i>
+                   Other
+                </a>
+                <a class="nav-link" id="any-tab" data-toggle="pill" href="#any" role="tab" aria-controls="any"
+                    aria-selected="false">
+                    <i class="fa fa-thermometer-half" aria-hidden="true"></i>
+                    What to do
+                </a>
+            </div>
+        </div>
+
+        <!-- Panel Content-->
+        <div class="col-9">
+            <div class="tab-content" id="learn-symptoms-tabContent">
+                <div class="tab-pane fade show active" id="learn-symptoms-none" role="tabpanel"
+                    aria-labelledby="learn-symptoms-none-tab">
+                   <symptoms-none></symptoms-none>
+                </div>
+                <div class="tab-pane fade" id="sometimes" role="tabpanel" aria-labelledby="sometimes-tab">
+                    <symptoms-sometimes></symptoms-sometimes>
+                </div>
+                <div class="tab-pane fade" id="often" role="tabpanel" aria-labelledby="often-tab">
+                    <symptoms-often></symptoms-often>
+                </div>
+                <div class="tab-pane fade" id="any" role="tabpanel" aria-labelledby="any-tab">
+                    <symptoms-any></symptoms-any>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

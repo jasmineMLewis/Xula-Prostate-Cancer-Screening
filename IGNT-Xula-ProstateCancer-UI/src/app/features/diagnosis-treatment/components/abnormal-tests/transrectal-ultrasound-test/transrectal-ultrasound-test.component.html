@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <div class="title">
+                <h1 class="problem-title">
+                    <i class="fa fa-asterisk" aria-hidden="true"></i>
+                    TransRectal Ultrasound Test (TRUS)
+                </h1>
+            </div>
+            <hr />
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Text and Audio -->
+        <div class="col-md">
+            <ul>
+                <li>
+                    In this exam a small lubricated probe is inserted into the 
+                    <a href="#" data-toggle="modal" data-target="#rectum">rectum</a>.
+                    The probe has sound waves that bounce off the prostate. This produces
+                    an image that the doctor can see on a video screen.
+                </li>
+                <li>
+                    You will feel some pressure when the probe is inserted, but it is
+                    usually not painful. A local anesthetic can be used to reduce any pain.
+                </li>
+            </ul>
+            
+            <div class="row">
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="transrectalUltrasoundTestPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" (click)="transrectalUltrasoundTestStop()">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                        Stop Audio
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image -->
+        <div class="col-md text-center">
+           <img src="/assets/img/features/diagnosis-treatment/abnormal-tests/transrectal-ultrasound-test.png" width="320" height="322">
+        </div>
+    </div>
+</div>
+
+<!-- Rectum Modal -->
+<div class="modal fade" id="rectum" tabindex="-1" role="dialog" aria-labelledby="rectumTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content border-success">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="modalTitle">Rectum</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="rectumStop()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <b>Rectum:</b> 
+                    The lower part (last 8-10 inches) of the large intestine. The rectum stores
+                    solid waste (stool) until it leaves the body thorough the anus.
+                </p>
+            </div>
+            <div class="modal-footer">                
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="rectumPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" data-dismiss="modal" (click)="rectumStop()">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                        Close
+                    </button> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

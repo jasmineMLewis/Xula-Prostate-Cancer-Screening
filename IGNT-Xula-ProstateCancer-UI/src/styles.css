@@ -1,0 +1,145 @@
+@import "~font-awesome/css/font-awesome.css";
+
+/*#region General */
+
+html {
+    position: relative;
+    font-size: 17px;
+    min-height: 100%;
+}
+
+/** Margins **/
+.margin-top-ten {
+    margin-top: 10px;
+}
+
+.margin-top-twenty {
+    margin-top: 20px;
+}
+
+.margin-top-thirty {
+    margin-top: 30px;
+}
+
+.margin-top-fifty {
+    margin-top: 50px;
+}
+
+.margin-top-seventy {
+    margin-top: 70px;
+}
+
+/** Text **/
+.text-light-blue {
+    color: #0275d8;
+}
+
+.text-dark-red {
+    color: #8b0000;
+}
+
+.text-light-green {
+    color: #5cb85c;
+}
+
+/*#endregion */
+
+/*#region Radio Buttons */
+.radio-toolbar {
+    margin: 10px;
+}
+  
+.radio-toolbar input[type="radio"] {
+    opacity: 0;
+    width: 0;
+}
+  
+.radio-toolbar label {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #DCDCDC;
+    border-radius: 4px;
+    color: #5cb85c;
+}
+  
+.radio-toolbar label:hover {
+    background-color: #5cb85c;
+    color: white;
+}
+  
+.radio-toolbar input[type="radio"]:focus + label {
+    border: 2px dashed #444;
+}
+  
+.radio-toolbar input[type="radio"]:checked + label {
+    background-color: #BFB;
+    border-color: #5cb85c;
+}
+/*#endregion */
+
+/*#region  Modules - Panels */
+#training-panel {
+    margin-top: 10px;
+    margin-left: 0px;
+    min-height: 580px;
+    /* min-width: 1400px; */
+}
+/*#endregion */
+
+/*#region  Modules - Generals */
+#module {
+    background-color: #ffffe2;
+    height: 270px;
+}
+
+#module-title {
+    text-align: center;
+    color: #0275d8;
+}
+
+#module-sub-title {
+    text-align: center;
+    color:gray;
+}
+
+.gray-background {
+    background-color: #DCDCDC;
+}
+/*#endregion */
+
+/*#region   Modules - Text */
+.problem-title {
+    color: #0275d8;
+}
+
+.definition-title {
+    color: #5cb85c;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.definition-name {
+    color: #0275d8;
+    font-weight: bold;
+}
+
+.credit-title {
+    color: darkblue;
+}
+/*#endregion */
+
+/*#region Banner */
+.training-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #0275d8;
+}
+
+.training-subtitle {
+    font-size: 20px;
+    font-style: italic;
+    color: green;
+}
+
+/*#endregion Banner */

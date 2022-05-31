@@ -1,0 +1,39 @@
+<div class="container">
+    <p></p>
+    <div class="row">
+      <div class="col-3">
+        <div class="nav flex-column nav-pills" id="prostate-exams-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link active" id="prostate-exams-home-tab" data-toggle="pill" href="#prostate-exams-home" role="tab" 
+             aria-controls="prostate-exams-home" aria-selected="true">
+             <!-- <i class="fa fa-stethoscope" aria-hidden="true"></i> -->
+             Prostate Exams
+          </a>
+           <a class="nav-link" id="digital-rectal-exam-tab" data-toggle="pill" href="#digital-rectal-exam" role="tab" 
+             aria-controls="digital-rectal-exam" aria-selected="false">
+             <!-- <i class="fa fa-hand-o-up" aria-hidden="true"></i> -->
+             1.
+             Digital Rectal Exam
+          </a>
+          <a class="nav-link" id="prostate-specific-antigen-tab" data-toggle="pill" href="#prostate-specific-antigen" role="tab" 
+             aria-controls="prostate-specific-antigen" aria-selected="false">
+             <!-- <i class="fa fa-tint" aria-hidden="true"></i> -->
+             2.
+             Prostate Specific Antigen
+          </a> 
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="tab-content" id="prostate-exams-tabContent">
+          <div class="tab-pane fade show active" id="prostate-exams-home" role="tabpanel" aria-labelledby="prostate-exams-home-tab">
+             <prostate-exams-home></prostate-exams-home>
+          </div>
+          <div class="tab-pane fade" id="digital-rectal-exam" role="tabpanel" aria-labelledby="digital-rectal-exam-tab">
+            <digital-rectal-exam></digital-rectal-exam>
+          </div>
+          <div class="tab-pane fade" id="prostate-specific-antigen" role="tabpanel" aria-labelledby="prostate-specific-antigen-tab">
+             <prostate-specific-antigen></prostate-specific-antigen>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

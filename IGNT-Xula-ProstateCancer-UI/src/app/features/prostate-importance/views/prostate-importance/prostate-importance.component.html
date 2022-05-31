@@ -1,0 +1,125 @@
+<div class="jumbotron">
+  <div class="container">
+    <hr />
+    <p class="training-title">Prostate Cancer Screening</p>
+    <p class="training-subtitle">Module 1: Importance of the Prostate</p>
+    <hr />
+  </div>
+</div>
+
+<div class="container">
+  <div id="training-panel" class="card">
+    <div class="card-header bg-primary text-white">
+      <i class="fa fa-bell" aria-hidden="true"></i>
+      Module 1: Importance of the Prostate
+    </div>
+
+    <div class="card-body">
+      <!-- Tabs -->
+      <ul class="nav nav-pills nav-fill" id="prostateImportance" role="tablist">
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+            aria-selected="true">
+            <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+            Title
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="prostate-tab" data-toggle="tab" href="#prostate" role="tab" aria-controls="prostate"
+            aria-selected="false">
+            1.1 Prostate
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="common-problem-tab" data-toggle="tab" href="#common-problem" role="tab"
+            aria-controls="common-problem" aria-selected="false">
+            1.2 Problems
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="symptoms-tab" data-toggle="tab" href="#symptoms" role="tab" aria-controls="symptoms"
+            aria-selected="false">
+            1.3 Symptoms
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="visit-tab" data-toggle="tab" href="#visit" role="tab" aria-controls="visit"
+            aria-selected="false">
+            1.4 Visit
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="prostate-exam-tab" data-toggle="tab" href="#prostate-exam" role="tab"
+            aria-controls="prostate-exam" aria-selected="false">
+            1.5 Exam
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="best-choice-questionaire-tab" data-toggle="tab" href="#best-choice-questionaire"
+            role="tab" aria-controls="best-choice-questionaire" aria-selected="false">
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
+            Questionaire
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="summary-tab" data-toggle="tab" href="#summary" role="tab" aria-controls="summary"
+            aria-selected="false">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+            Summary
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="credits-tab" data-toggle="tab" href="#credits" role="tab" aria-controls="credits"
+            aria-selected="false">
+            <i class="fa fa-handshake-o" aria-hidden="true"></i>
+            Credits
+          </a>
+        </li>
+      </ul>
+
+      <!-- Panels -->
+      <div class="tab-content" id="prostateImportanceContent">
+        <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <prostate-importance-home></prostate-importance-home>
+        </div>
+        <div class="tab-pane fade" id="prostate" role="tabpanel" aria-labelledby="prostate-tab">
+          <what-is-prostate></what-is-prostate>
+        </div>
+        <div class="tab-pane fade" id="common-problem" role="tabpanel" aria-labelledby="common-problem-tab">
+          <common-problems></common-problems>
+        </div>
+        <div class="tab-pane fade" id="symptoms" role="tabpanel" aria-labelledby="symptoms-tab">
+          <symptoms></symptoms>
+        </div>
+        <div class="tab-pane fade" id="visit" role="tabpanel" aria-labelledby="visit-tab">
+          <doctor-visit></doctor-visit>
+        </div>
+        <div class="tab-pane fade" id="prostate-exam" role="tabpanel" aria-labelledby="prostate-exam-tab">
+          <prostate-exams></prostate-exams>
+        </div>
+        <div class="tab-pane fade" id="best-choice-questionaire" role="tabpanel"
+          aria-labelledby="best-choice-questionaire-tab">
+          <screening-for-you></screening-for-you>
+        </div>
+        <div class="tab-pane fade" id="summary" role="tabpanel" aria-labelledby="summary-tab">
+          <prostate-importance-summary></prostate-importance-summary>
+        </div>
+        <div class="tab-pane fade" id="credits" role="tabpanel" aria-labelledby="credits-tab">
+          <prostate-importance-credits></prostate-importance-credits>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-footer bg-primary text-white">
+      <button type="button" class="btn btn-success float-left">
+        Next
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+      </button>
+
+      <button type="button" class="btn btn-success float-right">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        Back
+      </button>
+    </div>
+  </div>
+</div>

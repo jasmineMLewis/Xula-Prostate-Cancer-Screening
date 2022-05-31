@@ -1,0 +1,104 @@
+<div class="jumbotron">
+  <div class="container">
+    <hr />
+    <p class="training-title">Prostate Cancer Screening</p>
+    <p class="training-subtitle"> Module 2: Risks & Symptoms of Prostate Cancer</p>
+    <hr />
+  </div>
+</div>
+
+<div class="container">
+  <div id="training-panel" class="card">
+    <div class="card-header bg-primary text-white">
+        <i class="fa fa-thermometer-full" aria-hidden="true"></i>
+        Module 2: Risks & Symptoms of Prostate Cancer
+    </div>
+    <div class="card-body">
+      <!-- Tabs -->
+      <ul class="nav nav-pills nav-fill" id="risksSymptoms" role="tablist">
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+            aria-selected="true">
+            <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+            Title
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="cancer-knowledge-tab" data-toggle="tab" href="#cancer-knowledge" role="tab" aria-controls="cancer-knowledge"
+            aria-selected="false">
+            2.1  Knowledge
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="risk-factors-tab" data-toggle="tab" href="#risk-factors" role="tab"
+            aria-controls="risk-factors" aria-selected="false">
+           2.2  Risk Factors
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="at-risk-questionaire-tab" data-toggle="tab" href="#at-risk-questionaire" role="tab" aria-controls="at-risk-questionaire"
+            aria-selected="false">
+            2.3  At Risk
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="symptoms-tab" data-toggle="tab" href="#symptoms" role="tab" aria-controls="symptoms"
+            aria-selected="false">
+            <i class="fa fa-thermometer-quarter" aria-hidden="true"></i>
+            2.4 Symptoms
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="best-choice-questionaire-tab" data-toggle="tab" href="#best-choice-questionaire" role="tab" 
+            aria-controls="best-choice-questionaire" aria-selected="false">
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
+            Questionaire
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="summary-tab" data-toggle="tab" href="#summary" role="tab" 
+            aria-controls="summary" aria-selected="false">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+            Summary
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="credits-tab" data-toggle="tab" href="#credits" role="tab" 
+            aria-controls="credits" aria-selected="false">
+            <i class="fa fa-handshake-o" aria-hidden="true"></i>
+            Credits
+          </a>
+        </li>
+      </ul>
+
+      <!-- Panels -->
+      <div class="tab-content" id="risksSymptomsContent">
+        <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <risks-symptoms-home></risks-symptoms-home>
+        </div>
+        <div class="tab-pane fade" id="cancer-knowledge" role="tabpanel" aria-labelledby="cancer-knowledge-tab">
+          <prostate-cancer-knowledge></prostate-cancer-knowledge>
+        </div>
+        <div class="tab-pane fade" id="risk-factors" role="tabpanel" aria-labelledby="risk-factors-tab">
+            <risk-factors></risk-factors>
+        </div>
+        <div class="tab-pane fade" id="at-risk-questionaire" role="tabpanel" aria-labelledby="symptoms-tab">
+          <am-i-at-risk></am-i-at-risk>
+        </div>
+        <div class="tab-pane fade" id="symptoms" role="tabpanel" aria-labelledby="symptoms-tab">
+            <learn-symptoms></learn-symptoms>
+        </div>
+        <div class="tab-pane fade" id="best-choice-questionaire" role="tabpanel" aria-labelledby="best-choice-questionaire-tab">
+          <screening-for-you></screening-for-you>
+        </div>
+        <div class="tab-pane fade" id="summary" role="tabpanel" aria-labelledby="summary-tab">
+            <risks-symptoms-summary></risks-symptoms-summary>
+        </div>
+        <div class="tab-pane fade" id="credits" role="tabpanel" aria-labelledby="credits-tab">
+           <risks-symptoms-credits></risks-symptoms-credits>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer bg-primary text-white"></div>
+  </div>
+</div>

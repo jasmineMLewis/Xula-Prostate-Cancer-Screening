@@ -1,0 +1,124 @@
+<div class="container">
+  <p></p>
+  <div class="row">
+    <div class="col-3">
+      <div class="nav flex-column nav-pills" id="steps-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="steps-home-tab" data-toggle="pill" href="#steps-home" role="tab"
+          aria-controls="steps-home" aria-selected="true">
+          <i class="fa fa-list" aria-hidden="true"></i>
+          Steps
+        </a>
+        <a class="nav-link" id="step-one-tab" data-toggle="pill" href="#step-one" role="tab" aria-controls="step-one"
+          aria-selected="false">
+          <i class="fa fa-caret-left" aria-hidden="true"></i>
+          Step One
+        </a>
+        <a class="nav-link" id="step-two-tab" data-toggle="pill" href="#step-two" role="tab" aria-controls="step-two"
+          aria-selected="false">
+          <i class="fa fa-caret-down" aria-hidden="true"></i>
+          Step Two
+        </a>
+        <a class="nav-link" id="step-three-tab" data-toggle="pill" href="#step-three" role="tab"
+          aria-controls="step-three" aria-selected="false">
+          <i class="fa fa-caret-right" aria-hidden="true"></i>
+          Step Three
+        </a>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="tab-content" id="stepsTabContent">
+        <!-- Steps Home -->
+        <div class="tab-pane fade show active" id="steps-home" role="tabpanel" aria-labelledby="steps-home-tab">
+          <steps-home></steps-home>
+        </div>
+
+        <!-- Step One -->
+        <div class="tab-pane fade" id="step-one" role="tabpanel" aria-labelledby="step-one-tab">
+          <step-one></step-one>
+        </div>
+
+        <!-- Step Two -->
+        <div class="tab-pane fade" id="step-two" role="tabpanel" aria-labelledby="step-two-tab">
+          <div class="title">
+            <h1 class="problem-title">
+              <i class="fa fa-caret-down" aria-hidden="true"></i>
+              Step 2: Get the Results
+            </h1>
+          </div>
+          <hr />
+
+          <div class="nav nav-tabs" id="steps-two-tab" role="tablist" aria-orientation="horizontal">
+            <a class="nav-link active" id="tab2-1-tab" data-toggle="pill" href="#tab2-1" role="tab"
+              aria-controls="tab1-1" aria-selected="true">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+              Get the Results
+            </a>
+            <a class="nav-link" id="tab2-2-tab" data-toggle="pill" href="#tab2-2" role="tab" aria-controls="tab2-2"
+              aria-selected="false">
+              <i class="fa fa-bar-chart" aria-hidden="true"></i>
+              Accuracy - PSA Test Results
+            </a>
+            <a class="nav-link" id="tab2-3-tab" data-toggle="pill" href="#tab2-3" role="tab" aria-controls="tab2-3"
+              aria-selected="false">
+              <i class="fa fa-barcode" aria-hidden="true"></i>
+              Example - PSA Test Results
+            </a>
+          </div>
+
+          <div class="tab-content" id="stepsTwoTabContent">
+            <div class="tab-pane fade show active" id="tab2-1" role="tabpanel">
+              <get-the-results></get-the-results>
+            </div>
+            <div class="tab-pane fade" id="tab2-2" role="tabpanel">
+              <accuracy-psa-test></accuracy-psa-test>
+            </div>
+            <div class="tab-pane fade" id="tab2-3" role="tabpanel">
+              <example-psa-test></example-psa-test>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step Three -->
+        <div class="tab-pane fade" id="step-three" role="tabpanel" aria-labelledby="step-three-tab">
+          <div class="title">
+            <h1 class="problem-title">
+              <i class="fa fa-caret-right" aria-hidden="true"></i>
+              Step 3: Discuss Results with Doctor
+            </h1>
+          </div>
+          <hr />
+
+          <div class="nav nav-tabs" id="steps-three-tab" role="tablist" aria-orientation="horizontal">
+            <a class="nav-link active" id="tab3-1-tab" data-toggle="pill" href="#tab3-1" role="tab"
+              aria-controls="tab3-1" aria-selected="true">
+              <i class="fa fa-hand-lizard-o" aria-hidden="true"></i>
+              Discussing Results
+            </a>
+            <a class="nav-link" id="tab3-2-tab" data-toggle="pill" href="#tab3-2" role="tab" aria-controls="tab3-2"
+              aria-selected="false">
+              <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+              Abnormal - Conditions
+            </a>
+            <a class="nav-link" id="tab3-3-tab" data-toggle="pill" href="#tab3-3" role="tab" aria-controls="tab3-3"
+              aria-selected="false">
+              <i class="fa fa-hand-scissors-o" aria-hidden="true"></i>
+              Abnormal - Urologist
+            </a>
+          </div>
+
+          <div class="tab-content" id="stepsThreeTabContent">
+            <div class="tab-pane fade show active" id="tab3-1" role="tabpanel">
+              <discussing-results></discussing-results>
+            </div>
+            <div class="tab-pane fade" id="tab3-2" role="tabpanel">
+              <abnormal-conditions></abnormal-conditions>
+            </div>
+            <div class="tab-pane fade" id="tab3-3" role="tabpanel">
+              <abnormal-urologist></abnormal-urologist>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
