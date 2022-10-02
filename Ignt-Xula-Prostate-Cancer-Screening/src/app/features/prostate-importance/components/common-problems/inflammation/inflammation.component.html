@@ -1,0 +1,92 @@
+<div class="container">
+    <div class="title">
+        <h1 class="problem-title">
+            <i class="fa fa-th-large" aria-hidden="true"></i>
+            Inflammation
+        </h1>
+    </div>
+
+    <hr/>
+    
+    <div class="row">
+        <!-- Text and Audio -->
+        <div class="col-md">
+            <p class="definition-title">Prostatitis</p>
+            <p>
+                This problem is called <b>prostatitis</b>, 
+                which means inflammation of the prostate.
+            </p>
+
+            <p>
+                Prostatitis is usually due to an infection and can be treated with antibiotics or 
+                <a href="#" data-toggle="modal" data-target="#antibioticAntiInflammatory">antibiotics</a> or 
+                <a href="#" data-toggle="modal" data-target="#antibioticAntiInflammatory">anti-inflammatory medications</a>.
+            </p>
+
+            <p>
+                Prostatitis is not prostate cancer.
+            </p>
+            
+            <div class="row">
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="inflammationPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" (click)="inflammationStop()">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                        Stop Audio
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image -->
+        <div class="col-md text-center">
+           <img src="/assets/img/prostate-importance/common-problems/inflammation.png" width="320" height="322">
+        </div>
+    </div>
+</div>
+
+
+<!-- Antibiotic & Anti-inflammatory Modal -->
+<div class="modal fade" id="antibioticAntiInflammatory" tabindex="-1" role="dialog" aria-labelledby="antibioticAntiInflammatoryTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content border-success">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="modalTitle">Antibiotic & Anti-Inflammatory</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="antibioticAntiInflammatoryStop()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <b>Antibiotic:</b> A medicine (such as penicillin or its derivatives) that inhibits the growth of or destroys microorganisms
+                </p>
+                <p>
+                    <b>Anti-inflammatory drugs:</b> Medicine that help reduce inflammation, which often helps to relieve pain.
+                </p>
+                
+            </div>
+            <div class="modal-footer">                
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" 
+                        (click)="antibioticAntiInflammatoryPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" data-dismiss="modal" 
+                        (click)="antibioticAntiInflammatoryStop()">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                        Close
+                    </button> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
