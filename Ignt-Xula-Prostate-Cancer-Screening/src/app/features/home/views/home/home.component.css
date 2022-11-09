@@ -1,7 +1,7 @@
 /*#region Modules */
 .font-icons {
     font-size: 90px;
-    color:#008000;; 
+    color:#939393; 
     text-align: center;
 }
 
@@ -9,11 +9,12 @@
 
 /*#region Banner */
 .jumbotron {
-    background-color: #ffffe2 !important;
+    background-color: #FFC530 !important;
     text-align: center;
-    min-height: 700px; 
-    padding-bottom: 0px !important;
-    margin-bottom: 2px !important;
+    min-height: 670px; 
+    /* padding-bottom: -30px !important; */
+    margin-top: -95px;
+    margin-bottom: 22px !important;
 }
 
 #jumbotron-text {
@@ -27,17 +28,14 @@
 
 #prostate-screening {
     font-size: 70px;
-    color: #0275d8;
+    font-weight: bold;
+    color: #000;
 }
 
 #best-choice {
     font-size: 70px;
-    font-weight: bold;
-    color: #008000;;
-}
-
-hr.line{
-    border: 1px solid #DCDCDC;
-}
-
+    /* font-weight: bold; */
+    /* color: #DADBDC; */
+    color: #000;
+} 
 /*#endregion Banner */

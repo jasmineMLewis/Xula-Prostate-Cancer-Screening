@@ -8,7 +8,7 @@ import { WhatIsProstateComponent } from './components/what-is-prostate/what-is-p
 import { ProstateImportanceSummaryComponent } from './components/prostate-importance-summary/prostate-importance-summary.component';
 import { ProstateImportanceCreditsComponent } from './components/prostate-importance-credits/prostate-importance-credits.component';
 import { DoctorVisitComponent } from './components/doctor-visit/doctor-visit.component';
-import { ScreeningForYouComponent } from './components/screening-for-you/screening-for-you.component';
+import { BestChoiceQuestionnaireComponent } from './components/best-choice-questionnaire/best-choice-questionnaire.component';
 import { CommonProblemsComponent } from './components/common-problems/common-problems.component';
 import { CommonProblemsHomeComponent } from './components/common-problems/common-problems-home/common-problems-home.component';
 import { EnlargedProstateComponent } from './components/common-problems/enlarged-prostate/enlarged-prostate.component';
@@ -31,7 +31,7 @@ import { UrineRelatedComponent } from './components/symptoms/urine-related/urine
     ProstateImportanceSummaryComponent,
     ProstateImportanceCreditsComponent,
     DoctorVisitComponent,
-    ScreeningForYouComponent,
+    BestChoiceQuestionnaireComponent,
     CommonProblemsComponent,
     CommonProblemsHomeComponent,
     EnlargedProstateComponent,

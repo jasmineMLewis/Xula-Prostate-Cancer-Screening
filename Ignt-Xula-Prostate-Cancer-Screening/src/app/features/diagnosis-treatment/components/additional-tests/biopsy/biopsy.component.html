@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <div class="title">
+                <h1 class="problem-title">
+                    <i class="fa fa-cubes" aria-hidden="true"></i>
+                    Biopsy
+                </h1>
+            </div>
+            <hr />
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Text and Audio -->
+        <div class="col-md-8">
+            <ul>
+                <li>
+                    A biopsy is the removal of tiny samples of tissue, that are examined
+                    under a microscope to find out if there are cancer cells in the sample.
+                </li>
+                <li>
+                    The biopsy is usually performed in the urologist's office. A needle is
+                    used to collect the samples during the TRUS or MRI tests.
+                </li>
+                <li>
+                    If the biopsy results are normal: You probably do not have cancer. If
+                    the biopsy results are abnormal: You may have cancer. Although biopsies
+                    are not 100% accurate, they are the best method we have today of finding
+                    out if cancer is present.
+                </li>
+            </ul>
+            
+            <div class="row">
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="biposyPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" (click)="biposyStop()">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                        Stop Audio
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Image -->
+        <div class="col-md-4 text-center">
+            <img src="/assets/img/diagnosis-treatment/additional-tests/biopsy.png" width="270" height="300" class="img-fluid">
+         </div>
+    </div>
+</div>

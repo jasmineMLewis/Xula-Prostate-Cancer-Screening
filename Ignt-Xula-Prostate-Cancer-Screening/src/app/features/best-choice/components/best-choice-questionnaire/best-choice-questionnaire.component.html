@@ -1,0 +1,101 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <div class="title">
+                <h1 class="problem-title">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Making the Best Choice: Is screening right for you?
+                </h1>
+            </div>
+            <hr />
+
+            <h6 class="definition-name">
+                Now take a few seconds to think about your OWN preferences.
+            </h6>
+            <p>
+                Which of the following statements sounds like you?
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md radio-toolbar">
+            <p>
+                Screening may lead to being diagnosed with prostate cancer. I will need to accept
+                living with untreated cancer, or the side affects of treatment.
+                <b>
+                    Still, I would prefer to routinely have screenings for the possibility of more treatment options and
+                    a longer life.
+                </b>
+            </p>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="routineScreenings" id="routineScreeningsYes"
+                    value="Yes">
+                <label class="form-check-label" for="routineScreeningsYes">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="routineScreenings" id="routineScreeningsNo"
+                    value="No">
+                <label class="form-check-label" for="routineScreeningsNo">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="routineScreenings" id="routineScreeningsNotSureYet"
+                    value="Not Sure Yet">
+                <label class="form-check-label" for="routineScreeningsNotSureYet">
+                    Not Sure Yet
+                </label>
+            </div>
+        </div>
+
+        <div class="col-md radio-toolbar">
+            <p>
+                Screening may lead to being diagnosed with prostate cancer. I will need to accept living 
+                with untreated cancer, or accept the side affects of treatment. These consequences are not worth 
+                the possibility of more treatment options and a longer life.
+                <b>
+                    Currently, I prefer not to be screened.
+                </b>
+            </p>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="noScreening" id="noScreeningYes" value="Yes">
+                <label class="form-check-label" for="noScreeningYes">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="noScreening" id="noScreeningNo" value="No">
+                <label class="form-check-label" for="noScreeningNo">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="noScreening" id="noScreeningNotSureYet"
+                    value="Not Sure Yet">
+                <label class="form-check-label" for="noScreeningNotSureYet">
+                    Not Sure Yet
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md">
+            <button type="button" class="btn btn-outline-success btn-block" (click)="bestChoiceQuestionnairePlay()">
+                <i class="fa fa-play" aria-hidden="true"></i>
+                Play Audio
+            </button>
+        </div>
+        <div class="col-md">
+            <button type="button" class="btn btn-outline-secondary btn-block" (click)="bestChoiceQuestionnaireStop()">
+                <i class="fa fa-stop" aria-hidden="true"></i>
+                Stop Audio
+            </button>
+        </div>
+    </div>
+</div>

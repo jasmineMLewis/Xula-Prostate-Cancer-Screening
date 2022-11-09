@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <div class="title">
+                <h1 class="problem-title">
+                    <i class="fa fa-tint" aria-hidden="true"></i>
+                    New Blood & Urine Tests
+                </h1>
+            </div>
+            <hr />
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Text and Audio -->
+        <div class="col-md">
+            <p>
+                There are two new screening tests that may be recommended to men with high PSA values
+            </p>
+            
+            <ul>
+                <li>
+                    <i class="definition-name">The Prostate Health Index (PHI)</i> is a blood test that 
+                     may detect if you have an aggressive type of cancer that may cause problems.
+                </li>
+                <li>
+                    <i class="definition-name">The PCA3 Urine Test</i> measures the amount of PCA3 present, 
+                    a gene that is only in the prostate.
+                </li>
+            </ul>
+            
+            <p>
+                Higher values of PHI and PCA3 indicate a greater chance that you have prostate cancer.
+            </p>
+
+            <div class="row">
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="bloodUrineTestPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" (click)="bloodUrineTestStop()">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                        Stop Audio
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image -->
+        <div class="col-md text-center">
+           <img src="/assets/img/diagnosis-treatment/additional-tests/blood-urine-tests.png" width="320" height="322" class="img-fluid">
+        </div>
+    </div>
+</div>

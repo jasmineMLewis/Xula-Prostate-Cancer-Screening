@@ -1,0 +1,94 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <div class="title">
+                <h1 class="problem-title">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    Tumors that Grow Fast
+                </h1>
+            </div>
+            <hr />
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Text and Audio -->
+        <div class="col-md">
+            <p class="definition-title">
+                Some prostate tumors DO become a serious problem
+            </p>
+            
+            <ul>
+                <li>
+                    Some <a href="#" data-toggle="modal" data-target="#tumorTwo">tumors</a> can grow quickly.
+                </li>
+                <li>
+                    They can spread beyond the prostate.
+                </li>
+                <li>
+                    They can cause illness and death.
+                </li>
+            </ul>
+
+            <div class="row">
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="treatmentSeriousProblemPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" (click)="treatmentSeriousProblemStop()">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                        Stop Audio
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Image -->
+        <!-- <div class="col-md text-center">
+            <video width="410" height="310" controls>
+                <source src="/assets/video/features/diagnosis-treatment/treatment/prostate-tumor-problem-do.mp4" type="video/mp4">
+            </video>
+         </div> -->
+    </div>
+</div>
+
+<!-- Tumor Modal -->
+<div class="modal fade" id="tumorTwo" tabindex="-1" role="dialog" aria-labelledby="tumorTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content border-success">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="modalTitle">Tumor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="tumorStop()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <b>Tumor:</b> 
+                    A mass of tissue formed when cells in the body do not grow normally.
+                    Tumors can be malignant (cancerous) or benign (not cancerous).
+                </p>
+                <p>
+                    * See Module 1, “The Importance of the Prostate”,  for additional information.
+                </p>
+            </div>
+            <div class="modal-footer">                
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block"  (click)="tumorPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" data-dismiss="modal" (click)="tumorStop()">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                        Close
+                    </button> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

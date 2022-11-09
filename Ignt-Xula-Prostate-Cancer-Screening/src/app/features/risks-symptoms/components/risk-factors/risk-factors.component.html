@@ -1,0 +1,43 @@
+<div class="container">
+    <p></p>
+    <div class="row">
+        <div class="col-3">
+            <div class="nav flex-column nav-pills" id="risk-factors-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="risk-factors-home-tab" data-toggle="pill" href="#risk-factors-home"
+                    role="tab" aria-controls="risk-factors-home" aria-selected="true">
+                    Risk Factors
+                </a>
+                <a class="nav-link" id="age-tab" data-toggle="pill" href="#age" role="tab" aria-controls="age"
+                    aria-selected="false">
+                   1. Age
+                </a>
+                <a class="nav-link" id="family-history-tab" data-toggle="pill" href="#family-history" role="tab"
+                    aria-controls="family-history" aria-selected="false">
+                    2. Family History
+                </a>
+                <a class="nav-link" id="race-tab" data-toggle="pill" href="#race" role="tab" aria-controls="race"
+                    aria-selected="false">
+                    3. Race
+                </a>
+                
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="tab-content" id="risk-factors-tabContent">
+                <div class="tab-pane fade show active" id="risk-factors-home" role="tabpanel"
+                    aria-labelledby="risk-factors-home-tab">
+                   <risk-factors-home></risk-factors-home>
+                </div>
+                <div class="tab-pane fade" id="age" role="tabpanel" aria-labelledby="age-tab">
+                    <age></age>
+                </div>
+                <div class="tab-pane fade" id="family-history" role="tabpanel" aria-labelledby="family-history-tab">
+                    <family-history></family-history>
+                </div>
+                <div class="tab-pane fade" id="race" role="tabpanel" aria-labelledby="race-tab">
+                    <race></race>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

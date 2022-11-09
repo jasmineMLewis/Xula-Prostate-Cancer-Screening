@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="title">
+        <h1 class="problem-title">
+            <i class="fa fa-thermometer-full" aria-hidden="true"></i>
+            What to Know aboout Prostate Cancer?
+        </h1>
+    </div>
+    <hr />
+
+    <div class="row">
+        <div class="col-md">
+            <!-- Text -->
+            <h5>What to Know aboout Prostate Cancer? </h5>
+            <i class="definition-title">Prostate cancer:</i>
+            <ul>
+                <li>
+                    Begins when cells in the prostate gland start to grow out of control.
+                </li>
+                <li>
+                    Prostate cancer may grow very slowly.
+                </li>
+                <li>
+                    Many men with prostate cancer die of other causes, and many never know they have it.
+                </li>
+                <li>
+                    Can become a very serious and fatal disease, if not discovered early.
+                </li>
+                <li>
+                    Is the second leading cause of cancer-related deaths among men. Almost 30,000 men
+                    die each year from prostate cancer in the U.S.
+                </li>
+            </ul>
+
+            <!-- Audio -->
+            <div class="row">
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block"
+                        (click)="prostateCancerKnowledgePlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block"
+                        (click)="prostateCancerKnowledgeStop()">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                        Stop Audio
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video -->
+        <div class="col-md text-center">
+            <i>What comes to mind first when you hear the word “Cancer”?</i>
+            <!-- <div class="row">
+                <h6>
+                    <i>What comes to mind first when you hear the word “Cancer”?</i>
+                </h6>
+            </div> -->
+            <div class="row embed-responsive embed-responsive-4by3">
+                <video  controls>
+                    <source src="/assets/video/risks-symptoms/prostate-cancer-knowledge/what-is-cancer.mp4"
+                        type="video/mp4">
+                </video>
+               
+            </div>
+            <p class="text-center">
+                [Video embedded with permission from 
+                BioDigital, Inc. (biodigital.com)]
+            </p>
+        </div>
+    </div>
+</div>

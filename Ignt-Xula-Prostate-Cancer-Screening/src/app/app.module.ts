@@ -1,3 +1,5 @@
+import { DiagnosisTreatmentModule } from './features/diagnosis-treatment/diagnosis-treatment.module';
+import { DiagnosisTreatmentComponent } from './features/diagnosis-treatment/views/diagnosis-treatment/diagnosis-treatment.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,10 +9,13 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { HomeModule} from './features/home/home.module';
 import { ProstateImportanceModule } from './features/prostate-importance/prostate-importance.module';
+import { RisksSymptomsModule } from './features/risks-symptoms/risks-symptoms.module';
+import { ProstateScreeningModule } from './features/prostate-screening/prostate-screening.module';
+import { BestChoiceModule } from './features/best-choice/best-choice.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent    
   ],
   imports: [
     // Angular modules
@@ -22,7 +27,12 @@ import { ProstateImportanceModule } from './features/prostate-importance/prostat
     // Feature modules
     HomeModule,
     ProstateImportanceModule,
-
+    RisksSymptomsModule,
+    ProstateScreeningModule,
+    DiagnosisTreatmentModule,
+    BestChoiceModule,
+    
+    // App routing - should be the last import!
     AppRoutingModule
   ],
   providers: [],

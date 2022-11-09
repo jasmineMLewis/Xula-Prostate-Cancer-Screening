@@ -1,11 +1,14 @@
 @import "~font-awesome/css/font-awesome.css";
 
 /*#region General */
-
 html {
     position: relative;
     font-size: 17px;
     min-height: 100%;
+}
+
+hr {
+    border: 1px solid #DADBDC !important;
 }
 
 /** Margins **/
@@ -38,10 +41,9 @@ html {
     color: #8b0000;
 }
 
-.text-light-green {
+/* .text-light-green {
     color: #5cb85c;
-}
-
+} */
 /*#endregion */
 
 /*#region Radio Buttons */
@@ -60,21 +62,22 @@ html {
     font-size: 16px;
     border: 1px solid #DCDCDC;
     border-radius: 4px;
-    color: #5cb85c;
+    /* color: #5cb85c; */
+    color: #FFC530;
 }
   
 .radio-toolbar label:hover {
-    background-color: #5cb85c;
+    background-color: #00AB87;
     color: white;
 }
   
 .radio-toolbar input[type="radio"]:focus + label {
-    border: 2px dashed #444;
+    border: 2px dashed #939393;
 }
   
 .radio-toolbar input[type="radio"]:checked + label {
-    background-color: #BFB;
-    border-color: #5cb85c;
+    background-color: #00AB87;
+    border-color: #00AB87;
 }
 /*#endregion */
 
@@ -83,49 +86,44 @@ html {
     margin-top: 10px;
     margin-left: 0px;
     min-height: 580px;
-    /* min-width: 1400px; */
 }
 /*#endregion */
 
 /*#region  Modules - Generals */
 #module {
-    background-color: #ffffe2;
+    background-color: #FFC530;
     height: 270px;
 }
 
 #module-title {
     text-align: center;
-    color: #0275d8;
+    color: #000;
 }
 
 #module-sub-title {
     text-align: center;
-    color:gray;
-}
-
-.gray-background {
-    background-color: #DCDCDC;
+    color:#FFF;
 }
 /*#endregion */
 
 /*#region   Modules - Text */
 .problem-title {
-    color: #0275d8;
+    color: #00AB87;
 }
 
 .definition-title {
-    color: #5cb85c;
+    color: #000;
     font-weight: bold;
     font-size: 20px;
 }
 
 .definition-name {
-    color: #0275d8;
+    color: #00AB87;
     font-weight: bold;
 }
 
 .credit-title {
-    color: darkblue;
+    color: #000;
 }
 /*#endregion */
 
@@ -133,13 +131,94 @@ html {
 .training-title {
     font-size: 40px;
     font-weight: bold;
-    color: #0275d8;
+    color: #000 !important;
 }
 
 .training-subtitle {
-    font-size: 20px;
-    font-style: italic;
-    color: green;
+    font-size: 28px;
+    color: #000;
 }
 
 /*#endregion Banner */
+
+/*#region  Override Boostrap Colors */
+
+/** Buttons - Primary **/
+.btn-primary {
+    color: #FFF !important;
+    background-color: #00AB87 !important;
+    border-color: #00AB87 !important;
+}
+
+/** Buttons - Success **/
+.btn-outline-success {
+    color: #00AB87 !important;
+    border-color: #00AB87 !important;
+}
+  
+.btn-outline-success:hover {
+    color: #FFF !important;
+    background-color: #00AB87 !important;
+    border-color: #00AB87 !important;
+}
+  
+.btn-outline-success:focus, .btn-outline-success.focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 168, 134) !important;
+}
+  
+.btn-outline-success.disabled, .btn-outline-success:disabled {
+    color: #00AB87 !important;
+    background-color: transparent !important;
+}
+
+/** Buttons - Secondary **/
+.btn-outline-secondary {
+    color: #939393 !important;
+    border-color: #939393 !important;
+}
+  
+.btn-outline-secondary:hover {
+    color: #FFF !important;
+    background-color: #939393 !important;
+    border-color: #939393 !important;
+}
+    
+.btn-outline-secondary:focus, .btn-outline-secondary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(147, 147, 147) !important;
+}
+  
+.btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
+    color: #939393 !important;
+    background-color: transparent !important;
+}
+  
+.btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-secondary.dropdown-toggle {
+    color: #FFF !important;
+    background-color: #939393 !important;
+    border-color: #939393 !important;
+}
+  
+.btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-outline-secondary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(147, 147, 147) !important;
+}
+
+/** Nav Pills **/
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #00AB87 !important;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #000;
+}
+
+.nav-link:hover, .nav-link:focus {
+    text-decoration: none;
+    color: #939393;
+}
+/*#endregion Override Boostrap Colors */

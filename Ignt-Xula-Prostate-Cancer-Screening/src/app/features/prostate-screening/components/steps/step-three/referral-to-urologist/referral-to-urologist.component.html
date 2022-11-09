@@ -1,0 +1,74 @@
+<div class="container">
+    <p></p>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="definition-title"><i>What if the screening results are abnormal?</i></p>
+
+            <p>If you receive a second PSA test and your PSA level is still high, your doctor may refer you to a 
+                <a href="#" data-toggle="modal" data-target="#urologist">urologist</a>.
+            </p>
+            
+            The urologist will:
+            <ul>
+                <li>
+                    Review your symptoms, medical and family history, and order more tests, as needed
+                </li>
+                <li>
+                    Give a more accurate diagnosis about what is going on with your prostate
+                </li>
+                <li>
+                    If necessary, discuss different treatment options with you
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row  margin-top-twenty">
+        <div class="col-md">
+            <button type="button" class="btn btn-outline-success btn-block" (click)="referralToUrologistPlay()">
+                <i class="fa fa-play" aria-hidden="true"></i>
+                Play Audio
+            </button>
+        </div>
+        <div class="col-md">
+            <button type="button" class="btn btn-outline-secondary btn-block" (click)="referralToUrologistStop()">
+                <i class="fa fa-stop" aria-hidden="true"></i>
+                Stop Audio
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Urologist Modal -->
+<div class="modal fade" id="urologist" tabindex="-1" role="dialog" aria-labelledby="urologistTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content border-success">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="modalTitle">Urologist</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="urologistStop()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <b>Urologist</b> A doctor (surgeon) who specializes in disorders of the urinary system 
+                    and the male reproductive system.
+                </p>
+
+            <div class="modal-footer">
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="urologistPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" data-dismiss="modal" (click)="urologistStop()">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

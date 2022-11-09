@@ -1,0 +1,51 @@
+<div class="container">
+  <p></p>
+  <div class="row">
+    <div class="col-3">
+      <div class="nav flex-column nav-pills" id="additional-tests-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="additional-tests-home-tab" data-toggle="pill" href="#additional-tests-home"
+          role="tab" aria-controls="additional-tests-home" aria-selected="true">
+          Additional Tests
+        </a>
+        <a class="nav-link" id="blood-urine-test-tab" data-toggle="pill" href="#blood-urine-test" role="tab"
+          aria-controls="blood-urine-test" aria-selected="false">
+          1. Blood & Urine
+        </a>
+        <a class="nav-link" id="trans-rectal-ultrasound-tab" data-toggle="pill" href="#trans-rectal-ultrasound"
+          role="tab" aria-controls="trans-rectal-ultrasound" aria-selected="false">
+          2. TRUS
+        </a>
+        <a class="nav-link" id="magnetic-resonance-imaging-tab" data-toggle="pill" href="#magnetic-resonance-imaging"
+          role="tab" aria-controls="magnetic-resonance-imaging" aria-selected="false">
+          3. MRI
+        </a>
+        <a class="nav-link" id="biopsy-tab" data-toggle="pill" href="#biopsy" role="tab" aria-controls="biopsy"
+          aria-selected="false">
+          4. Biopsy
+        </a>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="tab-content" id="tabContent">
+        <div class="tab-pane fade show active" id="additional-tests-home" role="tabpanel"
+          aria-labelledby="additional-tests-home-tab">
+          <additional-tests-home></additional-tests-home>
+        </div>
+        <div class="tab-pane fade" id="blood-urine-test" role="tabpanel" aria-labelledby="blood-urine-test-tab">
+          <blood-urine-test></blood-urine-test>
+        </div>
+        <div class="tab-pane fade" id="trans-rectal-ultrasound" role="tabpanel"
+          aria-labelledby="trans-rectal-ultrasound-tab">
+          <transrectal-ultrasound-test></transrectal-ultrasound-test>
+        </div>
+        <div class="tab-pane fade" id="magnetic-resonance-imaging" role="tabpanel"
+          aria-labelledby="magnetic-resonance-imaging-tab">
+          <magnetic-resonance-imaging></magnetic-resonance-imaging>
+        </div>
+        <div class="tab-pane fade" id="biopsy" role="tabpanel" aria-labelledby="biopsy-tab">
+          <biopsy></biopsy>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

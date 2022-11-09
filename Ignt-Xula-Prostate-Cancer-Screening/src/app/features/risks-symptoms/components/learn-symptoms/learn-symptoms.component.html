@@ -1,0 +1,44 @@
+<div class="container">
+    <p></p>
+    <div class="row">
+        <!-- Tabs -->
+        <div class="col-3">
+            <div class="nav flex-column nav-pills" id="learn-symptoms-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="none-tab" data-toggle="pill" href="#none"
+                    role="tab" aria-controls="learn-symptoms-none" aria-selected="true">
+                    1. None
+                </a>
+                <a class="nav-link" id="common-tab" data-toggle="pill" href="#common" role="tab" aria-controls="common"
+                    aria-selected="false">
+                    2. Common 
+                </a>
+                <a class="nav-link" id="other-tab" data-toggle="pill" href="#other" role="tab"
+                    aria-controls="other" aria-selected="false">
+                   3. Other
+                </a>
+                <a class="nav-link" id="what-to-do-tab" data-toggle="pill" href="#what-to-do" role="tab" aria-controls="what-to-do"
+                    aria-selected="false">
+                    4. What to do
+                </a>
+            </div>
+        </div>
+
+        <!-- Panel Content-->
+        <div class="col-9">
+            <div class="tab-content" id="learn-symptoms-tabContent">
+                <div class="tab-pane fade show active" id="none" role="tabpanel" aria-labelledby="none-tab">
+                   <symptoms-none></symptoms-none>
+                </div>
+                <div class="tab-pane fade" id="common" role="tabpanel" aria-labelledby="common-tab">
+                    <symptoms-common></symptoms-common>
+                </div>
+                <div class="tab-pane fade" id="other" role="tabpanel" aria-labelledby="other-tab">
+                    <symptoms-other></symptoms-other>
+                </div>
+                <div class="tab-pane fade" id="what-to-do" role="tabpanel" aria-labelledby="what-to-do-tab">
+                    <what-to-do></what-to-do> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

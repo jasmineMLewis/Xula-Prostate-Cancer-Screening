@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <div class="title">
+                <h1 class="problem-title">
+                    <i class="fa fa-magnet" aria-hidden="true"></i>
+                    Magnetic Resonance Imaging (MRI)
+                </h1>
+            </div>
+            <hr />
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Text and Audio -->
+        <div class="col-md">
+            <ul>
+                <li>
+                    In this test you will lie inside of a large, tube-like structure that is open on both ends.
+                </li>
+                <li>
+                    The machine sends radio waves that produce a signal that is received and converted by a
+                    computer into an image of the prostate.
+                </li>
+            </ul>
+            
+            <div class="row">
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="magneticResonanceImagingPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" (click)="magneticResonanceImagingStop()">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                        Stop Audio
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image -->
+        <div class="col-md text-center">
+           <img src="/assets/img/diagnosis-treatment/additional-tests/magnetic-resonance-imaging.png" width="320" height="322" class="img-fluid">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+<div class="jumbotron">
+  <div class="container">
+    <hr />
+    <p class="training-title">Prostate Cancer Screening</p>
+    <p class="training-subtitle">Module 3: Screening for Prostate Cancer</p>
+    <hr />
+  </div>
+</div>
+
+<div class="container">
+  <div id="training-panel" class="card">
+    <div class="card-header bg-primary text-white">
+      <i class="fa fa-search-plus" aria-hidden="true"></i>
+      Module 3: Screening for Prostate Cancer
+    </div>
+    <div class="card-body">
+      <!-- Tabs -->
+      <ul class="nav nav-pills nav-fill" id="prostateScreening" role="tablist">
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+            aria-selected="true">
+            <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+            Title
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="screening-tab" data-toggle="tab" href="#screening" role="tab"
+            aria-controls="screening" aria-selected="false">
+            3.1 Screening
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="studies-tab" data-toggle="tab" href="#studies" role="tab" aria-controls="studies"
+            aria-selected="false">
+            3.2 Studies
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="best-choice-tab" data-toggle="tab" href="#best-choice" role="tab"
+            aria-controls="best-choice" aria-selected="false">
+            3.3 Choice
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="steps-tab" data-toggle="tab" href="#steps" role="tab" aria-controls="steps"
+            aria-selected="false">
+            3.4 Steps
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="stories-tab" data-toggle="tab" href="#stories" role="tab" aria-controls="stories"
+            aria-selected="false">
+            3.5 Stories
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="best-choice-questionnaire-tab" data-toggle="tab" href="#best-choice-questionnaire"
+            role="tab" aria-controls="best-choice-questionnaire" aria-selected="false">
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
+            Questionnaire
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="summary-tab" data-toggle="tab" href="#summary" role="tab" aria-controls="summary"
+            aria-selected="false">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+            Summary
+          </a>
+        </li>
+        <li class="nav-item waves-effect waves-light">
+          <a class="nav-link" id="credits-tab" data-toggle="tab" href="#credits" role="tab" aria-controls="credits"
+            aria-selected="false">
+            <i class="fa fa-handshake-o" aria-hidden="true"></i>
+            Credits
+          </a>
+        </li>
+      </ul>
+
+      <!-- Panels -->
+      <div class="tab-content" id="prostateScreeningContent">
+        <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <prostate-screening-home></prostate-screening-home>
+        </div>
+        <div class="tab-pane fade" id="screening" role="tabpanel" aria-labelledby="screening-tab">
+          <screening></screening>
+        </div>
+        <div class="tab-pane fade" id="studies" role="tabpanel" aria-labelledby="studies-tab">
+          <studies></studies>
+        </div>
+        <div class="tab-pane fade" id="best-choice" role="tabpanel" aria-labelledby="best-choice-tab">
+          <choice></choice>
+        </div>
+        <div class="tab-pane fade" id="steps" role="tabpanel" aria-labelledby="steps-tab">
+          <steps></steps>
+        </div>
+        <div class="tab-pane fade" id="stories" role="tabpanel" aria-labelledby="stories-tab">
+          <stories></stories>
+        </div>
+        <div class="tab-pane fade" id="best-choice-questionnaire" role="tabpanel"
+          aria-labelledby="best-choice-questionnaire-tab">
+          <best-choice-questionnaire></best-choice-questionnaire>
+        </div>
+        <div class="tab-pane fade" id="summary" role="tabpanel" aria-labelledby="summary-tab">
+          <prostate-screening-summary></prostate-screening-summary>
+        </div>
+        <div class="tab-pane fade" id="credits" role="tabpanel" aria-labelledby="credits-tab">
+          <prostate-screening-credits></prostate-screening-credits>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer bg-primary text-white"></div>
+  </div>
+</div>

@@ -1,0 +1,113 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <div class="title">
+                <h1 class="problem-title">
+                    <i class="fa fa-anchor" aria-hidden="true"></i>
+                    Am I at Risk?
+                </h1>
+            </div>
+
+            <hr />
+
+            <b>
+                What are my chances of getting prostate cancer?
+            </b>
+            <br/>
+
+            <b class="definition-name">
+                Now take a few seconds to think about your OWN medical history.
+            </b>
+
+            <div class="row">
+                <div class="col-md radio-toolbar">
+                    <p>
+                        <b>
+                            Are you a man over the age of 50?
+                        </b>
+                    </p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="overFifty" id="overFiftyYes"
+                            value="Yes">
+                        <label class="form-check-label" for="overFiftyYes">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="overFifty" id="overFiftyNo" value="No">
+                        <label class="form-check-label" for="overFiftyNo">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md radio-toolbar">
+                    <p>
+                        <b>
+                            Do you have a family history of prostate cancer?
+                        </b>
+                    </p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="familyHistory" id="familyHistoryYes"
+                            value="Yes">
+                        <label class="form-check-label" for="familyHistoryYes">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="familyHistory" id="familyHistoryNo" value="No">
+                        <label class="form-check-label" for="familyHistoryNo">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md radio-toolbar">
+                    <p>
+                        <b>
+                            Are you a man of African American descent?
+                        </b>
+                    </p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="africanAmericanDescent" id="africanAmericanDescentYes"
+                            value="Yes">
+                        <label class="form-check-label" for="africanAmericanDescentYes">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="africanAmericanDescent" id="africanAmericanDescentNo" value="No">
+                        <label class="form-check-label" for="africanAmericanDescentNo">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image -->
+        <div class="col-md text-center margin-top-seventy">
+            <img src="/assets/img/risks-symptoms/am-i-at-risk/am-i-at-risk.png" width="305" height="305">
+           
+
+            <div class="row margin-top-twenty">
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="amIAtRiskPlay()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play Audio
+                    </button>
+                </div>
+                <div class="col-md">
+                    <button type="button" class="btn btn-outline-secondary btn-block" (click)="amIAtRiskStop()">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                        Stop Audio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
