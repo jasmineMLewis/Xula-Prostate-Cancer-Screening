@@ -1,8 +1,9 @@
+import { SharedModule } from './../../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ProstateImportanceRoutingModule } from './prostate-importance-routing.module';
-import { ProstateImportanceHomeComponent } from './components/prostate-importance-home/prostate-importance-home.component';
+import { ProstateImportanceTitleComponent } from './components/prostate-importance-title/prostate-importance-title.component';
 import { ProstateImportanceComponent } from './views/prostate-importance/prostate-importance.component';
 import { WhatIsProstateComponent } from './components/what-is-prostate/what-is-prostate.component';
 import { ProstateImportanceSummaryComponent } from './components/prostate-importance-summary/prostate-importance-summary.component';
@@ -25,7 +26,7 @@ import { UrineRelatedComponent } from './components/symptoms/urine-related/urine
 
 @NgModule({
   declarations: [
-    ProstateImportanceHomeComponent,
+    ProstateImportanceTitleComponent,
     ProstateImportanceComponent,
     WhatIsProstateComponent,
     ProstateImportanceSummaryComponent,
@@ -47,6 +48,7 @@ import { UrineRelatedComponent } from './components/symptoms/urine-related/urine
   ],
   imports: [
     CommonModule,
+    SharedModule,
     ProstateImportanceRoutingModule
   ],
   exports: [
