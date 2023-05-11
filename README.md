@@ -13,7 +13,7 @@ Pharmacy and Medical
 Educational Training
 
 ## Project Description
-Prostate Cancer Screening: Making the Best Choice is an informational training to teach visitors about the prostate’s relevance, cancer risks and prostate screening. The site provides a pre-training demographic questionnaire, prostate cancer training information, a Decision Aid summary based on the user’s new knowledge and a post-training questionnaire.
+Prostate Cancer Screening: Making the Best Choice is an informational training to teach visitors about the prostate’s relevance, cancer risks and prostate screening. The site provides a pre-training demographic questionnaire, prostate cancer training information, and a post-training questionnaire.
 
 # Introduction
 ----
