@@ -1,11 +1,9 @@
-import { PROSTATE_SCREENING_MODULE_NAV_TAB } from './../../../core/data/prostate-screening-data';
-import { ProstateScreeningModule } from '@features/prostate-screening/prostate-screening.module';
-import { ProstateScreeningComponent } from './../../../features/prostate-screening/views/prostate-screening/prostate-screening.component';
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModuleNavTabs } from '@core/models/module-nav-tabs';
 import { PROSTATE_IMPORTANCE_MODULE_NAV_TAB } from '@core/data/prostate-importance-data';
 import { RISKS_SYMPTOMS_MODULE_NAV_TAB } from '@core/data/risks-symptoms-data';
+import { PROSTATE_SCREENING_MODULE_NAV_TAB } from '@core/data/prostate-screening-data';
 
 @Component({
   selector: 'previous-next-buttons',
@@ -54,7 +52,9 @@ export class PreviousNextButtonsComponent {
       }
     }
 
+    console.log("naviagteToModule/outside if | currentHref -> " + this.currentHref);
     if (this.currentHref === 'credits') {
+      console.log("naviagteToModule/in if | currentHref -> " + this.currentHref);
       if (module === this.PROSTATE_IMPORTANCE) {
         routeTo = this.RISK_SYMPTOMS;
       } else if (module === this.RISK_SYMPTOMS) {
@@ -78,6 +78,7 @@ export class PreviousNextButtonsComponent {
   public nextButton(module: string = ''): void {
     switch (module) {
       case this.PROSTATE_IMPORTANCE:
+        console.log("nextButton | this.PROSTATE_IMPORTANCE " + module);
         this.nextModuleTab(module);
         break;
       case this.RISK_SYMPTOMS:
@@ -90,8 +91,23 @@ export class PreviousNextButtonsComponent {
   }
 
   public nextModuleTab(module: string = ''): void {
+
+  
+
+    //if moduleNavTab is prostateImportance, set to this.prostateImportanceModuleNavTab
+    // switch (module) {
+    //   case this.PROSTATE_IMPORTANCE:
+        
+    //   break;
+      
+    // }
+
     switch (module) {
       case this.PROSTATE_IMPORTANCE:
+        console.log("nextModuleTab | this.PROSTATE_IMPORTANCE " + module);
+        console.log("this.currentHref !== this.prostateImportanceModuleNavTab[this.prostateImportanceModuleNavTab.length - 1].href  \n");
+        console.log("\n");
+        console.log(this.currentHref !== this.prostateImportanceModuleNavTab[this.prostateImportanceModuleNavTab.length - 1].href);
         if (this.currentHref !== this.prostateImportanceModuleNavTab[this.prostateImportanceModuleNavTab.length - 1].href) {
           const currHref = this.currentHref;
           const i = this.prostateImportanceModuleNavTab.findIndex((h) => h.href === currHref);
@@ -104,7 +120,14 @@ export class PreviousNextButtonsComponent {
           let element: HTMLElement = document.getElementById(this.currentTab) as HTMLElement;
           element.click();
     
+          console.log("nextModuleTab/outside if | currentHref -> " + this.currentHref);
           if (this.currentHref === 'credits') {
+            console.log("nextModuleTab/in if | currentHref -> " + this.currentHref);
+            this.naviagteToModule(module);
+          }
+        } else {
+          if (this.currentHref === 'credits') {
+            console.log("nextModuleTab/in if | currentHref -> " + this.currentHref);
             this.naviagteToModule(module);
           }
         }
@@ -218,5 +241,8 @@ export class PreviousNextButtonsComponent {
   public setHrefTab(href: string, tab: string): void {
     this.currentHref = href;
     this.currentTab = tab;
+
+    console.log("setHrefTab | currentHref -> " + this.currentHref);
+    console.log("setHrefTab | currentTab -> " + this.currentTab);
   }
 }
