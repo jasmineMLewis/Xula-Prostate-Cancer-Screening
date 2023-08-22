@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { SharedModule } from '@shared/shared.module';
 import { ProstateScreeningRoutingModule } from './prostate-screening-routing.module';
 import { ProstateScreeningComponent } from './views/prostate-screening/prostate-screening.component';
-import { ProstateScreeningHomeComponent } from './components/prostate-screening-home/prostate-screening-home.component';
+import { ProstateScreeningTitleComponent } from './components/prostate-screening-title/prostate-screening-title.component';
 import { ScreeningComponent } from './components/screening/screening.component';
 import { CancerScreeningComponent } from './components/screening/cancer-screening/cancer-screening.component';
 import { ScreeningForCancerComponent } from './components/screening/screening-for-cancer/screening-for-cancer.component';
@@ -29,7 +30,7 @@ import { ProstateScreeningCreditsComponent } from './components/prostate-screeni
 @NgModule({
   declarations: [
     ProstateScreeningComponent,
-    ProstateScreeningHomeComponent,
+    ProstateScreeningTitleComponent,
     ScreeningComponent,
     CancerScreeningComponent,
     ScreeningForCancerComponent,
@@ -54,6 +55,7 @@ import { ProstateScreeningCreditsComponent } from './components/prostate-screeni
   ],
   imports: [
     CommonModule,
+    SharedModule,
     ProstateScreeningRoutingModule
   ],
  exports: [

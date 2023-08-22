@@ -1,51 +1,42 @@
 import { Component, OnInit } from '@angular/core';
-import { FeatureMenuService } from '@core/services/feature-menu.service';
 
 @Component({
   selector: 'prostate-importance',
   templateUrl: './prostate-importance.component.html',
-  styleUrls: ['./prostate-importance.component.css'],
- providers: [FeatureMenuService]
+  styleUrls: ['./prostate-importance.component.css']
 })
 export class ProstateImportanceComponent implements OnInit {
 
-  constructor(public featuresMenuService: FeatureMenuService) {  }
-
-  ngOnInit(): void {
-  
-  }
-
+  ngOnInit(): void {  }
 
   // public hrefs = [
-  //   'home',
+  //   'title',
   //   'prostate',
-  //   'commonproblem',
+  //   'commonProblem',
   //   'symptoms',
   //   'visit',
-  //   'prostateexam',
-  //   'bestchoicequestionnaire',
+  //   'prostateExam',
+  //   'bestChoiceQuestionnaire',
   //   'summary',
   //   'credits',
   // ];
   // public tabs = [
-  //   'hometab',
-  //   'prostatetab',
-  //   'commonproblemtab',
-  //   'symptomstab',
-  //   'visittab',
-  //   'prostateexamtab',
-  //   'bestchoicequestionnairetab',
-  //   'summarytab',
-  //   'creditstab',
+  //   'titleTab',
+  //   'prostateTab',
+  //   'commonProblemTab',
+  //   'symptomsTab',
+  //   'visitTab',
+  //   'prostateExamTab',
+  //   'bestChoiceQuestionnaireTab',
+  //   'summaryTab',
+  //   'creditsTab',
   // ];
 
-  // public currentHref: string = 'home';
-  // public currentTab: string = 'hometab';
+  // public currentHref: string = 'title';
+  // public currentTab: string = 'titleTab';
   // public isActive = false;
   // public isNextButtonVisible = false;
   // public isPreviousButtonVisible = false;
-
-  // constructor() {  }
 
   // ngOnInit(): void {
   //    // this.displayNextButton();
@@ -66,6 +57,8 @@ export class ProstateImportanceComponent implements OnInit {
   //     const i = this.hrefs.findIndex(function (el) {
   //       return el === currHref;
   //     });
+
+  //     console.log("i " + i);
   //     this.currentHref = this.hrefs[i + 1];
   //     this.currentTab = this.tabs[i + 1];
   //     this.isActive = true;
@@ -74,8 +67,8 @@ export class ProstateImportanceComponent implements OnInit {
   //     this.displayNextButton(); 
   //     this.displayPreviousButton();
 
-  //     let element: HTMLElement = document.getElementById(this.currentTab) as HTMLElement;
-  //     element.click();
+  //      let element: HTMLElement = document.getElementById(this.currentTab) as HTMLElement;
+  //      element.click();
   //   }
   // }
 
@@ -103,7 +96,7 @@ export class ProstateImportanceComponent implements OnInit {
   //   this.currentHref = href;
   //   this.currentTab = tab;
 
-  //   this.displayPreviousButton();
-  //   this.displayNextButton();
+  //  this.displayPreviousButton();
+  //  this.displayNextButton();
   // }
 }

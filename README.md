@@ -1,7 +1,7 @@
 # Prostate Cancer Screening
 ----
 
-## Client
+## Igloonarian | Client
 <p>Xavier University of Louisiana, College of Pharamcy</p>
 <p>Margarita Echeverri, MSc, PhD, Principal Investigator</p>
 <p>Kyazia Felder, MPH, Research Assistant</p>
@@ -13,7 +13,7 @@ Pharmacy and Medical
 Educational Training
 
 ## Project Description
-Prostate Cancer Screening: Making the Best Choice is an informational training to teach visitors about the prostate’s relevance, cancer risks and prostate screening. The site provides a pre-training demographic questionnaire, prostate cancer training information, and a post-training questionnaire.
+Prostate Cancer Screening: Making the Best Choice is an informational training to teach visitors about the prostate’s relevance, cancer risks and prostate screening. The site provides a pre-training demographic questionnaire, prostate cancer training information, a Decision Aid summary based on the user’s new knowledge and a post-training questionnaire.
 
 # Introduction
 ----
@@ -21,7 +21,7 @@ Prostate Cancer Screening: Making the Best Choice is an informational training t
 This is the Angular project for Xavier University of Louisiana's Prostate Screening: Making the Best Choice.
 
 ## Version
-1.1.0
+1.1.3
 [Recreated entire project]
 
 ## Technologies

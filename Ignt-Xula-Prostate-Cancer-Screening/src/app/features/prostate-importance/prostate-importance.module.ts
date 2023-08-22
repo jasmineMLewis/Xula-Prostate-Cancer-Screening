@@ -1,7 +1,7 @@
-import { SharedModule } from './../../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { SharedModule } from './../../shared/shared.module';
 import { ProstateImportanceRoutingModule } from './prostate-importance-routing.module';
 import { ProstateImportanceTitleComponent } from './components/prostate-importance-title/prostate-importance-title.component';
 import { ProstateImportanceComponent } from './views/prostate-importance/prostate-importance.component';
@@ -22,7 +22,6 @@ import { ProstateSpecificAntigenComponent } from './components/prostate-exams/pr
 import { SymptomsComponent } from './components/symptoms/symptoms.component';
 import { CommonSymptomsComponent } from './components/symptoms/common-symptoms/common-symptoms.component';
 import { UrineRelatedComponent } from './components/symptoms/urine-related/urine-related.component';
-
 
 @NgModule({
   declarations: [

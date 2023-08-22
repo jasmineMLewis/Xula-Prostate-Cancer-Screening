@@ -1,7 +1,7 @@
-# Prostate Cancer Training User Interface
+# Prostate Cancer Screening
 ----
 
-## Client
+## Igloonarian | Client
 <p>Xavier University of Louisiana, College of Pharamcy</p>
 <p>Margarita Echeverri, MSc, PhD, Principal Investigator</p>
 <p>Kyazia Felder, MPH, Research Assistant</p>
@@ -21,7 +21,7 @@ Prostate Cancer Screening: Making the Best Choice is an informational training t
 This is the Angular project for Xavier University of Louisiana's Prostate Screening: Making the Best Choice.
 
 ## Version
-1.1.0
+1.1.3
 [Recreated entire project]
 
 ## Technologies

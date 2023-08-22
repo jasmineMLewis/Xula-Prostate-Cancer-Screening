@@ -6,9 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./risks-symptoms.component.css']
 })
 export class RisksSymptomsComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  
+  ngOnInit(): void { }
 }

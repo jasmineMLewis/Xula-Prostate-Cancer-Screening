@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { SharedModule } from '@shared/shared.module';
 import { RisksSymptomsRoutingModule } from './risks-symptoms-routing.module';
 import { RisksSymptomsComponent } from './views/risks-symptoms/risks-symptoms.component';
-import { RisksSymptomsHomeComponent } from './components/risks-symptoms-home/risks-symptoms-home.component';
+import { RisksSymptomsTitleComponent } from './components/risks-symptoms-title/risks-symptoms-title.component';
 import { ProstateCancerKnowledgeComponent } from './components/prostate-cancer-knowledge/prostate-cancer-knowledge.component';
 import { RiskFactorsComponent } from './components/risk-factors/risk-factors.component';
 import { RiskFactorsHomeComponent } from './components/risk-factors/risk-factors-home/risk-factors-home.component';
@@ -22,8 +23,8 @@ import { RisksSymptomsCreditsComponent } from './components/risks-symptoms-credi
 
 @NgModule({
   declarations: [
+    RisksSymptomsTitleComponent,
     RisksSymptomsComponent,
-    RisksSymptomsHomeComponent,
     ProstateCancerKnowledgeComponent,
     RiskFactorsComponent,
     RiskFactorsHomeComponent,
@@ -42,6 +43,7 @@ import { RisksSymptomsCreditsComponent } from './components/risks-symptoms-credi
   ],
   imports: [
     CommonModule,
+    SharedModule,
     RisksSymptomsRoutingModule
   ],
   exports: [
