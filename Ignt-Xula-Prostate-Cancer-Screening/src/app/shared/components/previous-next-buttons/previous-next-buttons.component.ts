@@ -1,3 +1,6 @@
+import { PROSTATE_SCREENING_MODULE_NAV_TAB } from './../../../core/data/prostate-screening-data';
+import { ProstateScreeningModule } from '@features/prostate-screening/prostate-screening.module';
+import { ProstateScreeningComponent } from './../../../features/prostate-screening/views/prostate-screening/prostate-screening.component';
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModuleNavTabs } from '@core/models/module-nav-tabs';
@@ -18,6 +21,7 @@ export class PreviousNextButtonsComponent {
 
   public prostateImportanceModuleNavTab: ModuleNavTabs[] = PROSTATE_IMPORTANCE_MODULE_NAV_TAB;
   public risksSymptomsModuleNaveTab: ModuleNavTabs[] = RISKS_SYMPTOMS_MODULE_NAV_TAB;
+  public prostateScreeningModuleNavTab: ModuleNavTabs[] = PROSTATE_SCREENING_MODULE_NAV_TAB;
 
   public readonly HOME = 'home';
   public readonly PROSTATE_IMPORTANCE = 'prostate-importance';
@@ -79,6 +83,9 @@ export class PreviousNextButtonsComponent {
       case this.RISK_SYMPTOMS:
         this.nextModuleTab(module);
         break;
+      case this.PROSTATE_SCREENING:
+      this.nextModuleTab(module); 
+      break;
     }
   }
 
@@ -120,15 +127,36 @@ export class PreviousNextButtonsComponent {
           }
         }
         break;
+        case this.PROSTATE_SCREENING:
+          if (this.currentHref !== this.prostateScreeningModuleNavTab[this.prostateScreeningModuleNavTab.length - 1].href) {
+            const currHref = this.currentHref;
+            const i = this.prostateScreeningModuleNavTab.findIndex((h) => h.href === currHref);
+  
+            this.currentHref = this.prostateScreeningModuleNavTab[i + 1].href!;
+            this.currentTab = this.prostateScreeningModuleNavTab[i + 1].tab!;
+            this.isActive = true;
+            this.setHrefTab(this.currentHref, this.currentTab);
+      
+            let element: HTMLElement = document.getElementById(this.currentTab) as HTMLElement;
+            element.click();
+      
+            if (this.currentHref === 'credits') {
+              this.naviagteToModule(module);
+            }
+          }
+          break;
     }
   }
 
   public previousButton(module: string = ''): void {
     switch (module) {
-      case 'prostate-importance':
+      case this.PROSTATE_IMPORTANCE:
         this.previousModuleTab(module);
         break;
-      case 'risks-symptoms':
+      case this.RISK_SYMPTOMS:
+        this.previousModuleTab(module);
+        break;
+      case this.PROSTATE_SCREENING:
         this.previousModuleTab(module);
         break;
     }
@@ -168,6 +196,22 @@ export class PreviousNextButtonsComponent {
           this.naviagteToModule(module);
         }
         break;
+        case this.PROSTATE_SCREENING:
+          if (this.currentHref !== this.prostateScreeningModuleNavTab[0].href) {
+            const currHref = this.currentHref;
+            const i = this.prostateScreeningModuleNavTab.findIndex((h) => h.href === currHref);
+      
+            this.currentHref = this.prostateScreeningModuleNavTab[i - 1].href!;
+            this.currentTab = this.prostateScreeningModuleNavTab[i - 1].tab!;
+            this.isActive = true;
+            this.setHrefTab(this.currentHref, this.currentTab);
+      
+            let element: HTMLElement = document.getElementById(this.currentTab) as HTMLElement;
+            element.click();
+          } else if(this.currentHref == this.prostateScreeningModuleNavTab[0].href) {
+            this.naviagteToModule(module);
+          }
+          break;
     }
   }
 

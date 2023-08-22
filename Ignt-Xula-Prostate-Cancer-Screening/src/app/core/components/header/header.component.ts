@@ -14,8 +14,6 @@ export class HeaderComponent implements OnInit  {
   public diagnosisTreatment: string = "Diagnosis & Treatment";
   public bestChoice: string = "Best Choice";
 
-  constructor() { }
-
   ngOnInit(): void {
   }
 

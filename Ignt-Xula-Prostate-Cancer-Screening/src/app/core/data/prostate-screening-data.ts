@@ -11,11 +11,11 @@ export var PROSTATE_SCREENING_MODULE_NAV_TAB: ModuleNavTabs[] = [
     },
     {
       'href': 'studies',
-      'tab': 'screeningTab',
+      'tab': 'studiesTab',
     },
     {
-      'href': 'studies',
-      'tab': 'studiesTab',
+      'href': 'bestChoice',
+      'tab': 'bestChoiceTab',
     },
     {
       'href': 'steps',

@@ -25,15 +25,13 @@
         </li>
         <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtonsProstateScreening.currentHref === 'screening'}" 
           (click)="previousNextButtonsProstateScreening.setHrefTab('screening', 'screeningTab')">
-          <a class="nav-link" id="screeningTab" data-toggle="tab" href="#screening" role="tab"
-            aria-controls="screening" aria-selected="false">
+          <a class="nav-link" id="screeningTab" data-toggle="tab" href="#screening" role="tab" aria-controls="screening" aria-selected="false">
             3.1 Screening
           </a>
         </li>
         <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtonsProstateScreening.currentHref === 'studies'}"
           (click)="previousNextButtonsProstateScreening.setHrefTab('studies', 'studiesTab')">
-          <a class="nav-link" id="studies-tab" data-toggle="tab" href="#studies" role="tab" aria-controls="studies"
-            aria-selected="false">
+          <a class="nav-link" id="studiesTab" data-toggle="tab" href="#studies" role="tab" aria-controls="studies" aria-selected="false">
             3.2 Studies
           </a>
         </li>
