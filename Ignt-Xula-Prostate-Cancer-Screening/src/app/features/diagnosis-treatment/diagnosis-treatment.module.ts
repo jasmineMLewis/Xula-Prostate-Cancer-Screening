@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { SharedModule } from '@shared/shared.module';
 import { DiagnosisTreatmentRoutingModule } from './diagnosis-treatment-routing.module';
 import { DiagnosisTreatmentComponent } from './views/diagnosis-treatment/diagnosis-treatment.component';
-import { DiagnosisTreatmentHomeComponent } from './components/diagnosis-treatment-home/diagnosis-treatment-home.component';
+import { DiagnosisTreatmentTitleComponent } from './components/diagnosis-treatment-title/diagnosis-treatment-title.component';
 import { DiagnosisComponent } from './components/diagnosis/diagnosis.component';
 import { AdditionalTestsComponent } from './components/additional-tests/additional-tests.component';
 import { AdditionalTestsHomeComponent } from './components/additional-tests/additional-tests-home/additional-tests-home.component';
@@ -25,11 +26,10 @@ import { BestChoiceQuestionnaireComponent } from './components/best-choice-quest
 import { DiagnosisTreatmentSummaryComponent } from './components/diagnosis-treatment-summary/diagnosis-treatment-summary.component';
 import { DiagnosisTreatmentCreditsComponent } from './components/diagnosis-treatment-credits/diagnosis-treatment-credits.component';
 
-
 @NgModule({
   declarations: [
     DiagnosisTreatmentComponent,
-    DiagnosisTreatmentHomeComponent,
+    DiagnosisTreatmentTitleComponent,
     DiagnosisComponent,
     AdditionalTestsComponent,
     AdditionalTestsHomeComponent,
@@ -53,6 +53,7 @@ import { DiagnosisTreatmentCreditsComponent } from './components/diagnosis-treat
   ],
   imports: [
     CommonModule,
+    SharedModule,
     DiagnosisTreatmentRoutingModule
   ],
   exports: [

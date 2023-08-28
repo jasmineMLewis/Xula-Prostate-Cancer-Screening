@@ -21,7 +21,7 @@ Prostate Cancer Screening: Making the Best Choice is an informational training t
 This is the Angular project for Xavier University of Louisiana's Prostate Screening: Making the Best Choice.
 
 ## Version
-1.1.3
+1.1.4
 [Recreated entire project]
 
 ## Technologies

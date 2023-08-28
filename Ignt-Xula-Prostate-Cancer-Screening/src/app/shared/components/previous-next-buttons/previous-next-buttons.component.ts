@@ -4,6 +4,7 @@ import { ModuleNavTabs } from '@core/models/module-nav-tabs';
 import { PROSTATE_IMPORTANCE_MODULE_NAV_TAB } from '@core/data/prostate-importance-data';
 import { RISKS_SYMPTOMS_MODULE_NAV_TAB } from '@core/data/risks-symptoms-data';
 import { PROSTATE_SCREENING_MODULE_NAV_TAB } from '@core/data/prostate-screening-data';
+import { DIAGNOSIS_TREATMENT_MODULE_NAV_TAB } from '@core/data/diagnosis-treatment-data';
 
 @Component({
   selector: 'previous-next-buttons',
@@ -13,20 +14,28 @@ import { PROSTATE_SCREENING_MODULE_NAV_TAB } from '@core/data/prostate-screening
 export class PreviousNextButtonsComponent {
   @Input() module: string = '';
 
+  //Navigation Tabs' Current State
   public currentHref: string = 'title';
   public currentTab: string = 'titleTab';
   public isActive: boolean = false;
 
-  public prostateImportanceModuleNavTab: ModuleNavTabs[] = PROSTATE_IMPORTANCE_MODULE_NAV_TAB;
-  public risksSymptomsModuleNaveTab: ModuleNavTabs[] = RISKS_SYMPTOMS_MODULE_NAV_TAB;
-  public prostateScreeningModuleNavTab: ModuleNavTabs[] = PROSTATE_SCREENING_MODULE_NAV_TAB;
+  //Navigation Tabs' Data
+  public prostateImportanceModuleNavTabData: ModuleNavTabs[] = PROSTATE_IMPORTANCE_MODULE_NAV_TAB;
+  public risksSymptomsModuleNavTabData: ModuleNavTabs[] = RISKS_SYMPTOMS_MODULE_NAV_TAB;
+  public prostateScreeningModuleNavTabData: ModuleNavTabs[] = PROSTATE_SCREENING_MODULE_NAV_TAB;
+  public diagnosisTreatmentModuleNavTabData: ModuleNavTabs[] = DIAGNOSIS_TREATMENT_MODULE_NAV_TAB;
 
+  //Modules
   public readonly HOME = 'home';
   public readonly PROSTATE_IMPORTANCE = 'prostate-importance';
   public readonly RISK_SYMPTOMS = 'risks-symptoms';
   public readonly PROSTATE_SCREENING = 'prostate-screening';
   public readonly DIAGNOSIS_TREATMENT = 'diagnosis-treatment';
   public readonly BEST_CHOICE = 'best-choice';
+
+  //Navigation Tabs' Name
+  public readonly TITLE = "title";
+  public readonly CREDITS = "credits";
 
   constructor(public router: Router) {}
 
@@ -36,7 +45,7 @@ export class PreviousNextButtonsComponent {
     const navigationDetails: string[] = [];
     var routeTo = '';
 
-    if(this.currentHref === 'title'){
+    if(this.currentHref === this.TITLE){
       if(module === this.PROSTATE_IMPORTANCE){
         routeTo = this.HOME;
       } else if(module === this.RISK_SYMPTOMS) {
@@ -47,14 +56,10 @@ export class PreviousNextButtonsComponent {
         routeTo = this.PROSTATE_SCREENING;
       } else if (module === this.BEST_CHOICE) {
         routeTo = this.DIAGNOSIS_TREATMENT;
-      } else {
-        //console.log('Backward Module: in Title');
       }
     }
 
-    console.log("naviagteToModule/outside if | currentHref -> " + this.currentHref);
-    if (this.currentHref === 'credits') {
-      console.log("naviagteToModule/in if | currentHref -> " + this.currentHref);
+    if (this.currentHref === this.CREDITS) {
       if (module === this.PROSTATE_IMPORTANCE) {
         routeTo = this.RISK_SYMPTOMS;
       } else if (module === this.RISK_SYMPTOMS) {
@@ -66,8 +71,6 @@ export class PreviousNextButtonsComponent {
       } else if (module === this.BEST_CHOICE) {
         //console.log('BEST_CHOICE: In Else for Credits');
         //hide next button
-      } else {
-        //console.log('Forward Module: in Credits');
       }
     }
 
@@ -78,96 +81,116 @@ export class PreviousNextButtonsComponent {
   public nextButton(module: string = ''): void {
     switch (module) {
       case this.PROSTATE_IMPORTANCE:
-        console.log("nextButton | this.PROSTATE_IMPORTANCE " + module);
         this.nextModuleTab(module);
         break;
       case this.RISK_SYMPTOMS:
         this.nextModuleTab(module);
         break;
       case this.PROSTATE_SCREENING:
-      this.nextModuleTab(module); 
+        this.nextModuleTab(module); 
+      break;
+      case this.DIAGNOSIS_TREATMENT:
+        this.nextModuleTab(module);
       break;
     }
   }
 
   public nextModuleTab(module: string = ''): void {
-
-  
-
-    //if moduleNavTab is prostateImportance, set to this.prostateImportanceModuleNavTab
+    //if moduleNavTab is prostateImportance, set to this.prostateImportanceModuleNavTabData
     // switch (module) {
     //   case this.PROSTATE_IMPORTANCE:
-        
-    //   break;
-      
+    //   break;      
     // }
 
     switch (module) {
       case this.PROSTATE_IMPORTANCE:
-        console.log("nextModuleTab | this.PROSTATE_IMPORTANCE " + module);
-        console.log("this.currentHref !== this.prostateImportanceModuleNavTab[this.prostateImportanceModuleNavTab.length - 1].href  \n");
-        console.log("\n");
-        console.log(this.currentHref !== this.prostateImportanceModuleNavTab[this.prostateImportanceModuleNavTab.length - 1].href);
-        if (this.currentHref !== this.prostateImportanceModuleNavTab[this.prostateImportanceModuleNavTab.length - 1].href) {
+        if (this.currentHref !== this.prostateImportanceModuleNavTabData[this.prostateImportanceModuleNavTabData.length - 1].href) {
           const currHref = this.currentHref;
-          const i = this.prostateImportanceModuleNavTab.findIndex((h) => h.href === currHref);
+          const i = this.prostateImportanceModuleNavTabData.findIndex((h) => h.href === currHref);
 
-          this.currentHref = this.prostateImportanceModuleNavTab[i + 1].href!;
-          this.currentTab = this.prostateImportanceModuleNavTab[i + 1].tab!;
+          this.currentHref = this.prostateImportanceModuleNavTabData[i + 1].href!;
+          this.currentTab = this.prostateImportanceModuleNavTabData[i + 1].tab!;
           this.isActive = true;
           this.setHrefTab(this.currentHref, this.currentTab);
     
           let element: HTMLElement = document.getElementById(this.currentTab) as HTMLElement;
           element.click();
     
-          console.log("nextModuleTab/outside if | currentHref -> " + this.currentHref);
-          if (this.currentHref === 'credits') {
-            console.log("nextModuleTab/in if | currentHref -> " + this.currentHref);
+          if (this.currentHref === this.CREDITS) {
             this.naviagteToModule(module);
           }
         } else {
-          if (this.currentHref === 'credits') {
-            console.log("nextModuleTab/in if | currentHref -> " + this.currentHref);
+          if (this.currentHref === this.CREDITS) {
             this.naviagteToModule(module);
           }
         }
         break;
       case this.RISK_SYMPTOMS:
-        if (this.currentHref !== this.risksSymptomsModuleNaveTab[this.risksSymptomsModuleNaveTab.length - 1].href) {
+        if (this.currentHref !== this.risksSymptomsModuleNavTabData[this.risksSymptomsModuleNavTabData.length - 1].href) {
           const currHref = this.currentHref;
-          const i = this.risksSymptomsModuleNaveTab.findIndex((h) => h.href === currHref);
+          const i = this.risksSymptomsModuleNavTabData.findIndex((h) => h.href === currHref);
 
-          this.currentHref = this.risksSymptomsModuleNaveTab[i + 1].href!;
-          this.currentTab = this.risksSymptomsModuleNaveTab[i + 1].tab!;
+          this.currentHref = this.risksSymptomsModuleNavTabData[i + 1].href!;
+          this.currentTab = this.risksSymptomsModuleNavTabData[i + 1].tab!;
           this.isActive = true;
           this.setHrefTab(this.currentHref, this.currentTab);
     
           let element: HTMLElement = document.getElementById(this.currentTab) as HTMLElement;
           element.click();
     
-          if (this.currentHref === 'credits') {
+          if (this.currentHref === this.CREDITS) {
+            this.naviagteToModule(module);
+          }
+        } else {
+          if (this.currentHref === this.CREDITS) {
             this.naviagteToModule(module);
           }
         }
         break;
-        case this.PROSTATE_SCREENING:
-          if (this.currentHref !== this.prostateScreeningModuleNavTab[this.prostateScreeningModuleNavTab.length - 1].href) {
-            const currHref = this.currentHref;
-            const i = this.prostateScreeningModuleNavTab.findIndex((h) => h.href === currHref);
-  
-            this.currentHref = this.prostateScreeningModuleNavTab[i + 1].href!;
-            this.currentTab = this.prostateScreeningModuleNavTab[i + 1].tab!;
-            this.isActive = true;
-            this.setHrefTab(this.currentHref, this.currentTab);
-      
-            let element: HTMLElement = document.getElementById(this.currentTab) as HTMLElement;
-            element.click();
-      
-            if (this.currentHref === 'credits') {
-              this.naviagteToModule(module);
-            }
+      case this.PROSTATE_SCREENING:
+        if (this.currentHref !== this.prostateScreeningModuleNavTabData[this.prostateScreeningModuleNavTabData.length - 1].href) {
+          const currHref = this.currentHref;
+          const i = this.prostateScreeningModuleNavTabData.findIndex((h) => h.href === currHref);
+
+          this.currentHref = this.prostateScreeningModuleNavTabData[i + 1].href!;
+          this.currentTab = this.prostateScreeningModuleNavTabData[i + 1].tab!;
+          this.isActive = true;
+          this.setHrefTab(this.currentHref, this.currentTab);
+    
+          let element: HTMLElement = document.getElementById(this.currentTab) as HTMLElement;
+          element.click();
+    
+          if (this.currentHref === this.CREDITS) {
+            this.naviagteToModule(module);
           }
-          break;
+        } else {
+          if (this.currentHref === this.CREDITS) {
+            this.naviagteToModule(module);
+          }
+        }
+        break;
+      case this.DIAGNOSIS_TREATMENT:
+        if (this.currentHref !== this.diagnosisTreatmentModuleNavTabData[this.diagnosisTreatmentModuleNavTabData.length - 1].href) {
+          const currHref = this.currentHref;
+          const i = this.diagnosisTreatmentModuleNavTabData.findIndex((h) => h.href === currHref);
+
+          this.currentHref = this.diagnosisTreatmentModuleNavTabData[i + 1].href!;
+          this.currentTab = this.diagnosisTreatmentModuleNavTabData[i + 1].tab!;
+          this.isActive = true;
+          this.setHrefTab(this.currentHref, this.currentTab);
+    
+          let element: HTMLElement = document.getElementById(this.currentTab) as HTMLElement;
+          element.click();
+    
+          if (this.currentHref === this.CREDITS) {
+            this.naviagteToModule(module);
+          }
+        } else {
+          if (this.currentHref === this.CREDITS) {
+            this.naviagteToModule(module);
+          }
+        }
+        break;
     }
   }
 
@@ -182,67 +205,83 @@ export class PreviousNextButtonsComponent {
       case this.PROSTATE_SCREENING:
         this.previousModuleTab(module);
         break;
+      case this.DIAGNOSIS_TREATMENT:
+        this.previousModuleTab(module);
+        break;
     }
   }
 
   public previousModuleTab(module: string = ''): void {
     switch (module) {
       case this.PROSTATE_IMPORTANCE:
-        if (this.currentHref !== this.prostateImportanceModuleNavTab[0].href) {
+        if (this.currentHref !== this.prostateImportanceModuleNavTabData[0].href) {
           const currHref = this.currentHref;
-          const i = this.prostateImportanceModuleNavTab.findIndex((h) => h.href === currHref);
+          const i = this.prostateImportanceModuleNavTabData.findIndex((h) => h.href === currHref);
     
-          this.currentHref = this.prostateImportanceModuleNavTab[i - 1].href!;
-          this.currentTab = this.prostateImportanceModuleNavTab[i - 1].tab!;
+          this.currentHref = this.prostateImportanceModuleNavTabData[i - 1].href!;
+          this.currentTab = this.prostateImportanceModuleNavTabData[i - 1].tab!;
           this.isActive = true;
           this.setHrefTab(this.currentHref, this.currentTab);
     
           let element: HTMLElement = document.getElementById(this.currentTab) as HTMLElement;
           element.click();
-        } else if(this.currentHref == this.prostateImportanceModuleNavTab[0].href){
+        } else if(this.currentHref == this.prostateImportanceModuleNavTabData[0].href){
           this.naviagteToModule(module);
         }
         break;
       case this.RISK_SYMPTOMS:
-        if (this.currentHref !== this.risksSymptomsModuleNaveTab[0].href) {
+        if (this.currentHref !== this.risksSymptomsModuleNavTabData[0].href) {
           const currHref = this.currentHref;
-          const i = this.risksSymptomsModuleNaveTab.findIndex((h) => h.href === currHref);
+          const i = this.risksSymptomsModuleNavTabData.findIndex((h) => h.href === currHref);
     
-          this.currentHref = this.risksSymptomsModuleNaveTab[i - 1].href!;
-          this.currentTab = this.risksSymptomsModuleNaveTab[i - 1].tab!;
+          this.currentHref = this.risksSymptomsModuleNavTabData[i - 1].href!;
+          this.currentTab = this.risksSymptomsModuleNavTabData[i - 1].tab!;
           this.isActive = true;
           this.setHrefTab(this.currentHref, this.currentTab);
     
           let element: HTMLElement = document.getElementById(this.currentTab) as HTMLElement;
           element.click();
-        } else if(this.currentHref == this.risksSymptomsModuleNaveTab[0].href) {
+        } else if(this.currentHref == this.risksSymptomsModuleNavTabData[0].href) {
           this.naviagteToModule(module);
         }
         break;
-        case this.PROSTATE_SCREENING:
-          if (this.currentHref !== this.prostateScreeningModuleNavTab[0].href) {
-            const currHref = this.currentHref;
-            const i = this.prostateScreeningModuleNavTab.findIndex((h) => h.href === currHref);
-      
-            this.currentHref = this.prostateScreeningModuleNavTab[i - 1].href!;
-            this.currentTab = this.prostateScreeningModuleNavTab[i - 1].tab!;
-            this.isActive = true;
-            this.setHrefTab(this.currentHref, this.currentTab);
-      
-            let element: HTMLElement = document.getElementById(this.currentTab) as HTMLElement;
-            element.click();
-          } else if(this.currentHref == this.prostateScreeningModuleNavTab[0].href) {
-            this.naviagteToModule(module);
-          }
-          break;
+      case this.PROSTATE_SCREENING:
+        if (this.currentHref !== this.prostateScreeningModuleNavTabData[0].href) {
+          const currHref = this.currentHref;
+          const i = this.prostateScreeningModuleNavTabData.findIndex((h) => h.href === currHref);
+    
+          this.currentHref = this.prostateScreeningModuleNavTabData[i - 1].href!;
+          this.currentTab = this.prostateScreeningModuleNavTabData[i - 1].tab!;
+          this.isActive = true;
+          this.setHrefTab(this.currentHref, this.currentTab);
+    
+          let element: HTMLElement = document.getElementById(this.currentTab) as HTMLElement;
+          element.click();
+        } else if(this.currentHref == this.prostateScreeningModuleNavTabData[0].href) {
+          this.naviagteToModule(module);
+        }
+        break;
+      case this.DIAGNOSIS_TREATMENT:
+        if (this.currentHref !== this.diagnosisTreatmentModuleNavTabData[0].href) {
+          const currHref = this.currentHref;
+          const i = this.diagnosisTreatmentModuleNavTabData.findIndex((h) => h.href === currHref);
+    
+          this.currentHref = this.diagnosisTreatmentModuleNavTabData[i - 1].href!;
+          this.currentTab = this.diagnosisTreatmentModuleNavTabData[i - 1].tab!;
+          this.isActive = true;
+          this.setHrefTab(this.currentHref, this.currentTab);
+    
+          let element: HTMLElement = document.getElementById(this.currentTab) as HTMLElement;
+          element.click();
+        } else if(this.currentHref == this.diagnosisTreatmentModuleNavTabData[0].href) {
+          this.naviagteToModule(module);
+        }
+        break;
     }
   }
 
   public setHrefTab(href: string, tab: string): void {
     this.currentHref = href;
     this.currentTab = tab;
-
-    console.log("setHrefTab | currentHref -> " + this.currentHref);
-    console.log("setHrefTab | currentTab -> " + this.currentTab);
   }
 }
