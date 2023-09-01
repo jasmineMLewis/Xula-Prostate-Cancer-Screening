@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { SharedModule } from '@shared/shared.module';
 import { BestChoiceRoutingModule } from './best-choice-routing.module';
 import { BestChoiceComponent } from './views/best-choice/best-choice.component';
-import { BestChoiceHomeComponent } from './components/best-choice-home/best-choice-home.component';
+import { BestChoiceTitleComponent } from './components/best-choice-title/best-choice-title.component';
 import { ChoiceComponent } from './components/choice/choice.component';
 import { ScreeningForYouComponent } from './components/choice/screening-for-you/screening-for-you.component';
 import { WatchfulWaitingComponent } from './components/choice/watchful-waiting/watchful-waiting.component';
@@ -21,7 +22,7 @@ import { BestChoiceCreditsComponent } from './components/best-choice-credits/bes
 @NgModule({
   declarations: [
     BestChoiceComponent,
-    BestChoiceHomeComponent,
+    BestChoiceTitleComponent,
     ChoiceComponent,
     ScreeningForYouComponent,
     WatchfulWaitingComponent,
@@ -33,11 +34,11 @@ import { BestChoiceCreditsComponent } from './components/best-choice-credits/bes
     GettingScreenedComponent,
     NotGettingScreenedComponent,
     BestChoiceSummaryComponent,
-    BestChoiceCreditsComponent
-    
+    BestChoiceCreditsComponent  
   ],
   imports: [
     CommonModule,
+    SharedModule,
     BestChoiceRoutingModule
   ],
   exports: [
