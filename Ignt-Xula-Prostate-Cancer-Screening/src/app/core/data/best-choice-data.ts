@@ -1,6 +1,6 @@
 import { ModuleNavTabs } from '../models/module-nav-tabs';
 
-export var BEST_CHOICE_MODULE_NAV_TAB: ModuleNavTabs[] = [
+export var BEST_CHOICE_NAV_TAB_DATA: ModuleNavTabs[] = [
     { 
         'href': 'title',   
         'tab': 'titleTab' 

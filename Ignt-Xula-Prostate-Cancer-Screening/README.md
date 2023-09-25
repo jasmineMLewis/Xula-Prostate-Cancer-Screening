@@ -24,14 +24,15 @@ This is the Angular project for Xavier University of Louisiana's Prostate Screen
 1.1.5
 
 ## Date Last Updated
-September 22, 2023
+September 25, 2023
 
 ## Technologies
 | Technology	 | Version  |
 |--|--|
-| Angular | 14 |
-| Bootstrap | 4 |
-| Font Awesome | 4.7 |
+| Angular | 15.0.1 |
+| Bootstrap | 4.5.3 |
+| Font Awesome | 4.7.0 |
+| JQuery | 3.6.3 |
 
 # Application Details
 ----
