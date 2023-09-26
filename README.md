@@ -33,7 +33,7 @@ Major.Minor.Patch
 September 26, 2023
 
 ## Technologies
-| Technology	 | Version  |
+| Technology | Version  |
 |--|--|
 | Angular | 15.0.1 |
 | Bootstrap | 4.5.3 |
