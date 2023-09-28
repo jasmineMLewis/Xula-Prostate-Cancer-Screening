@@ -26,11 +26,11 @@ https://github.com/jasmineMonquieLewis/Xula-Prostate-Cancer-Screening
 This is the Angular project for Xavier University of Louisiana College of Pharmacy's Prostate Screening: Making the Best Choice.
 
 ## Version
-Major.Minor.Patch
-2.1.6
+<p>Major.Minor.Patch</p>
+<p>2.1.7</p>
 
 ## Date Last Updated
-September 26, 2023
+September 27, 2023
 
 ## Technologies
 | Technology | Version  |
