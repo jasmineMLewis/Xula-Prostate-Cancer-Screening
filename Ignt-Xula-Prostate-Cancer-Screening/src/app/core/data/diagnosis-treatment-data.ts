@@ -1,6 +1,6 @@
 import { ModuleNavTabs } from '../models/module-nav-tabs';
 
-export var DIAGNOSIS_TREATMENT_MODULE_NAV_TAB: ModuleNavTabs[] = [
+export var DIAGNOSIS_TREATMENT_TAB_DATA: ModuleNavTabs[] = [
     { 
         'href': 'title',   
         'tab': 'titleTab' 

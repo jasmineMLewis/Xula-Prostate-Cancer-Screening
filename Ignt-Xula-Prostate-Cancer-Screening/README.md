@@ -15,23 +15,30 @@ Educational Training
 ## Project Description
 Prostate Cancer Screening: Making the Best Choice is an informational training to teach visitors about the prostate’s relevance, cancer risks and prostate screening. The site provides a pre-training demographic questionnaire, prostate cancer training information, a Decision Aid summary based on the user’s new knowledge and a post-training questionnaire.
 
+## Project Link
+http://prostatecancertraining.com/home
+
+## Project GitHub
+https://github.com/jasmineMonquieLewis/Xula-Prostate-Cancer-Screening
+
 # Introduction
 ----
-
-This is the Angular project for Xavier University of Louisiana's Prostate Screening: Making the Best Choice.
+This is the Angular project for Xavier University of Louisiana College of Pharmacy's Prostate Screening: Making the Best Choice.
 
 ## Version
-1.1.5
+<p>Major.Minor.Patch</p>
+<p>2.1.8</p>
 
 ## Date Last Updated
-September 22, 2023
+September 28, 2023
 
 ## Technologies
-| Technology	 | Version  |
+| Technology | Version  |
 |--|--|
-| Angular | 14 |
-| Bootstrap | 4 |
-| Font Awesome | 4.7 |
+| Angular | 15.0.1 |
+| Bootstrap | 4.5.3 |
+| Font Awesome | 4.7.0 |
+| JQuery | 3.6.3 |
 
 # Application Details
 ----

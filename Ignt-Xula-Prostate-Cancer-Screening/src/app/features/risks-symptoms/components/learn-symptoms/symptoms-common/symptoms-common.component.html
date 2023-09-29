@@ -5,7 +5,6 @@
              Cancer Symptoms: Common
         </h1>
     </div>
-
     <hr />
 
     <div class="row">
@@ -22,10 +21,18 @@
                 Some symptoms might be a sign of prostate cancer. This is particularly true when the cancer is more advanced.
             </p>
             <p class="margin-top-twenty">
-                Let’s look all the possible symptoms.
+                Click on the video at the right to look all the possible symptoms.
             </p>
+        </div>
 
-            <div class="row margin-top-seventy">
+        <!-- Video -->
+        <div class="col-md">
+            <div class="row embed-responsive embed-responsive-16by9">
+                <video width="420" height="310" controls>
+                    <source src="/assets/video/risks-symptoms/learn-symptoms/common-symptoms.mp4" type="video/mp4">                
+                </video>
+            </div>
+            <div class="row margin-top-thirty">
                 <div class="col-md">
                     <button type="button" class="btn btn-outline-success btn-block" (click)="symptomsPlay()">
                         <i class="fa fa-play" aria-hidden="true"></i>
@@ -38,15 +45,6 @@
                         Stop Audio
                     </button>
                 </div>
-            </div>
-        </div>
-
-        <!-- Video -->
-        <div class="col-md">
-            <div class="row embed-responsive embed-responsive-16by9">
-                <video width="420" height="310" controls>
-                    <source src="/assets/video/risks-symptoms/learn-symptoms/common-symptoms.mp4" type="video/mp4">                
-                </video>
             </div>
         </div>
     </div>

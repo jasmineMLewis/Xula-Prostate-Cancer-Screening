@@ -1,6 +1,6 @@
 import { ModuleNavTabs } from '../models/module-nav-tabs';
 
-export var RISKS_SYMPTOMS_MODULE_NAV_TAB: ModuleNavTabs[] = [
+export var RISKS_SYMPTOMS_TAB_DATA: ModuleNavTabs[] = [
     { 
         'href': 'title',   
         'tab': 'titleTab' 
@@ -11,7 +11,7 @@ export var RISKS_SYMPTOMS_MODULE_NAV_TAB: ModuleNavTabs[] = [
     },
     {  
         'href': 'riskFactors', 
-        'tab': 'riskFactorsTab' 
+        'tab': 'riskFacriskFactorsTabtorsTab' 
     },
     {  
         'href': 'atRiskQuestionaire', 

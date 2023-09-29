@@ -28,7 +28,7 @@ export class ReferralToUrologistComponent implements OnInit {
   }
 
   public urologistPlay(): void {
-    this.urologistAudio.src ="/assets/audio/features/prostate-screening/steps-involved/step-three-urologist.mp3";
+    this.urologistAudio.src ="/assets/audio/prostate-screening/steps/step-three-urologist.mp3";
     this.urologistAudio.load();
     this.urologistAudio.play();
   }
