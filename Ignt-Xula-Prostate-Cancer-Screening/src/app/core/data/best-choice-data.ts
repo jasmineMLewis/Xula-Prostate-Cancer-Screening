@@ -6,8 +6,8 @@ export var BEST_CHOICE_NAV_TAB_DATA: ModuleNavTabs[] = [
         'tab': 'titleTab' 
     },
     {
-        'href': 'choice',
-        'tab': 'choiceTab',
+        'href': 'choices',
+        'tab': 'choicesTab',
     },
     {
         'href': 'bestChoiceQuestionnaire',
@@ -22,8 +22,8 @@ export var BEST_CHOICE_NAV_TAB_DATA: ModuleNavTabs[] = [
         'tab': 'discussionTab',
     },
     {
-        'href': 'screening',
-        'tab': 'screeningTab',
+        'href': 'decision',
+        'tab': 'decisionTab',
     },
     {   
         'href': 'summary', 
