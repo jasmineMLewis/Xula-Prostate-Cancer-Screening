@@ -17,7 +17,7 @@ export class TreatmentSeriousProblemComponent implements OnInit {
   }
 
   public treatmentSeriousProblemPlay(): void {
-    this.treatmentSeriousProblemDoAudio.src = "/assets/audio/features/diagnosis-treatment/treatment/prostate-tumor-serious-problem.mp3";
+    this.treatmentSeriousProblemDoAudio.src = "/assets/audio/diagnosis-treatment/treatment/prostate-tumor-serious-problem.mp3";
     this.treatmentSeriousProblemDoAudio.load();
     this.treatmentSeriousProblemDoAudio.play();
   }

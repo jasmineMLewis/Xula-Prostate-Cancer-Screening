@@ -10,9 +10,9 @@ import { CancerScreeningComponent } from './components/screening/cancer-screenin
 import { ScreeningForCancerComponent } from './components/screening/screening-for-cancer/screening-for-cancer.component';
 import { ScreeningTestComponent } from './components/screening/screening-test/screening-test.component';
 import { StudiesComponent } from './components/studies/studies.component';
-import { ChoiceComponent } from './components/choice/choice.component';
-import { BestChoiceComponent } from './components/choice/best-choice/best-choice.component';
-import { SharedDecisionMakingComponent } from './components/choice/shared-decision-making/shared-decision-making.component';
+import { ChoicesComponent } from './components/choices/choices.component';
+import { BestChoiceComponent } from './components/choices/best-choice/best-choice.component';
+import { SharedDecisionMakingComponent } from './components/choices/shared-decision-making/shared-decision-making.component';
 import { StepsComponent } from './components/steps/steps.component';
 import { StepsHomeComponent } from './components/steps/steps-home/steps-home.component';
 import { StepOneComponent } from './components/steps/step-one/step-one.component';
@@ -20,7 +20,7 @@ import { GetTheResultsComponent } from './components/steps/step-two/get-the-resu
 import { ExamplePsaTestComponent } from './components/steps/step-two/example-psa-test/example-psa-test.component';
 import { AccuracyPsaTestComponent } from './components/steps/step-two/accuracy-psa-test/accuracy-psa-test.component';
 import { DiscussingResultsComponent } from './components/steps/step-three/discussing-results/discussing-results.component';
-import { AbnormalReasonsComponent } from './components/steps/step-three/abnormal-reasons/abnormal-reasons.component';
+import { AbnormalResultsComponent } from './components/steps/step-three/abnormal-results/abnormal-results.component';
 import { ReferralToUrologistComponent } from './components/steps/step-three/referral-to-urologist/referral-to-urologist.component';
 import { StoriesComponent } from './components/stories/stories.component';
 import { BestChoiceQuestionnaireComponent } from './components/best-choice-questionnaire/best-choice-questionnaire.component';
@@ -36,7 +36,7 @@ import { ProstateScreeningCreditsComponent } from './components/prostate-screeni
     ScreeningForCancerComponent,
     ScreeningTestComponent,
     StudiesComponent,
-    ChoiceComponent,
+    ChoicesComponent,
     BestChoiceComponent,
     SharedDecisionMakingComponent,
     StepsComponent,
@@ -46,12 +46,12 @@ import { ProstateScreeningCreditsComponent } from './components/prostate-screeni
     ExamplePsaTestComponent,
     AccuracyPsaTestComponent,
     DiscussingResultsComponent,
-    AbnormalReasonsComponent,
     ReferralToUrologistComponent,
     StoriesComponent,
     BestChoiceQuestionnaireComponent,
     ProstateScreeningSummaryComponent,
-    ProstateScreeningCreditsComponent
+    ProstateScreeningCreditsComponent,
+    AbnormalResultsComponent
   ],
   imports: [
     CommonModule,
