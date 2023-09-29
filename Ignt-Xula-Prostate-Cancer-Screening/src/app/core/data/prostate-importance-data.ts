@@ -1,6 +1,6 @@
 import { ModuleNavTabs } from '../models/module-nav-tabs';
 
-export var PROSTATE_IMPORTANCE_MODULE_NAV_TAB: ModuleNavTabs[] = [
+export var PROSTATE_IMPORTANCE_TAB_DATA: ModuleNavTabs[] = [
     { 
         'href': 'title',   
         'tab': 'titleTab' 

@@ -15,8 +15,7 @@ export class StepsHomeComponent implements OnInit {
   }
   
   public stepsHomePlay(): void {
-    this.stepsHomeAudio.src = 
-      "/assets/audio/features/prostate-screening/steps/steps-home.mp3";
+    this.stepsHomeAudio.src = "/assets/audio/prostate-screening/steps/steps-home.mp3";
     this.stepsHomeAudio.load();
     this.stepsHomeAudio.play();
   }

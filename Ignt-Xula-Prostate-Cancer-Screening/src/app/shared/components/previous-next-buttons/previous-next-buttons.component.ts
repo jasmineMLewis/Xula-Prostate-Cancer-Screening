@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModuleNavTabs } from '@core/models/module-nav-tabs';
-import { PROSTATE_IMPORTANCE_MODULE_NAV_TAB } from '@core/data/prostate-importance-data';
-import { RISKS_SYMPTOMS_MODULE_NAV_TAB } from '@core/data/risks-symptoms-data';
-import { PROSTATE_SCREENING_MODULE_NAV_TAB } from '@core/data/prostate-screening-data';
-import { DIAGNOSIS_TREATMENT_MODULE_NAV_TAB } from '@core/data/diagnosis-treatment-data';
-import { BEST_CHOICE_MODULE_NAV_TAB } from '@core/data/best-choice-data';
+import { PROSTATE_IMPORTANCE_TAB_DATA } from '@core/data/prostate-importance-data';
+import { RISKS_SYMPTOMS_TAB_DATA } from '@core/data/risks-symptoms-data';
+import { PROSTATE_SCREENING_TAB_DATA } from '@core/data/prostate-screening-data';
+import { DIAGNOSIS_TREATMENT_TAB_DATA } from '@core/data/diagnosis-treatment-data';
+import { BEST_CHOICE_NAV_TAB_DATA } from '@core/data/best-choice-data';
 
 @Component({
   selector: 'previous-next-buttons',
@@ -19,14 +19,14 @@ export class PreviousNextButtonsComponent {
   public currentHref: string = 'title';
   public currentTab: string = 'titleTab';
   public isActive: boolean = false;
-  public isNextButtonVisible: boolean = true;
+  //public isNextButtonVisible: boolean = true;
 
-  //Navigation Tabs' Data
-  public prostateImportanceModuleNavTabData: ModuleNavTabs[] = PROSTATE_IMPORTANCE_MODULE_NAV_TAB;
-  public risksSymptomsModuleNavTabData: ModuleNavTabs[] = RISKS_SYMPTOMS_MODULE_NAV_TAB;
-  public prostateScreeningModuleNavTabData: ModuleNavTabs[] = PROSTATE_SCREENING_MODULE_NAV_TAB;
-  public diagnosisTreatmentModuleNavTabData: ModuleNavTabs[] = DIAGNOSIS_TREATMENT_MODULE_NAV_TAB;
-  public bestChoiceModuleNavTabData: ModuleNavTabs[] = BEST_CHOICE_MODULE_NAV_TAB;
+  //Module Navigation Tabs' Data
+  public prostateImportanceTabData: ModuleNavTabs[] = PROSTATE_IMPORTANCE_TAB_DATA;
+  public risksSymptomsTabData: ModuleNavTabs[] = RISKS_SYMPTOMS_TAB_DATA;
+  public prostateScreeningTabData: ModuleNavTabs[] = PROSTATE_SCREENING_TAB_DATA;
+  public diagnosisTreatmentTabData: ModuleNavTabs[] = DIAGNOSIS_TREATMENT_TAB_DATA;
+  public bestChoiceTabData: ModuleNavTabs[] = BEST_CHOICE_NAV_TAB_DATA;
 
   //Modules
   public readonly HOME = 'home';
@@ -80,7 +80,7 @@ export class PreviousNextButtonsComponent {
     this.router.navigate(navigationDetails);
   }
 
-  public navigateModuleIfHrefCredits(module: string): void {
+  public navigateModuleCredits(module: string): void {
     if (this.currentHref === this.CREDITS) {
       this.naviagteModule(module);
     }
@@ -91,19 +91,19 @@ export class PreviousNextButtonsComponent {
 
     switch (module) {
       case this.PROSTATE_IMPORTANCE:
-        moduleNavTabData = Array.from(this.prostateImportanceModuleNavTabData);
+        moduleNavTabData = Array.from(this.prostateImportanceTabData);
         break;
       case this.RISK_SYMPTOMS:
-        moduleNavTabData = Array.from(this.risksSymptomsModuleNavTabData);
+        moduleNavTabData = Array.from(this.risksSymptomsTabData);
         break;
       case this.PROSTATE_SCREENING:
-        moduleNavTabData = Array.from(this.prostateScreeningModuleNavTabData);
+        moduleNavTabData = Array.from(this.prostateScreeningTabData);
         break;
       case this.DIAGNOSIS_TREATMENT:
-        moduleNavTabData = Array.from(this.diagnosisTreatmentModuleNavTabData);
+        moduleNavTabData = Array.from(this.diagnosisTreatmentTabData);
         break;
       case this.BEST_CHOICE:
-        moduleNavTabData = Array.from(this.bestChoiceModuleNavTabData);
+        moduleNavTabData = Array.from(this.bestChoiceTabData);
         break;
     }
 
@@ -113,7 +113,7 @@ export class PreviousNextButtonsComponent {
 
       this.currentHref = moduleNavTabData![i + 1].href!;
       this.currentTab = moduleNavTabData![i + 1].tab!;
-      
+
       this.isActive = true;
       this.setHrefTab(this.currentHref, this.currentTab);
 
@@ -131,7 +131,7 @@ export class PreviousNextButtonsComponent {
         this.nextModuleTab(module);
         break;
       case this.PROSTATE_SCREENING:
-        this.nextModuleTab(module); 
+        this.nextModuleTab(module);
         break;
       case this.DIAGNOSIS_TREATMENT:
         this.nextModuleTab(module);
@@ -146,52 +146,52 @@ export class PreviousNextButtonsComponent {
     switch (module) {
       case this.PROSTATE_IMPORTANCE:
         this.next(module);
-        this.navigateModuleIfHrefCredits(module);
+        this.navigateModuleCredits(module);
         break;
       case this.RISK_SYMPTOMS:
         this.next(module);
-        this.navigateModuleIfHrefCredits(module);
+        this.navigateModuleCredits(module);
         break;
       case this.PROSTATE_SCREENING:
         this.next(module);
-        this.navigateModuleIfHrefCredits(module);
+        this.navigateModuleCredits(module);
         break;
       case this.DIAGNOSIS_TREATMENT:
         this.next(module);
-        this.navigateModuleIfHrefCredits(module);
+        this.navigateModuleCredits(module);
         break;
       case this.BEST_CHOICE:
         this.next(module);
-        this.navigateModuleIfHrefCredits(module);
-        break; 
+        this.navigateModuleCredits(module);
+        break;
     }
   }
 
-  public previous(module: string = ''): void {
+  public previous(module: string = '') {
     var moduleNavTabData: ModuleNavTabs[];
 
     switch (module) {
       case this.PROSTATE_IMPORTANCE:
-        moduleNavTabData = Array.from(this.prostateImportanceModuleNavTabData);
+        moduleNavTabData = Array.from(this.prostateImportanceTabData);
         break;
       case this.RISK_SYMPTOMS:
-        moduleNavTabData = Array.from(this.risksSymptomsModuleNavTabData);
+        moduleNavTabData = Array.from(this.risksSymptomsTabData);
         break;
       case this.PROSTATE_SCREENING:
-        moduleNavTabData = Array.from(this.prostateScreeningModuleNavTabData);
+        moduleNavTabData = Array.from(this.prostateScreeningTabData);
         break;
       case this.DIAGNOSIS_TREATMENT:
-        moduleNavTabData = Array.from(this.diagnosisTreatmentModuleNavTabData);
+        moduleNavTabData = Array.from(this.diagnosisTreatmentTabData);
         break;
       case this.BEST_CHOICE:
-        moduleNavTabData = Array.from(this.bestChoiceModuleNavTabData);
+        moduleNavTabData = Array.from(this.bestChoiceTabData);
         break;
     }
 
     if (this.currentHref !== moduleNavTabData![0].href) {
       const currHref = this.currentHref;
       const i = moduleNavTabData!.findIndex((h) => h.href === currHref);
-      
+
       this.currentHref = moduleNavTabData![i - 1].href!;
       this.currentTab = moduleNavTabData![i - 1].tab!;
 
@@ -200,7 +200,7 @@ export class PreviousNextButtonsComponent {
 
       let element: HTMLElement = document.getElementById(this.currentTab) as HTMLElement;
       element.click();
-    } else if(this.currentHref == moduleNavTabData![0].href){
+    }  else if(this.currentHref == moduleNavTabData![0].href){
       this.naviagteModule(module);
     }
   }
