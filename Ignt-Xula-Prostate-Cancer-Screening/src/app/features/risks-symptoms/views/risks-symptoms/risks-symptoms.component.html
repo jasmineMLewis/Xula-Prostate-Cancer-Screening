@@ -31,23 +31,23 @@
             2.1 Knowledge
           </a>
         </li>
-        <li class="nav-item waves-effect waves-light">
-          <a class="nav-link" id="riskFactorsTab" data-toggle="tab" href="#riskFactors" role="tab" [ngClass]="{ 'active': previousNextButtonsRisksSymptoms.currentHref === 'riskFactors'}" 
-            (click)="previousNextButtonsRisksSymptoms.setHrefTab('riskFactors', 'riskFactorsTab')"
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtonsRisksSymptoms.currentHref === 'riskFactors'}" 
+            (click)="previousNextButtonsRisksSymptoms.setHrefTab('riskFactors', 'riskFactorsTab')">
+          <a class="nav-link" id="riskFactorsTab" data-toggle="tab" href="#riskFactors" role="tab"
             aria-controls="riskFactors" aria-selected="false">
             2.2 Risk Factors
           </a>
         </li>
-        <li class="nav-item waves-effect waves-light">
-          <a class="nav-link" id="atRiskQuestionaireTab" data-toggle="tab" href="#atRiskQuestionaire" role="tab" [ngClass]="{ 'active': previousNextButtonsRisksSymptoms.currentHref === 'atRiskQuestionaire'}" 
-            (click)="previousNextButtonsRisksSymptoms.setHrefTab('atRiskQuestionaire', 'atRiskQuestionaireTab')"
+        <li class="nav-item waves-effect waves-light"  [ngClass]="{ 'active': previousNextButtonsRisksSymptoms.currentHref === 'atRiskQuestionaire'}" 
+          (click)="previousNextButtonsRisksSymptoms.setHrefTab('atRiskQuestionaire', 'atRiskQuestionaireTab')">
+          <a class="nav-link" id="atRiskQuestionaireTab" data-toggle="tab" href="#atRiskQuestionaire" role="tab"
             aria-controls="atRiskQuestionaire" aria-selected="false">
             2.3 At Risk
           </a>
         </li>
-        <li class="nav-item waves-effect waves-light">
-          <a class="nav-link" id="symptomsTab" data-toggle="tab" href="#symptoms" role="tab" aria-controls="symptoms" [ngClass]="{ 'active': previousNextButtonsRisksSymptoms.currentHref === 'symptoms'}" 
-            (click)="previousNextButtonsRisksSymptoms.setHrefTab('symptoms', 'symptomsTab')"
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtonsRisksSymptoms.currentHref === 'symptoms'}" 
+          (click)="previousNextButtonsRisksSymptoms.setHrefTab('symptoms', 'symptomsTab')">
+          <a class="nav-link" id="symptomsTab" data-toggle="tab" href="#symptoms" role="tab" aria-controls="symptoms" 
             aria-controls="symptoms" aria-selected="false">
             2.4 Symptoms
           </a>
@@ -57,7 +57,7 @@
           <a class="nav-link" id="bestChoiceQuestionnaireTab" data-toggle="tab" href="#bestChoiceQuestionnaire"
             role="tab" aria-controls="bestChoiceQuestionnaire" aria-selected="false">
             <i class="fa fa-question-circle" aria-hidden="true"></i>
-            Questionnaire
+            Preferences
           </a>
         </li>
         <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtonsRisksSymptoms.currentHref === 'summary'}" 

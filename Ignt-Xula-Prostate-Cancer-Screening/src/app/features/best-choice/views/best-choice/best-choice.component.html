@@ -24,18 +24,18 @@
             Title
           </a>
         </li>
-        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtonsBestChoice.currentHref === 'choice'}" 
-          (click)="previousNextButtonsBestChoice.setHrefTab('choice', 'choiceTab')">
-          <a class="nav-link" id="choiceTab" data-toggle="tab" href="#choice" role="tab" aria-controls="choice"
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtonsBestChoice.currentHref === 'choices'}" 
+          (click)="previousNextButtonsBestChoice.setHrefTab('choices', 'choicesTab')">
+          <a class="nav-link" id="choicesTab" data-toggle="tab" href="#choices" role="tab" aria-controls="choices"
             aria-selected="false">
-            5.1 Choice
+            5.1 Choices
           </a>
         </li>
         <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtonsBestChoice.currentHref === 'bestChoiceQuestionnaire'}" 
           (click)="previousNextButtonsBestChoice.setHrefTab('bestChoiceQuestionnaire', 'bestChoiceQuestionnaireTab')">
           <a class="nav-link" id="bestChoiceQuestionnaireTab" data-toggle="tab" href="#bestChoiceQuestionnaire"
             role="tab" aria-controls="bestChoiceQuestionnaire" aria-selected="false">
-            5.2 Questionaire
+            5.2 Preferences
           </a>
         </li>
         <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtonsBestChoice.currentHref === 'factors'}" 
@@ -52,10 +52,10 @@
             5.4 Discussion
           </a>
         </li>
-        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtonsBestChoice.currentHref === 'screening'}" 
-          (click)="previousNextButtonsBestChoice.setHrefTab('screening', 'screeningTab')">
-          <a class="nav-link" id="screeningTab" data-toggle="tab" href="#screening" role="tab" aria-controls="screening" aria-selected="false">
-            5.5 Screening
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtonsBestChoice.currentHref === 'decision'}" 
+          (click)="previousNextButtonsBestChoice.setHrefTab('decision', 'decisionTab')">
+          <a class="nav-link" id="decisionTab" data-toggle="tab" href="#decision" role="tab" aria-controls="decision" aria-selected="false">
+            5.5 Decision
           </a>
         </li>
         <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtonsBestChoice.currentHref === 'summary'}" 
@@ -80,9 +80,9 @@
           [ngClass]="{ 'active': previousNextButtonsBestChoice.currentHref ==='title'}">
          <best-choice-title></best-choice-title>
         </div>
-        <div class="tab-pane fade" id="choice" role="tabpanel" aria-labelledby="choiceTab"
-          [ngClass]="{ 'active': previousNextButtonsBestChoice.currentHref ==='choice'}">
-          <choice></choice>
+        <div class="tab-pane fade" id="choices" role="tabpanel" aria-labelledby="choicesTab"
+          [ngClass]="{ 'active': previousNextButtonsBestChoice.currentHref ==='choices'}">
+          <choices></choices>
         </div>
         <div class="tab-pane fade" id="bestChoiceQuestionnaire" role="tabpanel" aria-labelledby="bestChoiceQuestionnaireTab"
           [ngClass]="{ 'active': previousNextButtonsBestChoice.currentHref === 'bestChoiceQuestionnaire'}">
@@ -96,9 +96,9 @@
           [ngClass]="{ 'active': previousNextButtonsBestChoice.currentHref === 'discussion'}">
           <discussion-questions></discussion-questions>
         </div>
-        <div class="tab-pane fade" id="screening" role="tabpanel" aria-labelledby="screeningTab"
-          [ngClass]="{ 'active': previousNextButtonsBestChoice.currentHref === 'screening'}">
-          <screening-questions></screening-questions>
+        <div class="tab-pane fade" id="decision" role="tabpanel" aria-labelledby="decisionTab"
+          [ngClass]="{ 'active': previousNextButtonsBestChoice.currentHref === 'decision'}">
+          <decision></decision>
         </div>
         <div class="tab-pane fade" id="summary" role="tabpanel" aria-labelledby="summaryTab"
           [ngClass]="{ 'active': previousNextButtonsBestChoice.currentHref === 'summary'}">

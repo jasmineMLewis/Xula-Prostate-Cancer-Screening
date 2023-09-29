@@ -1,0 +1,19 @@
+/*#region  Override Boostrap Colors */
+
+/** Borders **/
+.border-success {
+    border-color: #939393 !important;
+}
+
+/** Background **/
+.bg-success {
+    background-color: #939393 !important;
+}
+  
+a.bg-success:hover, a.bg-success:focus,
+  button.bg-success:hover,
+  button.bg-success:focus {
+    background-color: #939393 !important;
+} 
+
+/*#endregion Override Boostrap Colors */
