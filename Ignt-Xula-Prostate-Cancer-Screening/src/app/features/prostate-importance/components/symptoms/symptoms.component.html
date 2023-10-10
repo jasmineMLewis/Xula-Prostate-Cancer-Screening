@@ -2,24 +2,29 @@
     <p></p>
     <div class="row">
       <div class="col-3">
-        <div class="nav flex-column nav-pills" id="common-problems-tab" role="tablist" aria-orientation="vertical">
-          <a class="nav-link active" id="urine-related-tab" data-toggle="pill" href="#urine-related" role="tab" 
-             aria-controls="urine-related" aria-selected="true">
-             1. Urine Related
-          </a>
-          <a class="nav-link" id="common-symptoms-tab" data-toggle="pill" href="#common-symptoms" role="tab" 
-             aria-controls="common-symptoms" aria-selected="false">
-             2. Common Symptoms
-          </a>
-       
-        </div>
+        <ul class="nav flex-column nav-pills" id="symptoms" role="tablist" aria-orientation="vertical">
+          <li class="nav-item waves-effect waves-light">
+            <a class="nav-link active" id="urineRelatedTab" data-toggle="pill" href="#urineRelated" role="tab"
+              aria-controls="urineRelated" aria-selected="true">
+              1. Urine Related
+            </a>
+          </li>
+          <li class="nav-item waves-effect waves-light">
+            <a class="nav-link" id="commonSymptomsTab" data-toggle="pill" href="#commonSymptoms" role="tab"
+              aria-controls="commonSymptoms" aria-selected="false">
+              2. Common Symptoms
+            </a>
+          </li>
+        </ul>
       </div>
       <div class="col-9">
-        <div class="tab-content" id="common-problems-tabContent">
-          <div class="tab-pane fade show active" id="urine-related" role="tabpanel" aria-labelledby="urine-related-tab">
+        <div class="tab-content" id="symptomsContent">
+          <div class="tab-pane fade show active" id="urineRelated" role="tabpanel" 
+            aria-labelledby="urineRelatedTab">
             <urine-related></urine-related>
           </div>
-          <div class="tab-pane fade" id="common-symptoms" role="tabpanel" aria-labelledby="common-symptoms-tab">
+          <div class="tab-pane fade" id="commonSymptoms" role="tabpanel" 
+            aria-labelledby="commonSymptomsTab">
             <common-symptoms></common-symptoms>
         </div>
       </div>

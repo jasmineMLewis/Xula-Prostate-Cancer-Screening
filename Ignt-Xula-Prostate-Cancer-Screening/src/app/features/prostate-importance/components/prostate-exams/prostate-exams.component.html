@@ -2,33 +2,42 @@
     <p></p>
     <div class="row">
       <div class="col-3">
-        <div class="nav flex-column nav-pills" id="prostate-exams-tab" role="tablist" aria-orientation="vertical">
-          <a class="nav-link active" id="prostate-exams-home-tab" data-toggle="pill" href="#prostate-exams-home" role="tab" 
-             aria-controls="prostate-exams-home" aria-selected="true">
-             Prostate Exams
-          </a>
-           <a class="nav-link" id="digital-rectal-exam-tab" data-toggle="pill" href="#digital-rectal-exam" role="tab" 
-             aria-controls="digital-rectal-exam" aria-selected="false">
-             1.  Digital Rectal Exam
-          </a>
-          <a class="nav-link" id="prostate-specific-antigen-tab" data-toggle="pill" href="#prostate-specific-antigen" role="tab" 
-             aria-controls="prostate-specific-antigen" aria-selected="false">
-             2. Prostate Specific Antigen
-          </a> 
-        </div>
+        <ul class="nav flex-column nav-pills" id="prostateExam" role="tablist" aria-orientation="vertical">
+          <li class="nav-item waves-effect waves-light">
+            <a class="nav-link active" id="prostateExamsHomeTab" data-toggle="pill" href="#prostateExamsHome" role="tab"
+              aria-controls="prostateExamsHome" aria-selected="true">
+              Prostate Exams
+            </a>
+          </li>
+          <li class="nav-item waves-effect waves-light">
+            <a class="nav-link" id="digitalRectalExamTab" data-toggle="pill" href="#digitalRectalExam" role="tab"
+              aria-controls="digitalRectalExam" aria-selected="false">
+              1. Digital Rectal Exam
+            </a>
+          </li>
+          <li class="nav-item waves-effect waves-light">
+            <a class="nav-link" id="prostateSpecificAntigenTab" data-toggle="pill" href="#prostateSpecificAntigen" role="tab"
+              aria-controls="prostateSpecificAntigen" aria-selected="false">
+              2. Prostate Specific Antigen
+            </a>
+          </li>
+        </ul>
       </div>
       <div class="col-9">
-        <div class="tab-content" id="prostate-exams-tabContent">
-          <div class="tab-pane fade show active" id="prostate-exams-home" role="tabpanel" aria-labelledby="prostate-exams-home-tab">
-             <prostate-exams-home></prostate-exams-home>
+        <div class="tab-content" id="prostateExamContent">
+          <div class="tab-pane fade show active" id="prostateExamsHome" role="tabpanel"
+            aria-labelledby="prostateExamsHomeTab">
+            <prostate-exams-home></prostate-exams-home>
           </div>
-          <div class="tab-pane fade" id="digital-rectal-exam" role="tabpanel" aria-labelledby="digital-rectal-exam-tab">
+          <div class="tab-pane fade" id="digitalRectalExam" role="tabpanel" 
+            aria-labelledby="digitalRectalExamTab">
             <digital-rectal-exam></digital-rectal-exam>
           </div>
-          <div class="tab-pane fade" id="prostate-specific-antigen" role="tabpanel" aria-labelledby="prostate-specific-antigen-tab">
-             <prostate-specific-antigen></prostate-specific-antigen>
+          <div class="tab-pane fade" id="prostateSpecificAntigen" role="tabpanel"
+            aria-labelledby="prostateSpecificAntigenTab">
+            <prostate-specific-antigen></prostate-specific-antigen>
           </div>
         </div>
       </div>
-    </div>
   </div>
+</div>

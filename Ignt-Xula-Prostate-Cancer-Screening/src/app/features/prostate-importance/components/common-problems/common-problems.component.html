@@ -2,40 +2,56 @@
     <p></p>
     <div class="row">
       <div class="col-3">
-        <div class="nav flex-column nav-pills" id="commonProblems" role="tablist" aria-orientation="vertical">
-          <a class="nav-link active" id="commonProblemsHomeTab" data-toggle="pill" href="#commonProblemsHome" role="tab" 
-             aria-controls="commonProblemsHome" aria-selected="true">
-             Common Problems
-          </a>
-          <a class="nav-link" id="enlargedProstateTab" data-toggle="pill" href="#enlargedProstate" role="tab" 
-             aria-controls="enlargedProstate" aria-selected="false">
-             1. Enlarged Prostate
-          </a>
-          <a class="nav-link" id="inflammationTab" data-toggle="pill" href="#inflammation" role="tab" 
+        <ul class="nav flex-column nav-pills" id="commonProblems" role="tablist" aria-orientation="vertical">
+         <li class="nav-item waves-effect waves-light">
+           <!-- [ngClass]="{ 'active': previousNextButtons.currentSubHref === 'commonProblemsHome'}"
+           (click)="previousNextButtons.setSubHrefTab('commonProblemsHome', 'commonProblemsHomeTab')" -->
+            <a class="nav-link active" id="commonProblemsHomeTab" data-toggle="pill" href="#commonProblemsHome" role="tab"
+            aria-controls="commonProblemsHome" aria-selected="true">
+            Common Problems
+         </a>
+         </li>
+         <li class="nav-item waves-effect waves-light">
+            <a class="nav-link" id="enlargedProstateTab" data-toggle="pill" href="#enlargedProstate" role="tab"
+            aria-controls="enlargedProstate" aria-selected="false">
+            1. Enlarged Prostate
+         </a>
+         </li>
+         <li class="nav-item waves-effect waves-light">
+            <a class="nav-link" id="inflammationTab" data-toggle="pill" href="#inflammation" role="tab"
              aria-controls="inflammation" aria-selected="false">
              2. Inflammation
           </a>
-          <a class="nav-link" id="tumorsCancerTab" data-toggle="pill" href="#tumorsCancer" role="tab" 
+         </li>
+         <li class="nav-item waves-effect waves-light">
+            <a class="nav-link" id="tumorsCancerTab" data-toggle="pill" href="#tumorsCancer" role="tab"
              aria-controls="tumorsCancer" aria-selected="false">
              3. Tumors & Cancer
-          </a>
-        </div>
+           </a>
+          </li>
+         </ul>
       </div>
       <div class="col-9">
-        <div class="tab-content" id="commonProblemsContent">
-          <div class="tab-pane fade show active" id="commonProblemsHome" role="tabpanel" aria-labelledby="commonProblemsHomeTab">
-             <common-problems-home></common-problems-home>
-          </div>
-          <div class="tab-pane fade" id="enlargedProstate" role="tabpanel" aria-labelledby="enlargedProstateTab">
-            <enlarged-prostate></enlarged-prostate>
-          </div>
-          <div class="tab-pane fade" id="inflammation" role="tabpanel" aria-labelledby="inflammationTab">
-             <inflammation></inflammation>
-          </div>
-          <div class="tab-pane fade" id="tumorsCancer" role="tabpanel" aria-labelledby="tumorsCancerTab">
-             <tumors-cancer></tumors-cancer>
-          </div>
-        </div>
+         <div class="tab-content" id="commonProblemsContent">
+            <div class="tab-pane fade show active" id="commonProblemsHome" role="tabpanel"
+               aria-labelledby="commonProblemsHomeTab">
+               <!-- [ngClass]="{ 'active': previousNextButtons.currentSubHref === 'commonProblemsHome'}" -->
+               <common-problems-home></common-problems-home>
+            </div>
+            <div class="tab-pane fade" id="enlargedProstate" role="tabpanel" 
+               aria-labelledby="enlargedProstateTab">
+               <enlarged-prostate></enlarged-prostate>
+            </div>
+            <div class="tab-pane fade" id="inflammation" role="tabpanel" 
+               aria-labelledby="inflammationTab">
+               <inflammation></inflammation>
+            </div>
+            <div class="tab-pane fade" id="tumorsCancer" role="tabpanel" 
+               aria-labelledby="tumorsCancerTab">
+               <tumors-cancer></tumors-cancer>
+            </div>
+         </div>
       </div>
     </div>
-  </div>
+    <!-- <previous-next-buttons #previousNextButtons module="prostate-importance" [hidden]="hideComponent"></previous-next-buttons> -->
+</div>

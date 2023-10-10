@@ -23,7 +23,7 @@ import { DiscussingResultsComponent } from './components/steps/step-three/discus
 import { AbnormalResultsComponent } from './components/steps/step-three/abnormal-results/abnormal-results.component';
 import { ReferralToUrologistComponent } from './components/steps/step-three/referral-to-urologist/referral-to-urologist.component';
 import { StoriesComponent } from './components/stories/stories.component';
-import { BestChoiceQuestionnaireComponent } from './components/best-choice-questionnaire/best-choice-questionnaire.component';
+import { ProstateScreeningPreferencesComponent } from './components/prostate-screening-preferences/prostate-screening-preferences.component';
 import { ProstateScreeningSummaryComponent } from './components/prostate-screening-summary/prostate-screening-summary.component';
 import { ProstateScreeningCreditsComponent } from './components/prostate-screening-credits/prostate-screening-credits.component';
 
@@ -48,7 +48,7 @@ import { ProstateScreeningCreditsComponent } from './components/prostate-screeni
     DiscussingResultsComponent,
     ReferralToUrologistComponent,
     StoriesComponent,
-    BestChoiceQuestionnaireComponent,
+    ProstateScreeningPreferencesComponent,
     ProstateScreeningSummaryComponent,
     ProstateScreeningCreditsComponent,
     AbnormalResultsComponent

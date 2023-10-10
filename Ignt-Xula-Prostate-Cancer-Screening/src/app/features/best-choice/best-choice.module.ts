@@ -9,7 +9,7 @@ import { ChoicesComponent } from './components/choices/choices.component';
 import { ScreeningForYouComponent } from './components/choices/screening-for-you/screening-for-you.component';
 import { WatchfulWaitingComponent } from './components/choices/watchful-waiting/watchful-waiting.component';
 import { ProstateSurgeryComponent } from './components/choices/prostate-surgery/prostate-surgery.component';
-import { BestChoiceQuestionnaireComponent } from './components/best-choice-questionnaire/best-choice-questionnaire.component';
+import { BestChoicePreferencesComponent } from './components/best-choice-preferences/best-choice-preferences.component';
 import { FactorsComponent } from './components/factors/factors.component';
 import { DiscussionQuestionsComponent } from './components/discussion-questions/discussion-questions.component';
 import { DecisionComponent } from './components/decision/decision.component';
@@ -17,7 +17,6 @@ import { GettingScreenedComponent } from './components/decision/getting-screened
 import { NotGettingScreenedComponent } from './components/decision/not-getting-screened/not-getting-screened.component';
 import { BestChoiceSummaryComponent } from './components/best-choice-summary/best-choice-summary.component';
 import { BestChoiceCreditsComponent } from './components/best-choice-credits/best-choice-credits.component';
-
 
 @NgModule({
   declarations: [
@@ -27,14 +26,14 @@ import { BestChoiceCreditsComponent } from './components/best-choice-credits/bes
     ScreeningForYouComponent,
     WatchfulWaitingComponent,
     ProstateSurgeryComponent,
-    BestChoiceQuestionnaireComponent,
+    BestChoicePreferencesComponent,
     FactorsComponent,
     DiscussionQuestionsComponent,
     DecisionComponent,
     GettingScreenedComponent,
     NotGettingScreenedComponent,
     BestChoiceSummaryComponent,
-    BestChoiceCreditsComponent  
+    BestChoiceCreditsComponent
   ],
   imports: [
     CommonModule,
