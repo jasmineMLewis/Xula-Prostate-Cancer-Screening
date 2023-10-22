@@ -8,7 +8,6 @@ import { DIAGNOSIS_TREATMENT_MAIN_TAB_DATA } from '@core/data/main-tabs/diagnosi
 import { BEST_CHOICE_MAIN_TAB_DATA } from '@core/data/main-tabs/best-choice-main-tab-data';
 import { ModuleSubTabs } from '@core/models/module-sub-tabs';
 import { PROSTATE_IMPORTANCE_SUB_TAB_DATA } from '@core/data/sub-tabs/prostate-importance-sub-tab-data';
-import { CommonProblemsComponent } from '@features/prostate-importance/components/common-problems/common-problems.component';
 
 @Component({
   selector: 'previous-next-buttons',
@@ -185,16 +184,17 @@ export class PreviousNextButtonsComponent {
 
     //  }
 
-    //  if(this.currentHasSubTabs == true){
-    //    for(let j = 0; j < moduleSubTabData!.length; j++){
-    //         console.log("mainHref " + moduleSubTabData![j].mainHref + " mainTab " + moduleSubTabData![j].mainTab + 
-    //       " subHref " + moduleSubTabData![j].subHref + " subTab " + moduleSubTabData![j].subTab + " \n");
-    //     }
+     if(this.currentHasSubTabs){
 
-    //     console.log("current Sub from Problems ");
-    //   //locate which subtab it is currently on
+      //  for(let j = 0; j < moduleSubTabData!.length; j++){
+      //       console.log("mainHref " + moduleSubTabData![j].mainHref + " mainTab " + moduleSubTabData![j].mainTab + 
+      //     " subHref " + moduleSubTabData![j].subHref + " subTab " + moduleSubTabData![j].subTab + " \n");
+      //   }
 
-    //  }
+      //  console.log("current Sub from Problems ");
+      //locate which subtab it is currently on
+
+     }
 
 
      let elementMainTab: HTMLElement = document.getElementById(this.currentMainTab) as HTMLElement;
@@ -326,12 +326,40 @@ export class PreviousNextButtonsComponent {
   }
 
   public setHrefTab(href: string, tab: string): void {
+    // this.currentMainHref = href;
+    // this.currentMainTab = tab;
+    this.setMainHref(href);
+    this.setMainTab(tab);
+
+    // console.log("this.currentMainHref " + this.currentMainHref + "\n");
+    // console.log("this.currentMainTab " + this.currentMainTab + "\n");
+  }
+
+  public setMainHref(href: string): void{
     this.currentMainHref = href;
+
+    console.log("this.currentMainHref " + this.currentMainHref + "\n");
+  }
+
+  public setMainTab(tab: string): void{
     this.currentMainTab = tab;
+
+    console.log("this.currentMainTab " + this.currentMainTab + "\n");
+  }
+
+  public getMainHref(): string {
+    return this.currentMainHref;
+  }
+
+  public getMainTab(): string {
+    return this.currentMainTab;
   }
 
   public setSubHrefTab(href: string, tab: string): void {
     this.currentSubHref = href;
     this.currentSubTab = tab;
+
+    console.log("this.currentSubHref " + this.currentSubHref + "\n");
+    console.log("this.currentSubTab " + this.currentSubTab + "\n");
   }
 }

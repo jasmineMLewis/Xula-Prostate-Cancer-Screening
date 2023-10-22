@@ -1,5 +1,4 @@
 import { Component, EventEmitter, OnInit, Output, ViewChild, Input } from '@angular/core';
-import { PreviousNextButtonsComponent } from '@shared/components/previous-next-buttons/previous-next-buttons.component';
 
 @Component({
   selector: 'common-problems',
@@ -10,7 +9,7 @@ export class CommonProblemsComponent implements OnInit {
  //@ViewChild('previousNextButtons', { static: false }) previousNextButtons!:PreviousNextButtonsComponent;
 
   //@Output('previousNextButtons') previousNextButtons: EventEmitter<any> = new EventEmitter();
-  //@Output() hideComponent: boolean = false;
+  @Output() hideComponent: boolean = false;
 
   constructor() { }
 
