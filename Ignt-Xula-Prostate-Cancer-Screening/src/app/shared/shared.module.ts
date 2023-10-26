@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PreviousNextButtonsComponent } from './components/previous-next-buttons/previous-next-buttons.component';
-import { FeatureCreditsComponent } from './components/feature-credits/feature-credits.component';
+import { PreviousNextButtonsComponent } from '@shared/components/previous-next-buttons/previous-next-buttons.component';
+import { FeatureCreditsComponent } from '@shared/components/feature-credits/feature-credits.component';
 
 
 @NgModule({

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-
 import { SharedModule } from '@shared/shared.module';
 import { ProstateImportanceRoutingModule } from './prostate-importance-routing.module';
 import { ProstateImportanceTitleComponent } from './components/prostate-importance-title/prostate-importance-title.component';

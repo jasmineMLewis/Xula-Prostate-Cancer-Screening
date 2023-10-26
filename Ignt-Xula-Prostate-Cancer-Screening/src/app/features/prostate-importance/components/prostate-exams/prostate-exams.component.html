@@ -3,19 +3,25 @@
     <div class="row">
       <div class="col-3">
         <ul class="nav flex-column nav-pills" id="prostateExam" role="tablist" aria-orientation="vertical">
-          <li class="nav-item waves-effect waves-light">
+          <li class="nav-item waves-effect waves-light"
+          [ngClass]="{ 'active': currentSubHref === 'prostateExamsHome'}"
+          (click)="setSubHrefTab('prostateExamsHome')">
             <a class="nav-link active" id="prostateExamsHomeTab" data-toggle="pill" href="#prostateExamsHome" role="tab"
               aria-controls="prostateExamsHome" aria-selected="true">
               Prostate Exams
             </a>
           </li>
-          <li class="nav-item waves-effect waves-light">
+          <li class="nav-item waves-effect waves-light"
+          [ngClass]="{ 'active': currentSubHref === 'digitalRectalExam'}"
+          (click)="setSubHrefTab('digitalRectalExam')">
             <a class="nav-link" id="digitalRectalExamTab" data-toggle="pill" href="#digitalRectalExam" role="tab"
               aria-controls="digitalRectalExam" aria-selected="false">
               1. Digital Rectal Exam
             </a>
           </li>
-          <li class="nav-item waves-effect waves-light">
+          <li class="nav-item waves-effect waves-light"
+          [ngClass]="{ 'active': currentSubHref === 'prostateSpecificAntigen'}"
+          (click)="setSubHrefTab('prostateSpecificAntigen')">
             <a class="nav-link" id="prostateSpecificAntigenTab" data-toggle="pill" href="#prostateSpecificAntigen" role="tab"
               aria-controls="prostateSpecificAntigen" aria-selected="false">
               2. Prostate Specific Antigen
@@ -26,15 +32,18 @@
       <div class="col-9">
         <div class="tab-content" id="prostateExamContent">
           <div class="tab-pane fade show active" id="prostateExamsHome" role="tabpanel"
-            aria-labelledby="prostateExamsHomeTab">
+            aria-labelledby="prostateExamsHomeTab"
+            [ngClass]="{ 'active': currentSubHref === 'prostateExamsHome'}">
             <prostate-exams-home></prostate-exams-home>
           </div>
           <div class="tab-pane fade" id="digitalRectalExam" role="tabpanel" 
-            aria-labelledby="digitalRectalExamTab">
+            aria-labelledby="digitalRectalExamTab"
+            [ngClass]="{ 'active': currentSubHref === 'digitalRectalExam'}">
             <digital-rectal-exam></digital-rectal-exam>
           </div>
           <div class="tab-pane fade" id="prostateSpecificAntigen" role="tabpanel"
-            aria-labelledby="prostateSpecificAntigenTab">
+            aria-labelledby="prostateSpecificAntigenTab"
+            [ngClass]="{ 'active': currentSubHref === 'prostateSpecificAntigen'}">
             <prostate-specific-antigen></prostate-specific-antigen>
           </div>
         </div>

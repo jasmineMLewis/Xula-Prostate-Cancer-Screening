@@ -3,29 +3,29 @@
     <div class="row">
       <div class="col-3">
         <ul class="nav flex-column nav-pills" id="commonProblems" role="tablist" aria-orientation="vertical">
-         <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentSubHref === 'commonProblemsHome'}"
-            (click)="previousNextButtons.setSubHrefTab('commonProblemsHome', 'commonProblemsHomeTab')">
+         <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'commonProblemsHome'}"
+            (click)="setSubHrefTab('commonProblemsHome')">
             <a class="nav-link" id="commonProblemsHomeTab" data-toggle="pill" href="#commonProblemsHome" role="tab"
             aria-controls="commonProblemsHome" aria-selected="true">
             Common Problems
          </a>
          </li>
-         <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentSubHref === 'enlargedProstate'}"
-            (click)="previousNextButtons.setSubHrefTab('enlargedProstate', 'enlargedProstateTab')">
+         <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'enlargedProstate'}"
+            (click)="setSubHrefTab('enlargedProstate')">
             <a class="nav-link" id="enlargedProstateTab" data-toggle="pill" href="#enlargedProstate" role="tab"
             aria-controls="enlargedProstate" aria-selected="false">
             1. Enlarged Prostate
          </a>
          </li>
-         <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentSubHref === 'inflammation'}"
-           (click)="previousNextButtons.setSubHrefTab('inflammation', 'inflammationTab')">
+         <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'inflammation'}"
+           (click)="setSubHrefTab('inflammation')">
             <a class="nav-link" id="inflammationTab" data-toggle="pill" href="#inflammation" role="tab"
              aria-controls="inflammation" aria-selected="false">
              2. Inflammation
           </a>
          </li>
-         <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentSubHref === 'tumorsCancer'}"
-            (click)="previousNextButtons.setSubHrefTab('tumorsCancer', 'tumorsCancerTab')">
+         <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'tumorsCancer'}"
+            (click)="setSubHrefTab('tumorsCancer')">
             <a class="nav-link" id="tumorsCancerTab" data-toggle="pill" href="#tumorsCancer" role="tab"
              aria-controls="tumorsCancer" aria-selected="false">
              3. Tumors & Cancer
@@ -36,23 +36,22 @@
       <div class="col-9">
          <div class="tab-content" id="commonProblemsContent">
             <div class="tab-pane fade show active" id="commonProblemsHome" role="tabpanel"
-               aria-labelledby="commonProblemsHomeTab" [ngClass]="{ 'active': previousNextButtons.currentSubHref === 'commonProblemsHome'}">
+               aria-labelledby="commonProblemsHomeTab" [ngClass]="{ 'active': currentSubHref === 'commonProblemsHome'}">
                <common-problems-home></common-problems-home>
             </div>
             <div class="tab-pane fade" id="enlargedProstate" role="tabpanel" 
-               aria-labelledby="enlargedProstateTab" [ngClass]="{ 'active': previousNextButtons.currentSubHref === 'enlargedProstate'}">
+               aria-labelledby="enlargedProstateTab" [ngClass]="{ 'active': currentSubHref === 'enlargedProstate'}">
                <enlarged-prostate></enlarged-prostate>
             </div>
             <div class="tab-pane fade" id="inflammation" role="tabpanel" 
-               aria-labelledby="inflammationTab" [ngClass]="{ 'active': previousNextButtons.currentSubHref === 'inflammation'}">
+               aria-labelledby="inflammationTab" [ngClass]="{ 'active': currentSubHref === 'inflammation'}">
                <inflammation></inflammation>
             </div>
             <div class="tab-pane fade" id="tumorsCancer" role="tabpanel" 
-               aria-labelledby="tumorsCancerTab" [ngClass]="{ 'active': previousNextButtons.currentSubHref === 'tumorsCancer'}">
+               aria-labelledby="tumorsCancerTab" [ngClass]="{ 'active': currentSubHref === 'tumorsCancer'}">
                <tumors-cancer></tumors-cancer>
             </div>
          </div>
       </div>
     </div>
-    <previous-next-buttons #previousNextButtons module="prostate-importance" [hidden]="hideComponent"></previous-next-buttons>
 </div>

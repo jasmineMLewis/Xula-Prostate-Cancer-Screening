@@ -3,13 +3,17 @@
     <div class="row">
       <div class="col-3">
         <ul class="nav flex-column nav-pills" id="symptoms" role="tablist" aria-orientation="vertical">
-          <li class="nav-item waves-effect waves-light">
+          <li class="nav-item waves-effect waves-light" 
+          [ngClass]="{ 'active': currentSubHref === 'urineRelated'}"
+          (click)="setSubHrefTab('urineRelated')">
             <a class="nav-link" id="urineRelatedTab" data-toggle="pill" href="#urineRelated" role="tab"
               aria-controls="urineRelated" aria-selected="true">
               1. Urine Related
             </a>
           </li>
-          <li class="nav-item waves-effect waves-light">
+          <li class="nav-item waves-effect waves-light"
+          [ngClass]="{ 'active': currentSubHref === 'commonSymptoms'}"
+          (click)="setSubHrefTab('commonSymptoms')">
             <a class="nav-link" id="commonSymptomsTab" data-toggle="pill" href="#commonSymptoms" role="tab"
               aria-controls="commonSymptoms" aria-selected="false">
               2. Common Symptoms
@@ -20,11 +24,13 @@
       <div class="col-9">
         <div class="tab-content" id="symptomsContent">
           <div class="tab-pane fade show active" id="urineRelated" role="tabpanel" 
-            aria-labelledby="urineRelatedTab">
+            aria-labelledby="urineRelatedTab"
+            [ngClass]="{ 'active': currentSubHref === 'urineRelated'}">
             <urine-related></urine-related>
           </div>
           <div class="tab-pane fade" id="commonSymptoms" role="tabpanel" 
-            aria-labelledby="commonSymptomsTab">
+            aria-labelledby="commonSymptomsTab"
+            [ngClass]="{ 'active': currentSubHref === 'commonSymptoms'}">
             <common-symptoms></common-symptoms>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output, ViewChild, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'common-problems',
@@ -6,22 +6,54 @@ import { Component, EventEmitter, OnInit, Output, ViewChild, Input } from '@angu
   styleUrls: ['./common-problems.component.css']
 })
 export class CommonProblemsComponent implements OnInit {
- //@ViewChild('previousNextButtons', { static: false }) previousNextButtons!:PreviousNextButtonsComponent;
+  public currentSubHref: string = "";
 
-  //@Output('previousNextButtons') previousNextButtons: EventEmitter<any> = new EventEmitter();
-  @Output() hideComponent: boolean = false;
+  private objTabMapping: any = {
+    commonProblemsHome: 'commonProblemsHomeTab',
+    enlargedProstate: 'enlargedProstateTab',
+    inflammation: 'inflammationTab',
+    tumorsCancer: 'tumorsCancerTab'
+  };
+
+  private objPrevNextMapping: any = {
+    commonProblemsHome: {prev: null, next: 'enlargedProstate'},
+    enlargedProstate: {prev: 'commonProblemsHome', next: 'inflammation'},
+    inflammation: {prev: 'enlargedProstate', next: 'tumorsCancer'},
+    tumorsCancer: {prev: 'inflammation', next: null}
+  }
 
   constructor() { }
 
   ngOnInit(): void {
-    //console.log(this.previousNextButtons.module);
-  //  this.hideComponent = true;
-   // this.previousNextButtons.emit();
-   //previousNextButtons.module = 'prostate-importance';
+    this.setSubHrefTab("commonProblemsHome");
   }
 
-  ngAfterViewInit() {
-    // child is set
-    //this.previousNextButtons.module = 'prostate-importance';
+  public setSubHrefTab(hrefName: string) {
+    this.currentSubHref = hrefName;
+
+    if(this.objTabMapping[hrefName]) {
+      const element = document.querySelector(`#${this.objTabMapping[hrefName]}`) as HTMLElement;
+      element.click();
+    }
+  }
+
+  public subModuleHandler(isNext: boolean): boolean {
+    let tab: string = "";
+
+    if(isNext) {
+      if(this.objPrevNextMapping[this.currentSubHref] && this.objPrevNextMapping[this.currentSubHref].next) {
+        tab = this.objPrevNextMapping[this.currentSubHref].next;
+      } 
+    } else {
+      if(this.objPrevNextMapping[this.currentSubHref] && this.objPrevNextMapping[this.currentSubHref].prev) {
+        tab = this.objPrevNextMapping[this.currentSubHref].prev;
+      } 
+    }
+
+    if(tab) {
+      this.setSubHrefTab(tab);
+      return false;
+    }
+    return true;
   }
 }

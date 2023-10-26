@@ -1,13 +1,11 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModuleMainTabs } from '@core/models/module-main-tabs';
-import { PROSTATE_IMPORTANCE_MAIN_TAB_DATA } from '@core/data/main-tabs/prostate-importance-main-tab-data';
-import { RISKS_SYMPTOMS_MAIN_TAB_DATA } from '@core/data/main-tabs/risks-symptoms-main-tab-data';
-import { PROSTATE_SCREENING_MAIN_TAB_DATA } from '@core/data/main-tabs/prostate-screening-main-tab-data';
-import { DIAGNOSIS_TREATMENT_MAIN_TAB_DATA } from '@core/data/main-tabs/diagnosis-treatment-main-tab-data';
-import { BEST_CHOICE_MAIN_TAB_DATA } from '@core/data/main-tabs/best-choice-main-tab-data';
-import { ModuleSubTabs } from '@core/models/module-sub-tabs';
-import { PROSTATE_IMPORTANCE_SUB_TAB_DATA } from '@core/data/sub-tabs/prostate-importance-sub-tab-data';
+import { PROSTATE_IMPORTANCE_MAIN_TAB_DATA } from '@core/data/prostate-importance-main-tab-data';
+import { RISKS_SYMPTOMS_MAIN_TAB_DATA } from '@core/data/risks-symptoms-main-tab-data';
+import { PROSTATE_SCREENING_MAIN_TAB_DATA } from '@core/data/prostate-screening-main-tab-data';
+import { DIAGNOSIS_TREATMENT_MAIN_TAB_DATA } from '@core/data/diagnosis-treatment-main-tab-data';
+import { BEST_CHOICE_MAIN_TAB_DATA } from '@core/data/best-choice-main-tab-data';
 
 @Component({
   selector: 'previous-next-buttons',
@@ -15,22 +13,13 @@ import { PROSTATE_IMPORTANCE_SUB_TAB_DATA } from '@core/data/sub-tabs/prostate-i
   styleUrls: ['./previous-next-buttons.component.css']
 })
 export class PreviousNextButtonsComponent {
-  // @ViewChild('commonProblemsCom', { static: false })
-  // commonProblemsComp!: CommonProblemsComponent;
-
   @Input() module: string = '';
+  @Input() canMove: any;
 
   //Main Tabs' Current State
   public currentMainHref: string = 'title';
   public currentMainTab: string = 'titleTab';
-  public currentHasSubTabs: boolean = false;
-  public currentSubTabCount: number = 0;
   public isActive: boolean = false;
-  
-  //Sub Tabs' Current State
-  public currentSubHref: string = '';
-  public currentSubTab: string = '';
-  public isCurrentSubTabActive: boolean = false;
 
   //Main Tabs' Data
   public prostateImportanceMainTabData: ModuleMainTabs[] = PROSTATE_IMPORTANCE_MAIN_TAB_DATA;
@@ -38,10 +27,6 @@ export class PreviousNextButtonsComponent {
   public prostateScreeningMainTabData: ModuleMainTabs[] = PROSTATE_SCREENING_MAIN_TAB_DATA;
   public diagnosisTreatmentMainTabData: ModuleMainTabs[] = DIAGNOSIS_TREATMENT_MAIN_TAB_DATA;
   public bestChoiceMainTabData: ModuleMainTabs[] = BEST_CHOICE_MAIN_TAB_DATA;
-
-  //Sub Tabs' Data
-  public prostateImportanceSubTabData: ModuleSubTabs[] = PROSTATE_IMPORTANCE_SUB_TAB_DATA;
-
 
   //Modules
   public readonly HOME = 'home';
@@ -59,7 +44,15 @@ export class PreviousNextButtonsComponent {
 
   ngOnInit(): void {}
 
-  public naviagteModule(module: string): void {
+  public getMainHref(): string {
+    return this.currentMainHref;
+  }
+
+  public getMainTab(): string {
+    return this.currentMainTab;
+  }
+
+  public naviagteModule(module: string): void {  
     const navigationDetails: string[] = [];
     var routeTo = '';
 
@@ -103,23 +96,10 @@ export class PreviousNextButtonsComponent {
 
   public next(module: string = ''): void {
     var moduleMainTabData: ModuleMainTabs[];
-    var moduleSubTabData: ModuleSubTabs[];
 
     switch (module) {
       case this.PROSTATE_IMPORTANCE:
         moduleMainTabData = Array.from(this.prostateImportanceMainTabData);
-        moduleSubTabData = Array.from(this.prostateImportanceSubTabData);
-
-        // for(let i = 0; i < moduleMainTabData.length; i++){
-        //   console.log("href " + moduleMainTabData[i].href + " tab " + moduleMainTabData[i].tab + 
-        //   " hasSub Tabs " + moduleMainTabData[i].hasSubTabs + " subTabCount " + moduleMainTabData[i].subTabCount + " \n");
-        // }
-
-        // for(let j = 0; j < moduleSubTabData.length; j++){
-        //   console.log("mainHref " + moduleSubTabData[j].mainHref + " mainTab " + moduleSubTabData[j].mainTab + 
-        //   " subHref " + moduleSubTabData[j].subHref + " subTab " + moduleSubTabData[j].subTab + " \n");
-        // }
-
         break;
       case this.RISK_SYMPTOMS:
         moduleMainTabData = Array.from(this.risksSymptomsMainTabData);
@@ -135,70 +115,26 @@ export class PreviousNextButtonsComponent {
         break;
     }
 
-    //let currSsubTab;
-    console.log("OUTSIDE OF IF \n");
-    console.log("this.currentMainHref " + this.currentMainHref + " \n");
-    console.log("moduleMainTabData![moduleMainTabData!.length - 1].href " + moduleMainTabData![moduleMainTabData!.length - 1].href);
-    console.log("(this.currentMainHref !== moduleMainTabData![moduleMainTabData!.length - 1].href) " + (this.currentMainHref !== moduleMainTabData![moduleMainTabData!.length - 1].href) + " \n");
    if (this.currentMainHref !== moduleMainTabData![moduleMainTabData!.length - 1].href) {
-     console.log("INSIDE OF IF \n");
-     const currMainHref = this.currentMainHref;
-     console.log("currMainHref " + currMainHref);
+      let moveAhead: boolean = true;
 
-     const i = moduleMainTabData!.findIndex((h) => h.href === currMainHref);
-     console.log("i " + i);
+      if(this.canMove && !this.canMove(true)) {
+        moveAhead = false;
+      }
 
+      if(moveAhead) {
+        const currMainHref = this.currentMainHref;
+        const i = moduleMainTabData!.findIndex((h) => h.href === currMainHref);
 
-     this.currentMainHref = moduleMainTabData![i + 1].href!;
-     console.log("this.currentMainHref " + this.currentMainHref + "\n");
-     
-     this.currentMainTab = moduleMainTabData![i + 1].tab!;
-     console.log("this.currentMainTab " + this.currentMainTab + "\n");
+        this.currentMainHref = moduleMainTabData![i + 1].href!;        
+        this.currentMainTab = moduleMainTabData![i + 1].tab!;
 
-     this.isActive = true;
-     console.log(" this.isActive " + this.isActive + "\n");
-     this.setHrefTab(this.currentMainHref, this.currentMainTab);
+        this.isActive = true;
+        this.setHrefTab(this.currentMainHref, this.currentMainTab);
 
-     this.currentHasSubTabs = moduleMainTabData![i + 1].hasSubTabs!;
-     console.log("this.currentHasSubTabs " + this.currentHasSubTabs + "\n");
-
-     this.currentSubTabCount = moduleMainTabData![i + 1].subTabCount!;
-     console.log("this.currentSubTabCount " + this.currentSubTabCount + "\n");
-
-
-
-     //NOTE: i will need to have a loop where i click all the subTabs for the mainHref/Tab
-     //if hasSubTabs locate which subtab it is currently on
-     //if(this.currentMainHref has sub tab) {
-     //
-     //this.isCurrentSubTabActive = true;
-     //console.log(" this.isCurrentSubTabActive " + this.isCurrentSubTabActive + "\n");
-     //this.setSubHrefTab(this.currentSubHref, this.currentSubTab);
-
-     //let elementSubTab: HTMLElement = document.getElementById(this.currentSubTab) as HTMLElement;
-     //elementSubTab.click();
-     //}
-
-    //  if(this.currentMainTab == 'commonProblemTab' || this.currentMainHref == 'commonProblem') {
-    //   console.log();
-
-    //  }
-
-     if(this.currentHasSubTabs){
-
-      //  for(let j = 0; j < moduleSubTabData!.length; j++){
-      //       console.log("mainHref " + moduleSubTabData![j].mainHref + " mainTab " + moduleSubTabData![j].mainTab + 
-      //     " subHref " + moduleSubTabData![j].subHref + " subTab " + moduleSubTabData![j].subTab + " \n");
-      //   }
-
-      //  console.log("current Sub from Problems ");
-      //locate which subtab it is currently on
-
-     }
-
-
-     let elementMainTab: HTMLElement = document.getElementById(this.currentMainTab) as HTMLElement;
-     elementMainTab.click();
+        let elementMainTab: HTMLElement = document.getElementById(this.currentMainTab) as HTMLElement;
+        elementMainTab.click();
+      }
     }
   }
 
@@ -223,28 +159,30 @@ export class PreviousNextButtonsComponent {
   }
 
   public nextModuleTab(module: string = ''): void {
-    switch (module) {
-      case this.PROSTATE_IMPORTANCE:
-        this.next(module);
-        this.navigateModuleCredits(module);
-        break;
-      case this.RISK_SYMPTOMS:
-        this.next(module);
-        this.navigateModuleCredits(module);
-        break;
-      case this.PROSTATE_SCREENING:
-        this.next(module);
-        this.navigateModuleCredits(module);
-        break;
-      case this.DIAGNOSIS_TREATMENT:
-        this.next(module);
-        this.navigateModuleCredits(module);
-        break;
-      case this.BEST_CHOICE:
-        this.next(module);
-        this.navigateModuleCredits(module);
-        break;
-    }
+      switch (module) {
+        case this.PROSTATE_IMPORTANCE:
+          this.next(module);
+          this.navigateModuleCredits(module);
+          break;
+        case this.RISK_SYMPTOMS:
+          this.next(module);
+          this.navigateModuleCredits(module);
+          break;
+        case this.PROSTATE_SCREENING:
+          this.next(module);
+          this.navigateModuleCredits(module);
+          break;
+        case this.DIAGNOSIS_TREATMENT:
+          this.next(module);
+          this.navigateModuleCredits(module);
+          break;
+        case this.BEST_CHOICE:
+          this.next(module);
+          this.navigateModuleCredits(module);
+          break;
+      }
+    
+    
   }
 
   public previous(module: string = '') {
@@ -269,17 +207,25 @@ export class PreviousNextButtonsComponent {
     }
 
     if (this.currentMainHref !== moduleMainTabData![0].href) {
-      const currHref = this.currentMainHref;
-      const i = moduleMainTabData!.findIndex((h) => h.href === currHref);
+      let moveAhead: boolean = true;
 
-      this.currentMainHref = moduleMainTabData![i - 1].href!;
-      this.currentMainTab = moduleMainTabData![i - 1].tab!;
+      if(this.canMove && !this.canMove(false)) {
+        moveAhead = false;
+      }
 
-      this.isActive = true;
-      this.setHrefTab(this.currentMainHref, this.currentMainTab);
+      if(moveAhead) {
+        const currHref = this.currentMainHref;
+        const i = moduleMainTabData!.findIndex((h) => h.href === currHref);
 
-      let element: HTMLElement = document.getElementById(this.currentMainTab) as HTMLElement;
-      element.click();
+        this.currentMainHref = moduleMainTabData![i - 1].href!;
+        this.currentMainTab = moduleMainTabData![i - 1].tab!;
+
+        this.isActive = true;
+        this.setHrefTab(this.currentMainHref, this.currentMainTab);
+
+        let element: HTMLElement = document.getElementById(this.currentMainTab) as HTMLElement;
+        element.click();
+      }
     }  else if(this.currentMainHref == moduleMainTabData![0].href){
       this.naviagteModule(module);
     }
@@ -326,40 +272,15 @@ export class PreviousNextButtonsComponent {
   }
 
   public setHrefTab(href: string, tab: string): void {
-    // this.currentMainHref = href;
-    // this.currentMainTab = tab;
     this.setMainHref(href);
     this.setMainTab(tab);
-
-    // console.log("this.currentMainHref " + this.currentMainHref + "\n");
-    // console.log("this.currentMainTab " + this.currentMainTab + "\n");
   }
 
   public setMainHref(href: string): void{
     this.currentMainHref = href;
-
-    console.log("this.currentMainHref " + this.currentMainHref + "\n");
   }
 
   public setMainTab(tab: string): void{
     this.currentMainTab = tab;
-
-    console.log("this.currentMainTab " + this.currentMainTab + "\n");
-  }
-
-  public getMainHref(): string {
-    return this.currentMainHref;
-  }
-
-  public getMainTab(): string {
-    return this.currentMainTab;
-  }
-
-  public setSubHrefTab(href: string, tab: string): void {
-    this.currentSubHref = href;
-    this.currentSubTab = tab;
-
-    console.log("this.currentSubHref " + this.currentSubHref + "\n");
-    console.log("this.currentSubTab " + this.currentSubTab + "\n");
   }
 }
