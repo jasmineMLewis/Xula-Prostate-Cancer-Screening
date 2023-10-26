@@ -17,7 +17,7 @@ import { SymptomsNoneComponent } from './components/learn-symptoms/symptoms-none
 import { SymptomsOtherComponent } from './components/learn-symptoms/symptoms-other/symptoms-other.component';
 import { SymptomsCommonComponent } from './components/learn-symptoms/symptoms-common/symptoms-common.component';
 import { WhatToDoComponent } from './components/learn-symptoms/what-to-do/what-to-do.component';
-import { BestChoiceQuestionnaireComponent } from './components/best-choice-questionnaire/best-choice-questionnaire.component';
+import { RiskSymptomsPreferencesComponent } from './components/risk-symptoms-preferences/risk-symptoms-preferences.component';
 import { RisksSymptomsSummaryComponent } from './components/risks-symptoms-summary/risks-symptoms-summary.component';
 import { RisksSymptomsCreditsComponent } from './components/risks-symptoms-credits/risks-symptoms-credits.component';
 
@@ -37,7 +37,7 @@ import { RisksSymptomsCreditsComponent } from './components/risks-symptoms-credi
     SymptomsOtherComponent,
     SymptomsCommonComponent,
     WhatToDoComponent,
-    BestChoiceQuestionnaireComponent,
+    RiskSymptomsPreferencesComponent,
     RisksSymptomsSummaryComponent,
     RisksSymptomsCreditsComponent
   ],

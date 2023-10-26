@@ -1,5 +1,4 @@
 # Prostate Cancer Screening
-----
 
 ## Igloonarian | Client
 <p>Xavier University of Louisiana, College of Pharamcy</p>
@@ -21,16 +20,16 @@ http://prostatecancertraining.com/home
 ## Project GitHub
 https://github.com/jasmineMonquieLewis/Xula-Prostate-Cancer-Screening
 
+
 # Introduction
-----
 This is the Angular project for Xavier University of Louisiana College of Pharmacy's Prostate Screening: Making the Best Choice.
 
 ## Version
 <p>Major.Minor.Patch</p>
-<p>2.1.8</p>
+<p>2.2.2</p>
 
 ## Date Last Updated
-September 28, 2023
+October 25, 2023
 
 ## Technologies
 | Technology | Version  |
@@ -41,8 +40,6 @@ September 28, 2023
 | JQuery | 3.6.3 |
 
 # Application Details
-----
-
 The application primary module is 'Features'. The 'Features' module is comprised of five items
 in addition to the home module:
 1. [Home](#home)
@@ -53,7 +50,6 @@ in addition to the home module:
 6. [Best Choice](#best-choice)
 
 # Primary Module 'Features'
-----
 
 ## Home
 > Application landing page and links to each module
@@ -68,7 +64,13 @@ in addition to the home module:
 > Cancer screening helps find cancer at an early stage
 
 ## Diagnosis & Treatment
-> Learn the options, benefits and risk for screening and treatment
+> Learn the options, benefits, and risks of screening and treatment
 
 ## Best Choice
 > Making an informed-decision about screening
+
+# Installation
+
+## Install Modules
+1) npm  install node modules  <br/>
+2) npm install bootstrap@4.5.3 <br/>

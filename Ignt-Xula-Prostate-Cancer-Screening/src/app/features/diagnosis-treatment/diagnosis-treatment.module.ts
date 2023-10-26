@@ -22,7 +22,7 @@ import { DecisionHomeComponent } from './components/decision/decision-home/decis
 import { WatchAndWaitComponent } from './components/decision/watch-and-wait/watch-and-wait.component';
 import { ActiveTreatmentComponent } from './components/decision/active-treatment/active-treatment.component';
 import { TalkToYourDoctorComponent } from './components/decision/talk-to-your-doctor/talk-to-your-doctor.component';
-import { BestChoiceQuestionnaireComponent } from './components/best-choice-questionnaire/best-choice-questionnaire.component';
+import { DiagnosisTreatmentPreferencesComponent } from './components/diagnosis-treatment-preferences/diagnosis-treatment-preferences.component';
 import { DiagnosisTreatmentSummaryComponent } from './components/diagnosis-treatment-summary/diagnosis-treatment-summary.component';
 import { DiagnosisTreatmentCreditsComponent } from './components/diagnosis-treatment-credits/diagnosis-treatment-credits.component';
 
@@ -47,7 +47,7 @@ import { DiagnosisTreatmentCreditsComponent } from './components/diagnosis-treat
     WatchAndWaitComponent,
     ActiveTreatmentComponent,
     TalkToYourDoctorComponent,
-    BestChoiceQuestionnaireComponent,
+    DiagnosisTreatmentPreferencesComponent,
     DiagnosisTreatmentSummaryComponent,
     DiagnosisTreatmentCreditsComponent
   ],
