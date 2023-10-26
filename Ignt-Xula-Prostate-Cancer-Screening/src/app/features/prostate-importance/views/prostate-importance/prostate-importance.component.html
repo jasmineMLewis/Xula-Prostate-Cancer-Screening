@@ -16,58 +16,58 @@
 
     <div class="card-body">
       <ul class="nav nav-pills nav-fill" id="prostateImportance" role="tablist">
-        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentHref === 'title'}" 
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentMainHref === 'title'}" 
           (click)="previousNextButtons.setHrefTab('title', 'titleTab')">
           <a class="nav-link active" id="titleTab" data-toggle="tab" href="#title" role="tab" aria-controls="title" aria-selected="true">
             <i class="fa fa-bookmark-o" aria-hidden="true"></i>
             Title
           </a>
         </li>
-        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentHref === 'prostate'}" 
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentMainHref === 'prostate'}" 
           (click)="previousNextButtons.setHrefTab('prostate', 'prostateTab')">
           <a class="nav-link" id="prostateTab" data-toggle="tab" href="#prostate" role="tab" aria-controls="prostate" aria-selected="false">
             1.1 Prostate
           </a>
         </li>
-        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentHref === 'commonProblem'}" 
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentMainHref === 'commonProblem'}" 
           (click)="previousNextButtons.setHrefTab('commonProblem', 'commonProblemTab')">
           <a class="nav-link" id="commonProblemTab" data-toggle="tab" href="#commonProblem" role="tab" aria-controls="commonProblem" aria-selected="false">
             1.2 Problems
           </a>
         </li>
-        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentHref === 'symptoms'}" 
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentMainHref === 'symptoms'}" 
           (click)="previousNextButtons.setHrefTab('symptoms', 'symptomsTab')">
           <a class="nav-link" id="symptomsTab" data-toggle="tab" href="#symptoms" role="tab" aria-controls="symptoms" aria-selected="false">
             1.3 Symptoms
           </a>
         </li>
-        <li class="nav-item waves-effect waves-light"  [ngClass]="{ 'active': previousNextButtons.currentHref === 'visit'}" 
+        <li class="nav-item waves-effect waves-light"  [ngClass]="{ 'active': previousNextButtons.currentMainHref === 'visit'}" 
           (click)="previousNextButtons.setHrefTab('visit', 'visitTab')">
           <a class="nav-link" id="visitTab" data-toggle="tab" href="#visit" role="tab" aria-controls="visit" aria-selected="false">
             1.4 Visit
           </a>
         </li>
-        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentHref === 'prostateExam'}" 
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentMainHref === 'prostateExam'}" 
           (click)="previousNextButtons.setHrefTab('prostateExam', 'prostateExamTab')">
           <a class="nav-link" id="prostateExamTab" data-toggle="tab" href="#prostateExam" role="tab" aria-controls="prostateExam" aria-selected="false">
             1.5 Exam
           </a>
         </li>
-        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentHref === 'bestChoiceQuestionnaire'}" 
-          (click)="previousNextButtons.setHrefTab('bestChoiceQuestionnaire', 'bestChoiceQuestionnaireTab')">
-          <a class="nav-link" id="bestChoiceQuestionnaireTab" data-toggle="tab" href="#bestChoiceQuestionnaire" role="tab" aria-controls="bestChoiceQuestionnaire" aria-selected="false">
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentMainHref === 'preferences'}" 
+          (click)="previousNextButtons.setHrefTab('preferences', 'preferencesTab')">
+          <a class="nav-link" id="preferencesTab" data-toggle="tab" href="#preferences" role="tab" aria-controls="preferences" aria-selected="false">
             <i class="fa fa-question-circle" aria-hidden="true"></i>
             Preferences
           </a>
         </li>
-        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentHref === 'summary'}" 
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentMainHref === 'summary'}" 
           (click)="previousNextButtons.setHrefTab('summary', 'summaryTab')">
           <a class="nav-link" id="summaryTab" data-toggle="tab" href="#summary" role="tab" aria-controls="summary" aria-selected="false">
             <i class="fa fa-info-circle" aria-hidden="true"></i>
             Summary
           </a>
         </li>
-        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentHref === 'credits'}" 
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtons.currentMainHref === 'credits'}" 
           (click)="previousNextButtons.setHrefTab('credits', 'creditsTab')">
           <a class="nav-link" id="creditsTab" data-toggle="tab" href="#credits" role="tab" aria-controls="credits" aria-selected="false">
             <i class="fa fa-handshake-o" aria-hidden="true"></i>
@@ -78,46 +78,46 @@
 
       <div class="tab-content" id="prostateImportanceContent">
         <div class="tab-pane fade active show" id="title" role="tabpanel" aria-labelledby="titleTab" 
-          [ngClass]="{ 'active': previousNextButtons.currentHref === 'title'}">
+          [ngClass]="{ 'active': previousNextButtons.currentMainHref === 'title'}">
           <prostate-importance-title></prostate-importance-title>
         </div>
         <div class="tab-pane fade" id="prostate" role="tabpanel" aria-labelledby="prostateTab" 
-          [ngClass]="{ 'active': previousNextButtons.currentHref === 'prostate'}">
+          [ngClass]="{ 'active': previousNextButtons.currentMainHref === 'prostate'}">
           <what-is-prostate></what-is-prostate>
         </div>
         <div class="tab-pane fade" id="commonProblem" role="tabpanel" aria-labelledby="commonProblemTab" 
-          [ngClass]="{ 'active': previousNextButtons.currentHref === 'commonProblem'}">
+          [ngClass]="{ 'active': previousNextButtons.currentMainHref === 'commonProblem'}">
           <common-problems></common-problems>
         </div>
         <div class="tab-pane fade" id="symptoms" role="tabpanel" aria-labelledby="symptomsTab" 
-          [ngClass]="{ 'active': previousNextButtons.currentHref === 'symptoms'}">
+          [ngClass]="{ 'active': previousNextButtons.currentMainHref === 'symptoms'}">
           <symptoms></symptoms>
         </div>
         <div class="tab-pane fade" id="visit" role="tabpanel" aria-labelledby="visitTab" 
-          [ngClass]="{ 'active': previousNextButtons.currentHref === 'visit'}">
+          [ngClass]="{ 'active': previousNextButtons.currentMainHref === 'visit'}">
           <doctor-visit></doctor-visit>
         </div>
         <div class="tab-pane fade" id="prostateExam" role="tabpanel" aria-labelledby="prostateExamTab" 
-          [ngClass]="{ 'active': previousNextButtons.currentHref === 'prostateExam'}">
+          [ngClass]="{ 'active': previousNextButtons.currentMainHref === 'prostateExam'}">
           <prostate-exams></prostate-exams>
         </div>
-        <div class="tab-pane fade" id="bestChoiceQuestionnaire" role="tabpanel" aria-labelledby="bestChoiceQuestionnaireTab" 
-          [ngClass]="{ 'active': previousNextButtons.currentHref === 'bestChoiceQuestionnaire'}">
-          <best-choice-questionnaire></best-choice-questionnaire>
+        <div class="tab-pane fade" id="preferences" role="tabpanel" aria-labelledby="preferencesTab" 
+          [ngClass]="{ 'active': previousNextButtons.currentMainHref === 'preferences'}">
+          <prostate-importance-preferences></prostate-importance-preferences>
         </div>
         <div class="tab-pane fade" id="summary" role="tabpanel" aria-labelledby="summaryTab" 
-          [ngClass]="{ 'active': previousNextButtons.currentHref === 'summary'}">
+          [ngClass]="{ 'active': previousNextButtons.currentMainHref === 'summary'}">
           <prostate-importance-summary></prostate-importance-summary>
         </div>
         <div class="tab-pane fade" id="credits" role="tabpanel" aria-labelledby="creditsTab" 
-          [ngClass]="{ 'active': previousNextButtons.currentHref === 'credits'}">
+          [ngClass]="{ 'active': previousNextButtons.currentMainHref === 'credits'}">
           <prostate-importance-credits></prostate-importance-credits>
         </div>
       </div>
     </div>
 
     <div class="card-footer bg-primary text-white">
-        <previous-next-buttons #previousNextButtons module="prostate-importance"></previous-next-buttons>
+        <previous-next-buttons #previousNextButtons module="prostate-importance" [canMove]="canMove.bind(this)"></previous-next-buttons>
     </div>
   </div>
 </div>

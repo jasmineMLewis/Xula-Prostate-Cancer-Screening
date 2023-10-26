@@ -19,7 +19,6 @@ import { BestChoiceModule } from '@features/best-choice/best-choice.module';
     BrowserModule,
 
     // "Singleton" modules (not feature modules)
-   // LayoutModule,
     CoreModule,
 
     // Feature modules

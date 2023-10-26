@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { CommonProblemsComponent } from '@features/prostate-importance/components/common-problems/common-problems.component';
+import { ProstateExamsComponent } from '@features/prostate-importance/components/prostate-exams/prostate-exams.component';
+import { SymptomsComponent } from '@features/prostate-importance/components/symptoms/symptoms.component';
+import { PreviousNextButtonsComponent } from '@shared/components/previous-next-buttons/previous-next-buttons.component';
 
 @Component({
   selector: 'prostate-importance',
@@ -6,97 +10,39 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./prostate-importance.component.css']
 })
 export class ProstateImportanceComponent implements OnInit {
+  @ViewChild(PreviousNextButtonsComponent,{static: true}) compPrevNext!: PreviousNextButtonsComponent;
+  
+  //Components to cycle through
+  @ViewChild(CommonProblemsComponent,{static: false}) compProblems!: CommonProblemsComponent;
+  @ViewChild(SymptomsComponent,{static: false}) compSymptoms!: SymptomsComponent;
+  @ViewChild(ProstateExamsComponent,{static: false}) compExam!: ProstateExamsComponent;
+ 
+  //Horizontal Tabs with Vertical Sub-Tabs 
+  public readonly COMMON_PROBLEM = 'commonProblem';
+  public readonly SYMPTOMS  = 'symptoms';
+  public readonly PROSTATE_EXAM = 'prostateExam';
 
+  constructor() { }
+  
   ngOnInit(): void {  }
 
-  // public hrefs = [
-  //   'title',
-  //   'prostate',
-  //   'commonProblem',
-  //   'symptoms',
-  //   'visit',
-  //   'prostateExam',
-  //   'bestChoiceQuestionnaire',
-  //   'summary',
-  //   'credits',
-  // ];
-  // public tabs = [
-  //   'titleTab',
-  //   'prostateTab',
-  //   'commonProblemTab',
-  //   'symptomsTab',
-  //   'visitTab',
-  //   'prostateExamTab',
-  //   'bestChoiceQuestionnaireTab',
-  //   'summaryTab',
-  //   'creditsTab',
-  // ];
+  public canMove(isNext: boolean): boolean {
+    let retVal: boolean = true;
 
-  // public currentHref: string = 'title';
-  // public currentTab: string = 'titleTab';
-  // public isActive = false;
-  // public isNextButtonVisible = false;
-  // public isPreviousButtonVisible = false;
-
-  // ngOnInit(): void {
-  //    // this.displayNextButton();
-  // }
-
-  // public displayNextButton(): void {
-  //   this.isNextButtonVisible = (this.currentHref === this.hrefs[8] || this.currentTab === this.tabs[8]) ? false : true;
-  // }
-
-  // public displayPreviousButton(): void {
-  //   this.isPreviousButtonVisible = (this.currentHref === this.hrefs[0] || this.currentTab === this.tabs[0]) ? false : true;
-  // }
-
-  // public next(): void {
-  //   if (this.currentHref !== this.hrefs[this.hrefs.length - 1]) {
-  //     const currHref = this.currentHref;
-
-  //     const i = this.hrefs.findIndex(function (el) {
-  //       return el === currHref;
-  //     });
-
-  //     console.log("i " + i);
-  //     this.currentHref = this.hrefs[i + 1];
-  //     this.currentTab = this.tabs[i + 1];
-  //     this.isActive = true;
-
-  //     this.setHrefTab(this.currentHref, this.currentTab);
-  //     this.displayNextButton(); 
-  //     this.displayPreviousButton();
-
-  //      let element: HTMLElement = document.getElementById(this.currentTab) as HTMLElement;
-  //      element.click();
-  //   }
-  // }
-
-  // public previous(): void {
-  //   if (this.currentHref !== this.hrefs[0]) {
-  //       const currHref = this.currentHref;
-
-  //       const i = this.hrefs.findIndex(function (el) {
-  //           return el === currHref;
-  //       });
-  //       this.currentHref = this.hrefs[i - 1];
-  //       this.currentTab = this.tabs[i - 1];
-  //       this.isActive = true;
-
-  //       this.setHrefTab(this.currentHref, this.currentTab);
-  //       this.displayNextButton(); 
-  //       this.displayPreviousButton();
-
-  //       let element: HTMLElement = document.getElementById(this.currentTab) as HTMLElement;
-  //       element.click();
-  //   }
-  // }
-
-  // public setHrefTab(href: string, tab: string): void {
-  //   this.currentHref = href;
-  //   this.currentTab = tab;
-
-  //  this.displayPreviousButton();
-  //  this.displayNextButton();
-  // }
+    switch(this.compPrevNext.currentMainHref) {
+      case this.COMMON_PROBLEM: {
+        retVal = this.compProblems.subModuleHandler(isNext);
+        break;
+      }
+      case this.SYMPTOMS: {
+        retVal = this.compSymptoms.subModuleHandler(isNext);
+        break;
+      }
+      case this.PROSTATE_EXAM: {
+        retVal = this.compExam.subModuleHandler(isNext);
+        break;
+      }
+    }
+    return retVal;
+  }
 }

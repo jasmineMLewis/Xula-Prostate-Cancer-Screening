@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SharedModule } from './../../shared/shared.module';
+import { SharedModule } from '@shared/shared.module';
 import { ProstateImportanceRoutingModule } from './prostate-importance-routing.module';
 import { ProstateImportanceTitleComponent } from './components/prostate-importance-title/prostate-importance-title.component';
 import { ProstateImportanceComponent } from './views/prostate-importance/prostate-importance.component';
@@ -9,7 +9,7 @@ import { WhatIsProstateComponent } from './components/what-is-prostate/what-is-p
 import { ProstateImportanceSummaryComponent } from './components/prostate-importance-summary/prostate-importance-summary.component';
 import { ProstateImportanceCreditsComponent } from './components/prostate-importance-credits/prostate-importance-credits.component';
 import { DoctorVisitComponent } from './components/doctor-visit/doctor-visit.component';
-import { BestChoiceQuestionnaireComponent } from './components/best-choice-questionnaire/best-choice-questionnaire.component';
+import { ProstateImportancePreferencesComponent } from './components/prostate-importance-preferences/prostate-importance-preferences.component';
 import { CommonProblemsComponent } from './components/common-problems/common-problems.component';
 import { CommonProblemsHomeComponent } from './components/common-problems/common-problems-home/common-problems-home.component';
 import { EnlargedProstateComponent } from './components/common-problems/enlarged-prostate/enlarged-prostate.component';
@@ -31,7 +31,7 @@ import { UrineRelatedComponent } from './components/symptoms/urine-related/urine
     ProstateImportanceSummaryComponent,
     ProstateImportanceCreditsComponent,
     DoctorVisitComponent,
-    BestChoiceQuestionnaireComponent,
+    ProstateImportancePreferencesComponent,
     CommonProblemsComponent,
     CommonProblemsHomeComponent,
     EnlargedProstateComponent,
