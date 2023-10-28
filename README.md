@@ -1,5 +1,15 @@
 # Prostate Cancer Screening
 
+# Table of Contentes
+
+1. [General Information](#general-information)
+2. [Introduction](#introduction)
+3. [Application Details](#application-details)
+4. [Primary Module Features](#primary-module-features)
+5. [Installation](#installation)
+
+# General Information
+
 ## Igloonarian | Client
 <p>Xavier University of Louisiana, College of Pharamcy</p>
 <p>Margarita Echeverri, MSc, PhD, Principal Investigator</p>
@@ -26,10 +36,10 @@ This is the Angular project for Xavier University of Louisiana College of Pharma
 
 ## Version
 <p>Major.Minor.Patch</p>
-<p>2.2.2</p>
+<p>2.2.4</p>
 
 ## Date Last Updated
-October 25, 2023
+October 28, 2023
 
 ## Technologies
 | Technology | Version  |
@@ -49,7 +59,7 @@ in addition to the home module:
 5. [Diagnosis & Treatment](#diagnosis-&-treatment)
 6. [Best Choice](#best-choice)
 
-# Primary Module 'Features'
+# Primary Module Features
 
 ## Home
 > Application landing page and links to each module
