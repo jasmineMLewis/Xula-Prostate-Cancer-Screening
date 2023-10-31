@@ -1,111 +1,142 @@
 <div class="container">
-    <p></p>
-    <div class="row">
-      <div class="col-3">
-        <div class="nav flex-column nav-pills" id="steps-tab" role="tablist" aria-orientation="vertical">
-          <a class="nav-link active" id="steps-home-tab" data-toggle="pill" href="#steps-home" role="tab"
-            aria-controls="steps-home" aria-selected="true">
+  <p></p>
+  <div class="row">
+    <div class="col-3">
+      <ul class="nav flex-column nav-pills" id="steps" role="tablist" aria-orientation="vertical">
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'stepsHome'}"
+          (click)="setSubHrefTab('stepsHome')">
+          <a class="nav-link active" id="stepsHomeTab" data-toggle="pill" href="#stepsHome" role="tab"
+            aria-controls="stepsHome" aria-selected="true">
             Steps
           </a>
-          <a class="nav-link" id="step-one-tab" data-toggle="pill" href="#step-one" role="tab" aria-controls="step-one"
+        </li>
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'stepOne'}"
+          (click)="setSubHrefTab('stepOne')">
+          <a class="nav-link" id="stepOneTab" data-toggle="pill" href="#stepOne" role="tab" aria-controls="stepOne"
             aria-selected="false">
             1. Step One
           </a>
-          <a class="nav-link" id="step-two-tab" data-toggle="pill" href="#step-two" role="tab" aria-controls="step-two"
+        </li>
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'stepTwo'}"
+          (click)="setSubHrefTab('stepTwo')">
+          <a class="nav-link" id="stepTwoTab" data-toggle="pill" href="#stepTwo" role="tab" aria-controls="stepTwo"
             aria-selected="false">
             2. Step Two
           </a>
-          <a class="nav-link" id="step-three-tab" data-toggle="pill" href="#step-three" role="tab"
-            aria-controls="step-three" aria-selected="false">
+        </li>
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'stepThree'}"
+          (click)="setSubHrefTab('stepThree')">
+          <a class="nav-link" id="stepThreeTab" data-toggle="pill" href="#stepThree" role="tab"
+            aria-controls="stepThree" aria-selected="false">
             3. Step Three
           </a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-9">
+      <div class="tab-content" id="stepsTabContent">
+        <!-- Steps Home -->
+        <div class="tab-pane fade show active" id="stepsHome" role="tabpanel" aria-labelledby="stepsHomeTab"
+          [ngClass]="{ 'active': currentSubHref === 'stepsHome'}">
+          <steps-home></steps-home>
         </div>
-      </div>
-      <div class="col-9">
-        <div class="tab-content" id="stepsTabContent">
-          <!-- Steps Home -->
-          <div class="tab-pane fade show active" id="steps-home" role="tabpanel" aria-labelledby="steps-home-tab">
-            <steps-home></steps-home>
+
+        <!-- Step One -->
+        <div class="tab-pane fade" id="stepOne" role="tabpanel" aria-labelledby="stepOneTab"
+          [ngClass]="{ 'active': currentSubHref === 'stepOne'}">
+          <step-one></step-one>
+        </div>
+
+        <!-- Step Two -->
+        <div class="tab-pane fade" id="stepTwo" role="tabpanel" aria-labelledby="stepTwoTab"
+          [ngClass]="{ 'active': currentSubHref === 'stepTwo'}">
+          <div class="title">
+            <h1 class="problem-title">
+              <i class="fa fa-caret-down" aria-hidden="true"></i>
+              Step 2: Get the Results
+            </h1>
           </div>
-  
-          <!-- Step One -->
-          <div class="tab-pane fade" id="step-one" role="tabpanel" aria-labelledby="step-one-tab">
-            <step-one></step-one>
-          </div>
-  
-          <!-- Step Two -->
-          <div class="tab-pane fade" id="step-two" role="tabpanel" aria-labelledby="step-two-tab">
-            <div class="title">
-              <h1 class="problem-title">
-                <i class="fa fa-caret-down" aria-hidden="true"></i>
-                Step 2: Get the Results
-              </h1>
+          <hr />
+
+          <ul class="nav nav-tabs" id="stepsTwoTab" role="tablist" aria-orientation="horizontal">
+            <li class="nav-item waves-effect waves-light">
+            <a class="nav-link active bg-secondary text-white" id="getTheResultsTab" data-toggle="pill" 
+            href="#getTheResults"
+              role="tab" aria-controls="getTheResults" aria-selected="true">
+              2.1 Get the Results
+            </a>
+            </li>
+            <li class="nav-item waves-effect waves-light">
+            <a class="nav-link bg-secondary text-white" id="accuracyOfPsaTestTab" data-toggle="pill" 
+            href="#accuracyOfPsaTest" role="tab"
+              aria-controls="accuracyOfPsaTest" aria-selected="false">
+              2.2 Accuracy of PSA Test
+            </a>
+            </li>
+            <li class="nav-item waves-effect waves-light">
+            <a class="nav-link bg-secondary text-white" id="exampleOfPsaAccuracyTab" data-toggle="pill" 
+            href="#exampleOfPsaAccuracy" role="tab"
+              aria-controls="exampleOfPsaAccuracy" aria-selected="false">
+              2.3 Example of PSA Accuracy
+            </a>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="stepsTwoTabContent">
+            <div class="tab-pane fade show active" id="getTheResults" role="tabpanel">
+              <get-the-results></get-the-results>
             </div>
-            <hr />
-  
-            <div class="nav nav-tabs" id="steps-two-tab" role="tablist" aria-orientation="horizontal">
-              <a class="nav-link active bg-secondary text-white" id="tab2-1-tab" data-toggle="pill" href="#tab2-1" role="tab"
-                aria-controls="tab1-1" aria-selected="true">
-                2.1 Get the Results
-              </a>
-              <a class="nav-link bg-secondary text-white" id="tab2-2-tab" data-toggle="pill" href="#tab2-2" role="tab" 
-                aria-controls="tab2-2" aria-selected="false">
-                2.2 Accuracy of PSA Test
-              </a>
-              <a class="nav-link bg-secondary text-white" id="tab2-3-tab" data-toggle="pill" href="#tab2-3" role="tab" 
-                aria-controls="tab2-3" aria-selected="false">
-                2.3 Example of PSA Accuracy
-              </a>
+            <div class="tab-pane fade" id="accuracyOfPsaTest" role="tabpanel">
+              <accuracy-psa-test></accuracy-psa-test>
             </div>
-  
-            <div class="tab-content" id="stepsTwoTabContent">
-              <div class="tab-pane fade show active" id="tab2-1" role="tabpanel">
-                <get-the-results></get-the-results>
-              </div>
-              <div class="tab-pane fade" id="tab2-2" role="tabpanel">
-                <accuracy-psa-test></accuracy-psa-test>
-              </div>
-              <div class="tab-pane fade" id="tab2-3" role="tabpanel">
-                <example-psa-test></example-psa-test>
-              </div>
+            <div class="tab-pane fade" id="exampleOfPsaAccuracy" role="tabpanel">
+              <example-psa-test></example-psa-test>
             </div>
           </div>
-  
-          <!-- Step Three -->
-          <div class="tab-pane fade" id="step-three" role="tabpanel" aria-labelledby="step-three-tab">
-            <div class="title">
-              <h1 class="problem-title">
-                <i class="fa fa-caret-right" aria-hidden="true"></i>
-                Step 3: Discuss Results with Your Doctor
-              </h1>
+        </div>
+
+        <!-- Step Three -->
+        <div class="tab-pane fade" id="stepThree" role="tabpanel" aria-labelledby="stepThreeTab"
+          [ngClass]="{ 'active': currentSubHref === 'stepThree'}">
+          <div class="title">
+            <h1 class="problem-title">
+              <i class="fa fa-caret-right" aria-hidden="true"></i>
+              Step 3: Discuss Results with Your Doctor
+            </h1>
+          </div>
+          <hr />
+
+          <ul class="nav nav-tabs" id="stepsThreeTab" role="tablist" aria-orientation="horizontal">
+            <li class="nav-item waves-effect waves-light">
+            <a class="nav-link active bg-secondary text-white" id="discussingResultsTab" data-toggle="pill" href="#discussingResults"
+              role="tab" aria-controls="discussingResults" aria-selected="true">
+              3.1 Discussing Results
+            </a>
+            </li>
+            <li class="nav-item waves-effect waves-light">
+            <a class="nav-link bg-secondary text-white" id="abnormalResultsTab" data-toggle="pill" href="#abnormalResults" role="tab"
+              aria-controls="abnormalResults" aria-selected="false">
+              3.2 Abnormal Results
+            </a>
+            </li>
+            <li class="nav-item waves-effect waves-light">
+            <a class="nav-link bg-secondary text-white" id="referralToUrologistTab" data-toggle="pill" href="#referralToUrologist" role="tab"
+              aria-controls="referralToUrologist" aria-selected="false">
+              3.3 Referral to Urologist
+            </a>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="stepsThreeTabContent">
+            <div class="tab-pane fade show active" id="discussingResults" role="tabpanel">
+              <discussing-results></discussing-results>
             </div>
-            <hr />
-  
-            <div class="nav nav-tabs" id="steps-three-tab" role="tablist" aria-orientation="horizontal">
-              <a class="nav-link active bg-secondary text-white" id="tab3-1-tab" data-toggle="pill" href="#tab3-1" role="tab"
-                aria-controls="tab3-1" aria-selected="true">
-                3.1 Discussing Results
-              </a>
-              <a class="nav-link bg-secondary text-white" id="tab3-2-tab" data-toggle="pill" href="#tab3-2" role="tab"
-                aria-controls="tab3-2" aria-selected="false">
-                3.2 Abnormal Results
-              </a>
-              <a class="nav-link bg-secondary text-white" id="tab3-3-tab" data-toggle="pill" href="#tab3-3" role="tab" 
-                aria-controls="tab3-3" aria-selected="false">
-                 3.3 Referral to Urologist
-              </a>
+            <div class="tab-pane fade" id="abnormalResults" role="tabpanel">
+              <abnormal-results></abnormal-results>
             </div>
-  
-            <div class="tab-content" id="stepsThreeTabContent">
-              <div class="tab-pane fade show active" id="tab3-1" role="tabpanel">
-                <discussing-results></discussing-results>
-              </div>
-              <div class="tab-pane fade" id="tab3-2" role="tabpanel">
-                <abnormal-results></abnormal-results>
-              </div>
-              <div class="tab-pane fade" id="tab3-3" role="tabpanel">
-                <referral-to-urologist></referral-to-urologist>
-              </div>
+            <div class="tab-pane fade" id="referralToUrologist" role="tabpanel">
+              <referral-to-urologist></referral-to-urologist>
+            </div>
           </div>
         </div>
       </div>

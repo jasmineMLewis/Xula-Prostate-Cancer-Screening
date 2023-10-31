@@ -45,10 +45,10 @@
             2.3 At Risk
           </a>
         </li>
-        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtonsRisksSymptoms.currentMainHref === 'symptoms'}" 
-          (click)="previousNextButtonsRisksSymptoms.setHrefTab('symptoms', 'symptomsTab')">
-          <a class="nav-link" id="symptomsTab" data-toggle="tab" href="#symptoms" role="tab" aria-controls="symptoms" 
-            aria-controls="symptoms" aria-selected="false">
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': previousNextButtonsRisksSymptoms.currentMainHref === 'learnSymptoms'}" 
+          (click)="previousNextButtonsRisksSymptoms.setHrefTab('learnSymptoms', 'learnSymptomsTab')">
+          <a class="nav-link" id="learnSymptomsTab" data-toggle="tab" href="#learnSymptoms" role="tab" aria-controls="learnSymptoms" 
+            aria-controls="learnSymptoms" aria-selected="false">
             2.4 Symptoms
           </a>
         </li>
@@ -96,8 +96,8 @@
           [ngClass]="{ 'active': previousNextButtonsRisksSymptoms.currentMainHref === 'atRiskQuestionaire'}">
           <am-i-at-risk></am-i-at-risk>
         </div>
-        <div class="tab-pane fade" id="symptoms" role="tabpanel" aria-labelledby="symptomsTab" 
-          [ngClass]="{ 'active': previousNextButtonsRisksSymptoms.currentMainHref === 'symptoms'}">
+        <div class="tab-pane fade" id="learnSymptoms" role="tabpanel" aria-labelledby="learnSymptomsTab" 
+          [ngClass]="{ 'active': previousNextButtonsRisksSymptoms.currentMainHref === 'learnSymptoms'}">
           <learn-symptoms></learn-symptoms>
         </div>
         <div class="tab-pane fade" id="preferences" role="tabpanel" aria-labelledby="preferencesTab" 
@@ -114,9 +114,8 @@
         </div>
       </div>
     </div>
-
     <div class="card-footer bg-primary text-white">
-      <previous-next-buttons #previousNextButtonsRisksSymptoms module="risks-symptoms"></previous-next-buttons>
+      <previous-next-buttons #previousNextButtonsRisksSymptoms module="risks-symptoms" [canMove]="canMove.bind(this)"></previous-next-buttons>
     </div>
   </div>
 </div>

@@ -10,12 +10,12 @@ import { PreviousNextButtonsComponent } from '@shared/components/previous-next-b
   styleUrls: ['./prostate-importance.component.css']
 })
 export class ProstateImportanceComponent implements OnInit {
-  @ViewChild(PreviousNextButtonsComponent,{static: true}) compPrevNext!: PreviousNextButtonsComponent;
+  @ViewChild(PreviousNextButtonsComponent, {static: true}) compPrevNext!: PreviousNextButtonsComponent;
   
-  //Components to cycle through
-  @ViewChild(CommonProblemsComponent,{static: false}) compProblems!: CommonProblemsComponent;
-  @ViewChild(SymptomsComponent,{static: false}) compSymptoms!: SymptomsComponent;
-  @ViewChild(ProstateExamsComponent,{static: false}) compExam!: ProstateExamsComponent;
+  //Components to cycle through as Vertical Sub-Tabs
+  @ViewChild(CommonProblemsComponent, {static: false}) compProblems!: CommonProblemsComponent;
+  @ViewChild(SymptomsComponent, {static: false}) compSymptoms!: SymptomsComponent;
+  @ViewChild(ProstateExamsComponent, {static: false}) compProstateExam!: ProstateExamsComponent;
  
   //Horizontal Tabs with Vertical Sub-Tabs 
   public readonly COMMON_PROBLEM = 'commonProblem';
@@ -24,7 +24,7 @@ export class ProstateImportanceComponent implements OnInit {
 
   constructor() { }
   
-  ngOnInit(): void {  }
+  ngOnInit(): void { }
 
   public canMove(isNext: boolean): boolean {
     let retVal: boolean = true;
@@ -39,7 +39,7 @@ export class ProstateImportanceComponent implements OnInit {
         break;
       }
       case this.PROSTATE_EXAM: {
-        retVal = this.compExam.subModuleHandler(isNext);
+        retVal = this.compProstateExam.subModuleHandler(isNext);
         break;
       }
     }

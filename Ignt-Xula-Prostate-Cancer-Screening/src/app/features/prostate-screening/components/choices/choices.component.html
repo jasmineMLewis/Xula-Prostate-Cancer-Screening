@@ -2,24 +2,35 @@
     <p></p>
     <div class="row">
         <div class="col-3">
-            <div class="nav flex-column nav-pills" id="choice-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link active" id="choice-tab" data-toggle="pill" href="#choice" role="tab"
-                    aria-controls="choice" aria-selected="true">
-                    1. Best Choice
-                </a>
-                <a class="nav-link" id="shared-decision-making-tab" data-toggle="pill" href="#shared-decision-making"
-                    role="tab" aria-controls="shared-decision-making" aria-selected="false">
-                    2. Shared Decision Making
-                </a>
-            </div>
+            <ul class="nav flex-column nav-pills" id="choices" role="tablist" aria-orientation="vertical">
+                <li class="nav-item waves-effect waves-light" 
+                    [ngClass]="{ 'active': currentSubHref === 'choice'}"
+                    (click)="setSubHrefTab('choice')">
+                    <a class="nav-link active" id="choiceTab" data-toggle="pill" href="#choice" role="tab"
+                        aria-controls="choice" aria-selected="true">
+                        1. Best Choice
+                    </a>
+                </li>
+                <li class="nav-item waves-effect waves-light"
+                    [ngClass]="{ 'active': currentSubHref === 'sharedDecisionMaking'}"
+                    (click)="setSubHrefTab('sharedDecisionMaking')">
+                    <a class="nav-link" id="sharedDecisionMakingTab" data-toggle="pill" href="#sharedDecisionMaking"
+                        role="tab" aria-controls="sharedDecisionMaking" aria-selected="false">
+                        2. Shared Decision Making
+                    </a>
+                </li>
+            </ul>
         </div>
         <div class="col-9">
-            <div class="tab-content" id="choiceTabContent">
-                <div class="tab-pane fade show active" id="choice" role="tabpanel" aria-labelledby="choice-tab">
+            <div class="tab-content" id="choicesTabContent">
+                <div class="tab-pane fade show active" id="choice" role="tabpanel" 
+                    aria-labelledby="choiceTab"
+                    [ngClass]="{ 'active': currentSubHref === 'choice'}">
                     <best-choice></best-choice>
                 </div>
-                <div class="tab-pane fade" id="shared-decision-making" role="tabpanel"
-                    aria-labelledby="shared-decision-making-tab">
+                <div class="tab-pane fade" id="sharedDecisionMaking" role="tabpanel"
+                    aria-labelledby="sharedDecisionMakingTab"
+                    [ngClass]="{ 'active': currentSubHref === 'sharedDecisionMaking'}">
                     <shared-decision-making></shared-decision-making>
                 </div>
             </div>

@@ -16,10 +16,10 @@ export class CommonProblemsComponent implements OnInit {
   };
 
   private objPrevNextMapping: any = {
-    commonProblemsHome: {prev: null, next: 'enlargedProstate'},
-    enlargedProstate: {prev: 'commonProblemsHome', next: 'inflammation'},
-    inflammation: {prev: 'enlargedProstate', next: 'tumorsCancer'},
-    tumorsCancer: {prev: 'inflammation', next: null}
+    commonProblemsHome: { prev: null, next: 'enlargedProstate' },
+    enlargedProstate: { prev: 'commonProblemsHome', next: 'inflammation' },
+    inflammation: { prev: 'enlargedProstate', next: 'tumorsCancer' },
+    tumorsCancer: { prev: 'inflammation', next: null }
   }
 
   constructor() { }
@@ -28,7 +28,7 @@ export class CommonProblemsComponent implements OnInit {
     this.setSubHrefTab("commonProblemsHome");
   }
 
-  public setSubHrefTab(hrefName: string) {
+  public setSubHrefTab(hrefName: string): void {
     this.currentSubHref = hrefName;
 
     if(this.objTabMapping[hrefName]) {
