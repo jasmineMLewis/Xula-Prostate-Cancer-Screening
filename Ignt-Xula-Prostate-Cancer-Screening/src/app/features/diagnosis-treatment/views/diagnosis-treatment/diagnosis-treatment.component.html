@@ -107,7 +107,7 @@
             </div>
         </div>
         <div class="card-footer bg-primary text-white">
-            <previous-next-buttons #previousNextButtonsDiagnosisTreatment module="diagnosis-treatment"></previous-next-buttons>
+            <previous-next-buttons #previousNextButtonsDiagnosisTreatment module="diagnosis-treatment" [canMove]="canMove.bind(this)"></previous-next-buttons>
         </div>
     </div>
 </div>

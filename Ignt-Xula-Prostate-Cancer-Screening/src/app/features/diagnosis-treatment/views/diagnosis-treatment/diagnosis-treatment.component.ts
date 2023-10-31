@@ -31,11 +31,11 @@ export class DiagnosisTreatmentComponent implements OnInit {
 
     switch(this.compPrevNext.currentMainHref) {
       case this.ADDITIONAL_TESTS: {
-        //retVal = this.compTests.subModuleHandler(isNext);
+        retVal = this.compTests.subModuleHandler(isNext);
         break;
       }
       case this.TREATMENT: {
-        //retVal = this.compTreatment.subModuleHandler(isNext);
+        retVal = this.compTreatment.subModuleHandler(isNext);
         break;
       }
       case this.DECISION: {
