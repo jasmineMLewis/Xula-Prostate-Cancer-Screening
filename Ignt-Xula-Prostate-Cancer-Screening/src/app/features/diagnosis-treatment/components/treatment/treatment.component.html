@@ -2,39 +2,54 @@
     <p></p>
     <div class="row">
         <div class="col-3">
-            <div class="nav flex-column nav-pills" id="treatment-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link active" id="treatment-home-tab" data-toggle="pill" href="#treatment-home" role="tab"
-                    aria-controls="treatment-home" aria-selected="true">
-                    Treatment Home
-                </a>
-                <a class="nav-link" id="no-problem-tab" data-toggle="pill" href="#no-problem" role="tab"
-                    aria-controls="no-problem" aria-selected="false">
-                   1. No Problem
-                </a>
-                <a class="nav-link" id="may-be-some-problem-tab" data-toggle="pill" href="#may-be-some-problem" role="tab"
-                    aria-controls="may-be-some-problem" aria-selected="false">
-                    2. May be Some Problems
-                </a>
-                <a class="nav-link" id="serious-problem-tab" data-toggle="pill" href="#serious-problem" role="tab"
-                    aria-controls="serious-problem" aria-selected="false">
-                    3. Serious Problem
-                </a>
-               
-            </div>
+            <ul class="nav flex-column nav-pills" id="treatmentTab" role="tablist" aria-orientation="vertical">
+                <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'treatmentHome'}"
+                    (click)="setSubHrefTab('treatmentHome')">
+                    <a class="nav-link active" id="treatmentHomeTab" data-toggle="pill" href="#treatmentHome" role="tab"
+                        aria-controls="treatmentHome" aria-selected="true">
+                        Treatment Home
+                    </a>
+                </li>
+                <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'noProblem'}"
+                    (click)="setSubHrefTab('noProblem')">
+                    <a class="nav-link" id="noProblemTab" data-toggle="pill" href="#noProblem" role="tab"
+                        aria-controls="noProblem" aria-selected="false">
+                        1. No Problem
+                    </a>
+                </li>
+                <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'mayBeSomeProblem'}"
+                    (click)="setSubHrefTab('mayBeSomeProblem')">
+                    <a class="nav-link" id="mayBeSomeProblemTab" data-toggle="pill" href="#mayBeSomeProblem" role="tab"
+                        aria-controls="mayBeSomeProblem" aria-selected="false">
+                        2. May be Some Problems
+                    </a>
+                </li>
+                <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'seriousProblem'}"
+                    (click)="setSubHrefTab('seriousProblem')">
+                    <a class="nav-link" id="seriousProblemTab" data-toggle="pill" href="#seriousProblem" role="tab"
+                        aria-controls="seriousProblem" aria-selected="false">
+                        3. Serious Problem
+                    </a>
+                </li>
+            </ul>
         </div>
         <div class="col-9">
-            <div class="tab-content" id="tabContent">
-                <div class="tab-pane fade show active" id="treatment-home" role="tabpanel" aria-labelledby="treatment-home-tab">
-                   <treatment-home></treatment-home>
+            <div class="tab-content" id="treatmentTabContent">
+                <div class="tab-pane fade show active" id="treatmentHome" role="tabpanel"
+                    aria-labelledby="treatmentHomeTab" [ngClass]="{ 'active': currentSubHref === 'treatmentHome'}">
+                    <treatment-home></treatment-home>
                 </div>
-                <div class="tab-pane fade" id="no-problem" role="tabpanel" aria-labelledby="no-problem-tab">
+                <div class="tab-pane fade" id="noProblem" role="tabpanel" aria-labelledby="noProblemTab"
+                    [ngClass]="{ 'active': currentSubHref === 'noProblem'}">
                     <treatment-no-problem></treatment-no-problem>
                 </div>
-                <div class="tab-pane fade" id="may-be-some-problem" role="tabpanel" aria-labelledby="may-be-some-problem-tab">
+                <div class="tab-pane fade" id="mayBeSomeProblem" role="tabpanel" aria-labelledby="mayBeSomeProblemTab"
+                    [ngClass]="{ 'active': currentSubHref === 'mayBeSomeProblem'}">
                     <treatment-may-be-some-problem></treatment-may-be-some-problem>
-                  </div>
-                <div class="tab-pane fade" id="serious-problem" role="tabpanel" aria-labelledby="serious-problem-tab">
-                   <treatment-serious-problem></treatment-serious-problem>
+                </div>
+                <div class="tab-pane fade" id="seriousProblem" role="tabpanel" aria-labelledby="seriousProblemTab"
+                    [ngClass]="{ 'active': currentSubHref === 'seriousProblem'}">
+                    <treatment-serious-problem></treatment-serious-problem>
                 </div>
             </div>
         </div>

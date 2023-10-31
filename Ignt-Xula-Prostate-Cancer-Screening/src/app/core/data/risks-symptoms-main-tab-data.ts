@@ -11,15 +11,15 @@ export var RISKS_SYMPTOMS_MAIN_TAB_DATA: ModuleMainTabs[] = [
     },
     {  
         'href': 'riskFactors', 
-        'tab': 'riskFacriskFactorsTabtorsTab'
+        'tab': 'riskFactorsTab'
     },
     {  
         'href': 'atRiskQuestionaire', 
         'tab': 'atRiskQuestionaireTab'
     },
     {  
-        'href': 'symptoms', 
-        'tab': 'symptomsTab'
+        'href': 'learnSymptoms', 
+        'tab': 'learnSymptomsTab'
     },
     {   
         'href': 'preferences', 

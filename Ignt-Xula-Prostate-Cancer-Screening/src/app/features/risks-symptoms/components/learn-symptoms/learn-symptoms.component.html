@@ -3,40 +3,64 @@
     <div class="row">
         <!-- Tabs -->
         <div class="col-3">
-            <div class="nav flex-column nav-pills" id="learn-symptoms-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link active" id="none-tab" data-toggle="pill" href="#none"
-                    role="tab" aria-controls="learn-symptoms-none" aria-selected="true">
-                    1. None
-                </a>
-                <a class="nav-link" id="common-tab" data-toggle="pill" href="#common" role="tab" aria-controls="common"
-                    aria-selected="false">
-                    2. Common 
-                </a>
-                <a class="nav-link" id="other-tab" data-toggle="pill" href="#other" role="tab"
-                    aria-controls="other" aria-selected="false">
-                   3. Other
-                </a>
-                <a class="nav-link" id="what-to-do-tab" data-toggle="pill" href="#what-to-do" role="tab" aria-controls="what-to-do"
-                    aria-selected="false">
-                    4. What to do
-                </a>
-            </div>
+            <ul class="nav flex-column nav-pills" id="learnSymptoms" role="tablist" aria-orientation="vertical">
+                <li class="nav-item waves-effect waves-light"
+                    [ngClass]="{ 'active': currentSubHref === 'learnSymptomsNone'}"
+                    (click)="setSubHrefTab('learnSymptomsNone')">
+                    <a class="nav-link active" id="learnSymptomsNoneTab" data-toggle="pill" href="#learnSymptomsNone"
+                        role="tab" aria-controls="learnSymptomsNone" aria-selected="true">
+                        1. None
+                    </a>
+                </li>
+                <li class="nav-item waves-effect waves-light"
+                    [ngClass]="{ 'active': currentSubHref === 'learnSymptomsCommon'}"
+                    (click)="setSubHrefTab('learnSymptomsCommon')">
+                    <a class="nav-link" id="learnSymptomsCommonTab" data-toggle="pill" href="#learnSymptomsCommon"
+                        role="tab" aria-controls="learnSymptomsCommon" aria-selected="false">
+                        2. Common
+                    </a>
+                </li>
+                <li class="nav-item waves-effect waves-light"
+                    [ngClass]="{ 'active': currentSubHref === 'learnSymptomsOther'}"
+                    (click)="setSubHrefTab('learnSymptomsOther')">
+                    <a class="nav-link" id="learnSymptomsOtherTab" data-toggle="pill" href="#learnSymptomsOther"
+                        role="tab" aria-controls="learnSymptomsOther" aria-selected="false">
+                        3. Other
+                    </a>
+                </li>
+                <li class="nav-item waves-effect waves-light"
+                    [ngClass]="{ 'active': currentSubHref === 'learnSymptomsWhatToDo'}"
+                    (click)="setSubHrefTab('learnSymptomsWhatToDo')">
+                    <a class="nav-link" id="learnSymptomsWhatToDoTab" data-toggle="pill" href="#learnSymptomsWhatToDo"
+                        role="tab" aria-controls="learnSymptomsWhatToDo" aria-selected="false">
+                        4. What to do
+                    </a>
+                </li>
+            </ul>
         </div>
 
         <!-- Panel Content-->
         <div class="col-9">
-            <div class="tab-content" id="learn-symptoms-tabContent">
-                <div class="tab-pane fade show active" id="none" role="tabpanel" aria-labelledby="none-tab">
-                   <symptoms-none></symptoms-none>
+            <div class="tab-content" id="learnSymptomsContent">
+                <div class="tab-pane fade show active" id="learnSymptomsNone" role="tabpanel"
+                    aria-labelledby="learnSymptomsNoneTab"
+                    [ngClass]="{ 'active': currentSubHref === 'learnSymptomsNone'}">
+                    <symptoms-none></symptoms-none>
                 </div>
-                <div class="tab-pane fade" id="common" role="tabpanel" aria-labelledby="common-tab">
+                <div class="tab-pane fade" id="learnSymptomsCommon" role="tabpanel"
+                    aria-labelledby="learnSymptomsCommonTab"
+                    [ngClass]="{ 'active': currentSubHref === 'learnSymptomsCommon'}">
                     <symptoms-common></symptoms-common>
                 </div>
-                <div class="tab-pane fade" id="other" role="tabpanel" aria-labelledby="other-tab">
+                <div class="tab-pane fade" id="learnSymptomsOther" role="tabpanel"
+                    aria-labelledby="learnSymptomsOtherTab"
+                    [ngClass]="{ 'active': currentSubHref === 'learnSymptomsOther'}">
                     <symptoms-other></symptoms-other>
                 </div>
-                <div class="tab-pane fade" id="what-to-do" role="tabpanel" aria-labelledby="what-to-do-tab">
-                    <what-to-do></what-to-do> 
+                <div class="tab-pane fade" id="learnSymptomsWhatToDo" role="tabpanel"
+                    aria-labelledby="learnSymptomsWhatToDoTab"
+                    [ngClass]="{ 'active': currentSubHref === 'learnSymptomsWhatToDo'}">
+                    <what-to-do></what-to-do>
                 </div>
             </div>
         </div>
