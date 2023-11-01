@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VerticalMenuService } from '@shared/services/vertical-menu.service';
 
 @Component({
   selector: 'steps',
@@ -22,7 +23,7 @@ export class StepsComponent implements OnInit {
     stepThree: { prev: 'stepTwo', next: null }
   }
 
-  constructor() { }
+  constructor(private verticalMenuService: VerticalMenuService) { }
 
   ngOnInit(): void {
     this.setSubHrefTab("stepsHome");
@@ -30,30 +31,10 @@ export class StepsComponent implements OnInit {
 
   public setSubHrefTab(hrefName: string): void {
     this.currentSubHref = hrefName;
-
-    if(this.objTabMapping[hrefName]) {
-      const element = document.querySelector(`#${this.objTabMapping[hrefName]}`) as HTMLElement;
-      element.click();
-    }
+    this.verticalMenuService.setSubHrefTab(hrefName, this.objTabMapping);
   }
 
   public subModuleHandler(isNext: boolean): boolean {
-    let tab: string = "";
-
-    if(isNext) {
-      if(this.objPrevNextMapping[this.currentSubHref] && this.objPrevNextMapping[this.currentSubHref].next) {
-        tab = this.objPrevNextMapping[this.currentSubHref].next;
-      } 
-    } else {
-      if(this.objPrevNextMapping[this.currentSubHref] && this.objPrevNextMapping[this.currentSubHref].prev) {
-        tab = this.objPrevNextMapping[this.currentSubHref].prev;
-      } 
-    }
-
-    if(tab) {
-      this.setSubHrefTab(tab);
-      return false;
-    }
-    return true;
+    return this.verticalMenuService.subModuleHandler(isNext, this.currentSubHref, this.objTabMapping, this.objPrevNextMapping)
   }
 }
