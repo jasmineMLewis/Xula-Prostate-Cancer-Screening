@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VerticalMenuService } from '@shared/services/vertical-menu.service';
 
 @Component({
   selector: 'prostate-exams',
@@ -15,42 +16,23 @@ export class ProstateExamsComponent implements OnInit {
   };
 
   private objPrevNextMapping: any = {
-    prostateExamsHome: {prev: null,next: 'digitalRectalExam'},
-    digitalRectalExam: {prev: 'prostateExamsHome',next: 'prostateSpecificAntigen'},
-    prostateSpecificAntigen: {prev: 'digitalRectalExam',next: null}
+    prostateExamsHome: { prev: null, next: 'digitalRectalExam' },
+    digitalRectalExam: { prev: 'prostateExamsHome', next: 'prostateSpecificAntigen' },
+    prostateSpecificAntigen: { prev: 'digitalRectalExam', next: null }
   }
 
-  constructor() { }
+  constructor(private verticalMenuService: VerticalMenuService) { }
 
   ngOnInit(): void {
     this.setSubHrefTab("prostateExamsHome");
   }
 
-  public setSubHrefTab(hrefName: string) {
+  public setSubHrefTab(hrefName: string): void {
     this.currentSubHref = hrefName;
-    if(this.objTabMapping[hrefName]) {
-      const elem = document.querySelector(`#${this.objTabMapping[hrefName]}`) as HTMLElement;
-      elem.click();
-    }
+    this.verticalMenuService.setSubHrefTab(hrefName, this.objTabMapping);
   }
 
- public subModuleHandler(isNext: boolean): boolean {
-    let tab: string = "";
-    if(isNext) {
-      if(this.objPrevNextMapping[this.currentSubHref] && this.objPrevNextMapping[this.currentSubHref].next) {
-        tab = this.objPrevNextMapping[this.currentSubHref].next;
-      } 
-    }
-    else {
-      if(this.objPrevNextMapping[this.currentSubHref] && this.objPrevNextMapping[this.currentSubHref].prev) {
-        tab = this.objPrevNextMapping[this.currentSubHref].prev;
-      } 
-    }
-
-    if(tab) {
-      this.setSubHrefTab(tab);
-      return false;
-    }
-    return true;
+  public subModuleHandler(isNext: boolean): boolean {
+    return this.verticalMenuService.subModuleHandler(isNext, this.currentSubHref, this.objTabMapping, this.objPrevNextMapping)
   }
 }

@@ -1,41 +1,57 @@
 <div class="container">
-    <p></p>
-    <div class="row">
-      <div class="col-3">
-        <div class="nav flex-column nav-pills" id="decisions-tab" role="tablist" aria-orientation="vertical">
-          <a class="nav-link active" id="decision-home-tab" data-toggle="pill" href="#decision-home" role="tab" 
-             aria-controls="decision-home" aria-selected="true">
-             Decision Home
+  <p></p>
+  <div class="row">
+    <div class="col-3">
+      <ul class="nav flex-column nav-pills" id="decisionsTab" role="tablist" aria-orientation="vertical">
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'decisionHome'}"
+          (click)="setSubHrefTab('decisionHome')">
+          <a class="nav-link active" id="decisionHomeTab" data-toggle="pill" href="#decisionHome" role="tab"
+            aria-controls="decisionHome" aria-selected="true">
+            Decision Home
           </a>
-          <a class="nav-link" id="watch-and-wait-tab" data-toggle="pill" href="#watch-and-wait" role="tab" 
-             aria-controls="watch-and-wait" aria-selected="false">
-             1. Watch and Wait
+        </li>
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'watchAndWait'}"
+          (click)="setSubHrefTab('watchAndWait')">
+          <a class="nav-link" id="watchAndWaitTab" data-toggle="pill" href="#watchAndWait" role="tab"
+            aria-controls="watchAndWait" aria-selected="false">
+            1. Watch and Wait
           </a>
-          <a class="nav-link" id="active-treatment-tab" data-toggle="pill" href="#active-treatment" role="tab" 
-             aria-controls="active-treatment" aria-selected="false">
-             2. Active Treatment
+        </li>
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'activeTreatment'}"
+          (click)="setSubHrefTab('activeTreatment')">
+          <a class="nav-link" id="activeTreatmentTab" data-toggle="pill" href="#activeTreatment" role="tab"
+            aria-controls="activeTreatment" aria-selected="false">
+            2. Active Treatment
           </a>
-          <a class="nav-link" id="talk-to-your-doctor-tab" data-toggle="pill" href="#talk-to-your-doctor" role="tab" 
-             aria-controls="talk-to-your-doctor" aria-selected="false">
-             3. Talk to your Doctor
+        </li>
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'talkToYourDoctor'}"
+          (click)="setSubHrefTab('talkToYourDoctor')">
+          <a class="nav-link" id="talkToYourDoctorTab" data-toggle="pill" href="#talkToYourDoctor" role="tab"
+            aria-controls="talkToYourDoctor" aria-selected="false">
+            3. Talk to your Doctor
           </a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-9">
+      <div class="tab-content" id="decisionsTabContent">
+        <div class="tab-pane fade show active" id="decisionHome" role="tabpanel" 
+        aria-labelledby="decisionHomeTab" [ngClass]="{ 'active': currentSubHref === 'decisionHome'}">
+          <decision-home></decision-home>
         </div>
-      </div>
-      <div class="col-9">
-        <div class="tab-content" id="decisions-tabContent">
-          <div class="tab-pane fade show active" id="decision-home" role="tabpanel" aria-labelledby="decision-home-tab">
-             <decision-home></decision-home>
-          </div>
-          <div class="tab-pane fade" id="watch-and-wait" role="tabpanel" aria-labelledby="watch-and-wait-tab">
-            <watch-and-wait></watch-and-wait>
-          </div>
-          <div class="tab-pane fade" id="active-treatment" role="tabpanel" aria-labelledby="active-treatment-tab">
-            <active-treatment></active-treatment>
-          </div>
-          <div class="tab-pane fade" id="talk-to-your-doctor" role="tabpanel" aria-labelledby="talk-to-your-doctor-tab">
-             <talk-to-your-doctor></talk-to-your-doctor>
-          </div>
+        <div class="tab-pane fade" id="watchAndWait" role="tabpanel" 
+        aria-labelledby="watchAndWaitTab" [ngClass]="{ 'active': currentSubHref === 'watchAndWait'}">
+          <watch-and-wait></watch-and-wait>
+        </div>
+        <div class="tab-pane fade" id="activeTreatment" role="tabpanel" 
+        aria-labelledby="activeTreatmentTab" [ngClass]="{ 'active': currentSubHref === 'activeTreatment'}">
+          <active-treatment></active-treatment>
+        </div>
+        <div class="tab-pane fade" id="talkToYourDoctor" role="tabpanel" 
+        aria-labelledby="talkToYourDoctorTab" [ngClass]="{ 'active': currentSubHref === 'talkToYourDoctor'}">
+          <talk-to-your-doctor></talk-to-your-doctor>
         </div>
       </div>
     </div>
+  </div>
 </div>

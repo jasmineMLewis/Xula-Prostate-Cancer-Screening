@@ -39,7 +39,7 @@ export class DiagnosisTreatmentComponent implements OnInit {
         break;
       }
       case this.DECISION: {
-        //retVal = this.compDecision.subModuleHandler(isNext);
+        retVal = this.compDecision.subModuleHandler(isNext);
         break;
       }
     }
