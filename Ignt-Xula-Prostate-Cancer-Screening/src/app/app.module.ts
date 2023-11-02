@@ -9,6 +9,7 @@ import { RisksSymptomsModule } from '@features/risks-symptoms/risks-symptoms.mod
 import { ProstateScreeningModule } from '@features/prostate-screening/prostate-screening.module';
 import { DiagnosisTreatmentModule } from '@features/diagnosis-treatment/diagnosis-treatment.module';
 import { BestChoiceModule } from '@features/best-choice/best-choice.module';
+import { VerticalMenuService } from '@shared/services/vertical-menu.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { BestChoiceModule } from '@features/best-choice/best-choice.module';
     // App routing - should be the last import!
     AppRoutingModule
   ],
-  // providers: [ ],
+  providers: [
+    VerticalMenuService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
