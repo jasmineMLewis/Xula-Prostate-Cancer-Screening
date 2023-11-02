@@ -36,10 +36,10 @@ This is the Angular project for Xavier University of Louisiana College of Pharma
 
 ## Version
 <p>Major.Minor.Patch</p>
-<p>2.2.4</p>
+<p>2.2.6</p>
 
 ## Date Last Updated
-October 28, 2023
+November 1, 2023
 
 ## Technologies
 | Technology | Version  |

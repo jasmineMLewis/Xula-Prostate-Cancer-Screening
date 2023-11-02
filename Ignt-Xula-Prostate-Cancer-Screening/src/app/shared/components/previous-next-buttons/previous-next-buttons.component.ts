@@ -44,14 +44,6 @@ export class PreviousNextButtonsComponent {
 
   ngOnInit(): void {}
 
-  public getMainHref(): string {
-    return this.currentMainHref;
-  }
-
-  public getMainTab(): string {
-    return this.currentMainTab;
-  }
-
   public naviagteModule(module: string): void {  
     const navigationDetails: string[] = [];
     var routeTo = '';
