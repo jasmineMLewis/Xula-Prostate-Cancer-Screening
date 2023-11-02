@@ -2,27 +2,33 @@
     <p></p>
     <div class="row">
         <div class="col-3">
-            <div class="nav flex-column nav-pills" id="screening-questions" role="tablist" aria-orientation="vertical">
-                <a class="nav-link active" id="men-getting-screened-tab" data-toggle="pill"
-                    href="#men-getting-screened" role="tab" aria-controls="men-getting-screened"
-                    aria-selected="true">
-                   1. Getting Screened
-                </a>
-                <a class="nav-link" id="men-not-getting-screened-tab" data-toggle="pill"
-                    href="#men-not-getting-screened" role="tab" aria-controls="men-not-getting-screened"
-                    aria-selected="false">
-                    2. Not Getting Screened
-                </a>
-            </div>
+            <ul class="nav flex-column nav-pills" id="screeningQuestions" role="tablist" aria-orientation="vertical">
+                <li class="nav-item waves-effect waves-light"
+                    [ngClass]="{ 'active': currentSubHref === 'menGettingScreened'}"
+                    (click)="setSubHrefTab('menGettingScreened')">
+                    <a class="nav-link active" id="menGettingScreenedTab" data-toggle="pill" href="#menGettingScreened"
+                        role="tab" aria-controls="menGettingScreened" aria-selected="true">
+                        1. Getting Screened
+                    </a>
+                </li>
+                <li class="nav-item waves-effect waves-light"
+                    [ngClass]="{ 'active': currentSubHref === 'menNotGettingScreened'}"
+                    (click)="setSubHrefTab('menNotGettingScreened')">
+                    <a class="nav-link" id="menNotGettingScreenedTab" data-toggle="pill" href="#menNotGettingScreened"
+                        role="tab" aria-controls="menNotGettingScreened" aria-selected="false">
+                        2. Not Getting Screened
+                    </a>
+                </li>
+            </ul>
         </div>
         <div class="col-9">
-            <div class="tab-content" id="screening-questionsContent">
-                <div class="tab-pane fade show active" id="men-getting-screened" role="tabpanel"
-                    aria-labelledby="men-getting-screened-tab">
-                   <getting-screened></getting-screened>
+            <div class="tab-content" id="screeningQuestionsContent">
+                <div class="tab-pane fade show active" id="menGettingScreened" role="tabpanel"
+                    aria-labelledby="menGettingScreenedTab" [ngClass]="{ 'active': currentSubHref === 'menGettingScreened'}">
+                    <getting-screened></getting-screened>
                 </div>
-                <div class="tab-pane fade" id="men-not-getting-screened" role="tabpanel"
-                    aria-labelledby="men-not-getting-screened-tab">
+                <div class="tab-pane fade" id="menNotGettingScreened" role="tabpanel"
+                    aria-labelledby="menNotGettingScreenedTab" [ngClass]="{ 'active': currentSubHref === 'menNotGettingScreened'}">
                     <not-getting-screened></not-getting-screened>
                 </div>
             </div>

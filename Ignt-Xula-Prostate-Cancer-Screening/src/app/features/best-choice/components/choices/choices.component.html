@@ -1,35 +1,46 @@
 <div class="container">
-    <p></p>
-    <div class="row">
-      <div class="col-3">
-        <div class="nav flex-column nav-pills" id="choice-tab" role="tablist" aria-orientation="vertical">
-          <a class="nav-link active" id="screening-for-you-tab" data-toggle="pill" href="#screening-for-you" role="tab" 
-             aria-controls="screening-for-you" aria-selected="true">
-             Screening for You
+  <p></p>
+  <div class="row">
+    <div class="col-3">
+      <ul class="nav flex-column nav-pills" id="choiceTab" role="tablist" aria-orientation="vertical">
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'screeningForYou'}"
+          (click)="setSubHrefTab('screeningForYou')">
+          <a class="nav-link active" id="screeningForYouTab" data-toggle="pill" href="#screeningForYou" role="tab"
+            aria-controls="screening-for-you" aria-selected="true">
+            Screening for You
           </a>
-          <a class="nav-link" id="watchful-waiting-tab" data-toggle="pill" href="#watchful-waiting" role="tab" 
-             aria-controls="watchful-waiting" aria-selected="false">
-             1. Watchful Waiting
+        </li>
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'watchfulWaiting'}"
+          (click)="setSubHrefTab('watchfulWaiting')">
+          <a class="nav-link" id="watchfulWaitingTab" data-toggle="pill" href="#watchfulWaiting" role="tab"
+            aria-controls="watchful-waiting" aria-selected="false">
+            1. Watchful Waiting
           </a>
-          <a class="nav-link" id="prostate-surgery-tab" data-toggle="pill" href="#prostate-surgery" role="tab" 
-             aria-controls="prostate-surgery" aria-selected="false">
-             2. Prostate Surgery
+        </li>
+        <li class="nav-item waves-effect waves-light" [ngClass]="{ 'active': currentSubHref === 'prostateSurgery'}"
+          (click)="setSubHrefTab('prostateSurgery')">
+          <a class="nav-link" id="prostateSurgeryTab" data-toggle="pill" href="#prostateSurgery" role="tab"
+            aria-controls="prostateSurgery" aria-selected="false">
+            2. Prostate Surgery
           </a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-9">
+      <div class="tab-content" id="choiceTabContent">
+        <div class="tab-pane fade show active" id="screeningForYou" role="tabpanel"
+          aria-labelledby="screeningForYouTab" [ngClass]="{ 'active': currentSubHref === 'screeningForYou'}">
+          <screening-for-you></screening-for-you>
         </div>
-      </div>
-      <div class="col-9">
-        <div class="tab-content" id="choice-tabContent">
-          <div class="tab-pane fade show active" id="screening-for-you" role="tabpanel" aria-labelledby="screening-for-you-tab">
-             <screening-for-you></screening-for-you>
-          </div>
-          <div class="tab-pane fade" id="watchful-waiting" role="tabpanel" aria-labelledby="watchful-waiting-tab">
-            <watchful-waiting></watchful-waiting>
-          </div>
-          <div class="tab-pane fade" id="prostate-surgery" role="tabpanel" aria-labelledby="prostate-surgery-tab">
-            <prostate-surgery></prostate-surgery>
-          
-          </div>
+        <div class="tab-pane fade" id="watchfulWaiting" role="tabpanel" 
+        aria-labelledby="watchfulWaitingTab" [ngClass]="{ 'active': currentSubHref === 'watchfulWaiting'}">
+          <watchful-waiting></watchful-waiting>
+        </div>
+        <div class="tab-pane fade" id="prostateSurgery" role="tabpanel"
+         aria-labelledby="prostateSurgeryTab" [ngClass]="{ 'active': currentSubHref === 'prostateSurgery'}">
+          <prostate-surgery></prostate-surgery>
         </div>
       </div>
     </div>
   </div>
+</div>
