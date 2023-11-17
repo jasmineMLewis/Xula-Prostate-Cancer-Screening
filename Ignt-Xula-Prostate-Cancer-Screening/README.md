@@ -1,4 +1,4 @@
-# Prostate Cancer Screening
+# Prostate Cancer Training: Making the Best Choice
 
 # Table of Contentes
 
@@ -36,10 +36,10 @@ This is the Angular project for Xavier University of Louisiana College of Pharma
 
 ## Version
 <p>Major.Minor.Patch</p>
-<p>2.2.6</p>
+<p>2.2.7</p>
 
 ## Date Last Updated
-November 1, 2023
+November 16, 2023
 
 ## Technologies
 | Technology | Version  |
@@ -82,5 +82,6 @@ in addition to the home module:
 # Installation
 
 ## Install Modules
-1) npm  install node modules  <br/>
+1) npm install node modules  <br/>
 2) npm install bootstrap@4.5.3 <br/>
+test
