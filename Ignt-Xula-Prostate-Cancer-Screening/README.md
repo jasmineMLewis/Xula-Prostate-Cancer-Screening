@@ -1,12 +1,12 @@
 # Prostate Cancer Training: Making the Best Choice
 
-# Table of Contentes
+# Table of Contents
 
 1. [General Information](#general-information)
 2. [Introduction](#introduction)
-3. [Application Details](#application-details)
-4. [Primary Module Features](#primary-module-features)
-5. [Installation](#installation)
+3. [Installation](#installation)
+4. [Application Details](#application-details)
+5. [Primary Module Features](#primary-module-features)
 
 # General Information
 
@@ -39,7 +39,7 @@ This is the Angular project for Xavier University of Louisiana College of Pharma
 <p>2.2.7</p>
 
 ## Date Last Updated
-November 16, 2023
+April 16, 2024
 
 ## Technologies
 | Technology | Version  |
@@ -48,6 +48,12 @@ November 16, 2023
 | Bootstrap | 4.5.3 |
 | Font Awesome | 4.7.0 |
 | JQuery | 3.6.3 |
+
+# Installation
+
+## Install Modules
+1) npm install node modules  <br/>
+2) npm install bootstrap@4.5.3 <br/>
 
 # Application Details
 The application primary module is 'Features'. The 'Features' module is comprised of five items
@@ -59,29 +65,44 @@ in addition to the home module:
 5. [Diagnosis & Treatment](#diagnosis-&-treatment)
 6. [Best Choice](#best-choice)
 
+## Modules Count | 4
+1. Core
+2. Features
+3. Layout
+4. Shared
+
+## Services Count | 1
+1. Vertical-Menu
+
+## Componenets Count | 115
+1. Core Componenets | 2
+    1. Footer
+    2. Header
+2. Shared Componenets | 2
+    1. Feature-Credits
+    2. Previous-Next-Buttons
+3. Features Componenets |  111
+    1. Prostate-Importance -> 22
+    2. Diagnosis-Treatment -> 24
+    3. Prostate-Screening -> 27
+    4. Best-Choice -> 19
+    5. Risks-Symptoms -> 19
+
 # Primary Module Features
+### Home
+Application landing page and links to each module
 
-## Home
-> Application landing page and links to each module
+### Prostate Importance
+Understand the importance of prostate exams in men's health
 
-## Prostate Importance
->  Understand the importance of prostate exams in men's health
+### Risks & Symptoms
+Review your risks and possible symptoms of prostate cancer
 
-## Risks & Symptoms
-> Review your risks and possible symptoms of prostate cancer
+### Screening for Cancer
+Cancer screening helps find cancer at an early stage
 
-## Screening for Cancer
-> Cancer screening helps find cancer at an early stage
+### Diagnosis & Treatment
+Learn the options, benefits, and risks of screening and treatment
 
-## Diagnosis & Treatment
-> Learn the options, benefits, and risks of screening and treatment
-
-## Best Choice
-> Making an informed-decision about screening
-
-# Installation
-
-## Install Modules
-1) npm install node modules  <br/>
-2) npm install bootstrap@4.5.3 <br/>
-test
+### Best Choice
+Making an informed-decision about screening
