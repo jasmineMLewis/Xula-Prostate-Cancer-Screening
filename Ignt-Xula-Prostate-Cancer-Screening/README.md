@@ -10,6 +10,7 @@
 5. [Primary Module Features](#primary-module-features)
 
 # General Information
+----
 
 ## Igloonarian | Client
 <p>Xavier University of Louisiana, College of Pharamcy</p>
@@ -34,7 +35,7 @@ https://github.com/jasmineMLewis/Xula-Prostate-Cancer-Screening
 
 # Introduction
 ----
-This is the Angular project for Xavier University of Louisiana College of Pharmacy's Prostate Screening: Making the Best Choice.
+Prostate Screening: Making the Best Choice is an Angular project for Xavier University of Louisiana's College of Pharmacy.
 
 ## Version
 <p>Major.Minor.Patch</p>
@@ -54,31 +55,34 @@ April 16, 2024
 # Installation
 ----
 
-## Install Modules
+## Install Dependencies
 1) npm install node modules  <br/>
 2) npm install bootstrap@4.5.3 <br/>
+
+## Run Development Server
+1) ng serve --open
 
 # Application Details
 ----
 The application's primary module is 'Features'. The 'Features' module is comprised of five items
 in addition to the home module:
 1. [Home](#home)
-2. [Prostate Importance](#prostate-mportance)
-3. [Risks & Scymptoms](#risks-&-Symptoms)
+2. [Prostate Importance](#prostate-importance)
+3. [Risks & Symptoms](#risks-symptoms)
 4. [Screening for Cancer](#screening-for-cancer)
-5. [Diagnosis & Treatment](#diagnosis-&-treatment)
+5. [Diagnosis & Treatment](#diagnosis-treatment)
 6. [Best Choice](#best-choice)
 
-## Modules Count | 4
+### Modules Count | 4
 1. Core
 2. Features
 3. Layout
 4. Shared
 
-## Services Count | 1
+### Services Count | 1
 1. Vertical-Menu
 
-## Components Count | 115
+### Components Count | 115
 1. Core Components | 2
     1. Footer
     2. Header
@@ -96,19 +100,19 @@ in addition to the home module:
 ----
 
 ### Home
-Application landing page and links to each module
+> Application landing page and links to each module
 
 ### Prostate Importance
-Understand the importance of prostate exams in men's health
+> Understand the importance of prostate exams in men's health
 
 ### Risks & Symptoms
-Review your risks and possible symptoms of prostate cancer
+> Review your risks and possible symptoms of prostate cancer
 
 ### Screening for Cancer
-Cancer screening helps find cancer at an early stage
+> Cancer screening helps find cancer at an early stage
 
 ### Diagnosis & Treatment
-Learn the options, benefits, and risks of screening and treatment
+> Learn the options, benefits, and risks of screening and treatment
 
 ### Best Choice
-Making an informed-decision about screening
+> Making an informed-decision about screening
