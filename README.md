@@ -1,5 +1,7 @@
 # Prostate Cancer Training: Making the Best Choice
-----
+
+![prostate-cancer-screening-home-full](https://github.com/user-attachments/assets/98d66089-adcf-4552-a505-f31f3614c8e5)
+
 
 # Table of Contents
 
@@ -10,7 +12,7 @@
 5. [Primary Module Features](#primary-module-features)
 
 # General Information
-----
+
 
 ## Igloonarian | Client
 <p>Xavier University of Louisiana, College of Pharamcy</p>
@@ -34,7 +36,7 @@ https://github.com/jasmineMLewis/Xula-Prostate-Cancer-Screening
 
 
 # Introduction
-----
+
 Prostate Screening: Making the Best Choice is an Angular project for Xavier University of Louisiana's College of Pharmacy.
 
 ## Version
@@ -53,7 +55,6 @@ April 16, 2024
 | JQuery | 3.6.3 |
 
 # Installation
-----
 
 ## Install Dependencies
 1) npm install node modules  <br/>
@@ -63,7 +64,6 @@ April 16, 2024
 1) ng serve --open
 
 # Application Details
-----
 The application's primary module is 'Features'. The 'Features' module is comprised of five items
 in addition to the home module:
 1. [Home](#home)
@@ -97,7 +97,6 @@ in addition to the home module:
     5. Risks-Symptoms -> 19
 
 # Primary Module Features
-----
 
 ### Home
 > Application landing page and links to each module
