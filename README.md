@@ -68,9 +68,9 @@ The application's primary module is 'Features'. The 'Features' module is compris
 in addition to the home module:
 1. [Home](#home)
 2. [Prostate Importance](#prostate-importance)
-3. [Risks & Symptoms](#risks-symptoms)
+3. [Risks Symptoms](#risks-symptoms)
 4. [Screening for Cancer](#screening-for-cancer)
-5. [Diagnosis & Treatment](#diagnosis-treatment)
+5. [Diagnosis Treatment](#diagnosis-treatment)
 6. [Best Choice](#best-choice)
 
 ### Modules Count | 4
