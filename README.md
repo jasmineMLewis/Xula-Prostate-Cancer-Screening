@@ -104,13 +104,13 @@ in addition to the home module:
 ### Prostate Importance
 > Understand the importance of prostate exams in men's health
 
-### Risks & Symptoms
+### Risks Symptoms
 > Review your risks and possible symptoms of prostate cancer
 
 ### Screening for Cancer
 > Cancer screening helps find cancer at an early stage
 
-### Diagnosis & Treatment
+### Diagnosis Treatment
 > Learn the options, benefits, and risks of screening and treatment
 
 ### Best Choice
