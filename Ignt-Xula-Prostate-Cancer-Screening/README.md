@@ -1,5 +1,6 @@
 # Prostate Cancer Training: Making the Best Choice
-----
+
+![prostate-cancer-screening-home-full](https://github.com/user-attachments/assets/98d66089-adcf-4552-a505-f31f3614c8e5)
 
 # Table of Contents
 
@@ -105,13 +106,13 @@ in addition to the home module:
 ### Prostate Importance
 > Understand the importance of prostate exams in men's health
 
-### Risks & Symptoms
+### Risks Symptoms
 > Review your risks and possible symptoms of prostate cancer
 
 ### Screening for Cancer
 > Cancer screening helps find cancer at an early stage
 
-### Diagnosis & Treatment
+### Diagnosis Treatment
 > Learn the options, benefits, and risks of screening and treatment
 
 ### Best Choice
