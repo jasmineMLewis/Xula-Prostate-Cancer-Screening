@@ -122,7 +122,6 @@ To view the file structure in an independent file:
 
 ## Ignt-Xula-Prostate-Cancer-Screening File Structure
 
-```bash
 C:.
 |   index.html
 |   main.ts
