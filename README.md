@@ -118,10 +118,12 @@ in addition to the home module:
 
 # Angular Project File Structure
 To view the file structure in an independent file: 
-[Ignt-Xula-Prostate-Cancer-Screening File Structure Independent File](https://github.com/jasmineMLewis/Xula-Prostate-Cancer-Screening/Ignt-Xula-Prostate-Cancer-Screening-File-Structure/Ignt-Xula-Prostate-Cancer-Screening-File-Structure.md)
+[Ignt-Xula-Prostate-Cancer-Screening File Structure Independent File](https://github.com/jasmineMLewis/Xula-Prostate-Cancer-Screening/blob/Development/Ignt-Xula-Prostate-Cancer-Screening-File-Structure/Ignt-Xula-Prostate-Cancer-Screening-File-Structure.md)
 
-## Ignt-Xula-Prostate-Cancer-Screening File Structure
 
+# Ignt-Xula-Prostate-Cancer-Screening File Structure
+
+```bash
 C:.
 |   index.html
 |   main.ts
