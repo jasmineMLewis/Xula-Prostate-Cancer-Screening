@@ -73,11 +73,10 @@ in addition to the home module:
 5. [Diagnosis Treatment](#diagnosis-treatment)
 6. [Best Choice](#best-choice)
 
-### Modules Count | 4
+### Modules Count | 3
 1. Core
 2. Features
-3. Layout
-4. Shared
+3. Shared
 
 ### Services Count | 1
 1. Vertical-Menu
@@ -123,7 +122,6 @@ To view the file structure in an independent file:
 
 ## Ignt-Xula-Prostate-Cancer-Screening File Structure
 
-```bash
 C:.
 |   index.html
 |   main.ts
@@ -988,4 +986,3 @@ C:.
 \---environments
         environment.prod.ts
         environment.ts
-```
